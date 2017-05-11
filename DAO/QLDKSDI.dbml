@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLDKSDI" Class="QLDKSDIDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-NSVI41J\SQLEXPRESS;Initial Catalog=QLDKSDI;Integrated Security=True" SettingsObjectName="DAO.Properties.Settings" SettingsPropertyName="QLDKSDIConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TaiKhoan" Member="TaiKhoans">
+    <Type Name="TaiKhoan">
+      <Column Name="TenTruyCap" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="MaHD" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="DiaChiCaiDat" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChiThanhToan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="TaiKhoan_PhieuBao" Member="PhieuBaos" ThisKey="TenTruyCap" OtherKey="TenTruyCap" Type="PhieuBao" />
+      <Association Name="HopDong_TaiKhoan" Member="HopDong" ThisKey="MaHD" OtherKey="MaHD" Type="HopDong" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChiTiet_TruyCap" Member="ChiTiet_TruyCaps">
+    <Type Name="ChiTiet_TruyCap">
+      <Column Name="MaLoai" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaPhieu" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ngay" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="TongSoPhut" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="LoaiTG_TruyCap_ChiTiet_TruyCap" Member="LoaiTG_TruyCap" ThisKey="MaLoai" OtherKey="MaLoai" Type="LoaiTG_TruyCap" IsForeignKey="true" />
+      <Association Name="PhieuBao_ChiTiet_TruyCap" Member="PhieuBao" ThisKey="MaPhieu" OtherKey="MaPhieu" Type="PhieuBao" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HopDong" Member="HopDongs">
+    <Type Name="HopDong">
+      <Column Name="MaHD" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaKH" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="NgayDK" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="TongTK" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="ChiPhi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayKyHD" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Association Name="HopDong_TaiKhoan" Member="TaiKhoans" ThisKey="MaHD" OtherKey="MaHD" Type="TaiKhoan" />
+      <Association Name="KhachHang_HopDong" Member="KhachHang" ThisKey="MaKH" OtherKey="MaKH" Type="KhachHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KhachHang" Member="KhachHangs">
+    <Type Name="KhachHang">
+      <Column Name="MaKH" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CMND" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LoaiKH" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SoDT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="KhachHang_HopDong" Member="HopDongs" ThisKey="MaKH" OtherKey="MaKH" Type="HopDong" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LoaiTG_TruyCap" Member="LoaiTG_TruyCaps">
+    <Type Name="LoaiTG_TruyCap">
+      <Column Name="MaLoai" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLoai" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Gia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GioBD" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="GioKT" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Association Name="LoaiTG_TruyCap_ChiTiet_TruyCap" Member="ChiTiet_TruyCaps" ThisKey="MaLoai" OtherKey="MaLoai" Type="ChiTiet_TruyCap" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhanVien" Member="NhanViens">
+    <Type Name="NhanVien">
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CMND" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TenTruyCap" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="MatKhau" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="QuyenHan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhieuBao" Member="PhieuBaos">
+    <Type Name="PhieuBao">
+      <Column Name="MaPhieu" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenTruyCap" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="NgayLap" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ThangLap" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TinhTrang" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="NgayTT" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="HinhThucTT" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TongTienTT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="PhieuBao_ChiTiet_TruyCap" Member="ChiTiet_TruyCaps" ThisKey="MaPhieu" OtherKey="MaPhieu" Type="ChiTiet_TruyCap" />
+      <Association Name="TaiKhoan_PhieuBao" Member="TaiKhoan" ThisKey="TenTruyCap" OtherKey="TenTruyCap" Type="TaiKhoan" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
