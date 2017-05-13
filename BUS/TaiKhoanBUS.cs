@@ -152,5 +152,10 @@ namespace BUS
             lsTaiKhoan = query.Where(u => Convert.ToBoolean(u.TrangThai) == false ).ToList();
             return lsTaiKhoan;
         }
+        /* public List<ChiTiet_TruyCap> xemChiTietTruyCap (string TenTruyCap)
+        {
+
+        } 
+        */
     }
 }

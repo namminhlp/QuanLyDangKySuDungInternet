@@ -56,7 +56,6 @@
             this.btnThoat = new System.Windows.Forms.Button();
             this.btDanhSachCho = new System.Windows.Forms.Button();
             this.btTaoTaiKhoan = new System.Windows.Forms.Button();
-            this.btInHoaDon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hopDongBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -295,22 +294,11 @@
             this.btTaoTaiKhoan.UseVisualStyleBackColor = true;
             this.btTaoTaiKhoan.Click += new System.EventHandler(this.btTaoTaiKhoan_Click);
             // 
-            // btInHoaDon
-            // 
-            this.btInHoaDon.Location = new System.Drawing.Point(329, 134);
-            this.btInHoaDon.Name = "btInHoaDon";
-            this.btInHoaDon.Size = new System.Drawing.Size(75, 23);
-            this.btInHoaDon.TabIndex = 11;
-            this.btInHoaDon.Text = "In hóa đơn";
-            this.btInHoaDon.UseVisualStyleBackColor = true;
-            this.btInHoaDon.Click += new System.EventHandler(this.btInHoaDon_Click);
-            // 
             // frmQuanLyHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.btInHoaDon);
             this.Controls.Add(this.btTaoTaiKhoan);
             this.Controls.Add(this.btDanhSachCho);
             this.Controls.Add(this.btnThoat);
@@ -370,6 +358,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayKyHDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource hopDongBindingSource;
         private System.Windows.Forms.Button btTaoTaiKhoan;
-        private System.Windows.Forms.Button btInHoaDon;
     }
 }

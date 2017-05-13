@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Button btChiTietTruyCap;
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,10 +49,6 @@
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtTrangThai = new System.Windows.Forms.ComboBox();
-            this.btChuaKichHoat = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.taiKhoanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tenTruyCapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matKhauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +56,10 @@
             this.diaChiCaiDatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diaChiThanhToanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trangThaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taiKhoanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtTrangThai = new System.Windows.Forms.ComboBox();
+            this.btChuaKichHoat = new System.Windows.Forms.Button();
+            btChiTietTruyCap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -238,43 +239,6 @@
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // txtTrangThai
-            // 
-            this.txtTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtTrangThai.FormattingEnabled = true;
-            this.txtTrangThai.Items.AddRange(new object[] {
-            "True",
-            "False"});
-            this.txtTrangThai.Location = new System.Drawing.Point(581, 33);
-            this.txtTrangThai.Name = "txtTrangThai";
-            this.txtTrangThai.Size = new System.Drawing.Size(84, 21);
-            this.txtTrangThai.TabIndex = 21;
-            this.txtTrangThai.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.txtTrangThai.DropDownStyleChanged += new System.EventHandler(this.comboBox1_DropDownStyleChanged);
-            // 
-            // btChuaKichHoat
-            // 
-            this.btChuaKichHoat.Location = new System.Drawing.Point(96, 126);
-            this.btChuaKichHoat.Name = "btChuaKichHoat";
-            this.btChuaKichHoat.Size = new System.Drawing.Size(106, 41);
-            this.btChuaKichHoat.TabIndex = 22;
-            this.btChuaKichHoat.Text = "Danh sách chưa kích hoạt";
-            this.btChuaKichHoat.UseVisualStyleBackColor = true;
-            this.btChuaKichHoat.Click += new System.EventHandler(this.btChuaKichHoat_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(228, 126);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 41);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // taiKhoanBindingSource
-            // 
-            this.taiKhoanBindingSource.DataSource = typeof(DAO.TaiKhoan);
-            // 
             // tenTruyCapDataGridViewTextBoxColumn
             // 
             this.tenTruyCapDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -322,12 +286,49 @@
             this.trangThaiDataGridViewTextBoxColumn.HeaderText = "Trạng thái";
             this.trangThaiDataGridViewTextBoxColumn.Name = "trangThaiDataGridViewTextBoxColumn";
             // 
+            // taiKhoanBindingSource
+            // 
+            this.taiKhoanBindingSource.DataSource = typeof(DAO.TaiKhoan);
+            // 
+            // txtTrangThai
+            // 
+            this.txtTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtTrangThai.FormattingEnabled = true;
+            this.txtTrangThai.Items.AddRange(new object[] {
+            "True",
+            "False"});
+            this.txtTrangThai.Location = new System.Drawing.Point(581, 33);
+            this.txtTrangThai.Name = "txtTrangThai";
+            this.txtTrangThai.Size = new System.Drawing.Size(84, 21);
+            this.txtTrangThai.TabIndex = 21;
+            this.txtTrangThai.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.txtTrangThai.DropDownStyleChanged += new System.EventHandler(this.comboBox1_DropDownStyleChanged);
+            // 
+            // btChuaKichHoat
+            // 
+            this.btChuaKichHoat.Location = new System.Drawing.Point(96, 126);
+            this.btChuaKichHoat.Name = "btChuaKichHoat";
+            this.btChuaKichHoat.Size = new System.Drawing.Size(106, 41);
+            this.btChuaKichHoat.TabIndex = 22;
+            this.btChuaKichHoat.Text = "Danh sách chưa kích hoạt";
+            this.btChuaKichHoat.UseVisualStyleBackColor = true;
+            this.btChuaKichHoat.Click += new System.EventHandler(this.btChuaKichHoat_Click);
+            // 
+            // btChiTietTruyCap
+            // 
+            btChiTietTruyCap.Location = new System.Drawing.Point(241, 126);
+            btChiTietTruyCap.Name = "btChiTietTruyCap";
+            btChiTietTruyCap.Size = new System.Drawing.Size(84, 41);
+            btChiTietTruyCap.TabIndex = 23;
+            btChiTietTruyCap.Text = "Chi tiết truy cập";
+            btChiTietTruyCap.UseVisualStyleBackColor = true;
+            // 
             // frmQuanLyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 561);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(btChiTietTruyCap);
             this.Controls.Add(this.btChuaKichHoat);
             this.Controls.Add(this.txtTrangThai);
             this.Controls.Add(this.dataGridView1);
@@ -382,7 +383,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox txtTrangThai;
         private System.Windows.Forms.Button btChuaKichHoat;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenTruyCapDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn matKhauDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
