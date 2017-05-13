@@ -18,8 +18,6 @@ namespace GUI
         {
             InitializeComponent();
             dataGridView1.DataSource = business.load();
-            btXemChiTietTruyCap.Enabled = false;
-
         }
 
         public event EventHandler TroVeMain;
@@ -74,7 +72,6 @@ namespace GUI
                 txtTrangThai.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
                 btnXoa.Enabled = true;
                 btnCapNhat.Enabled = true;
-                btXemChiTietTruyCap.Enabled = true;
             }
             catch (Exception)
             {
@@ -131,16 +128,6 @@ namespace GUI
         {
             dataGridView1.DataSource = business.xemChuaKichHoat();
 
-        }
-        private void frmCTTC_FormClosed (object sender, EventArgs e)
-        {
-
-        }
-        private void btXemChiTietTruyCap_Click(object sender, EventArgs e)
-        {
-            frmChiTietTruyCap frmCTTC = new frmChiTietTruyCap(txtTenTruyCap.Text);
-            frmCTTC.Show();
-            frmCTTC.FormClosed += frmCTTC_FormClosed;
         }
     }
 }

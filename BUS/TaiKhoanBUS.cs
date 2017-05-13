@@ -30,11 +30,6 @@ namespace BUS
                 }
         }
 
-        public object xemChiTietTruyCap()
-        {
-            throw new NotImplementedException();
-        }
-
         public List<TaiKhoan> load()
         {
             return db.TaiKhoans.ToList();
@@ -149,21 +144,13 @@ namespace BUS
             else return false;
 
         }
-        public List<TaiKhoan> xemChuaKichHoat()
+        public List<TaiKhoan> xemChuaKichHoat ()
         {
             var query = (from u in db.TaiKhoans
                          select u);
             List<TaiKhoan> lsTaiKhoan = new List<TaiKhoan>();
-            lsTaiKhoan = query.Where(u => Convert.ToBoolean(u.TrangThai) == false).ToList();
+            lsTaiKhoan = query.Where(u => Convert.ToBoolean(u.TrangThai) == false ).ToList();
             return lsTaiKhoan;
-        }
-        public List<ChiTiet_TruyCap> xemChiTietTruyCap(string TenTruyCap)
-        {
-            var query = from u in db.ChiTiet_TruyCaps
-                        select u;
-            List<ChiTiet_TruyCap> lsCTTC = new List<ChiTiet_TruyCap>();
-            lsCTTC = query.Where(u => u.TenTruyCap.ToString() == TenTruyCap).ToList();
-            return lsCTTC;
         }
     }
 }
