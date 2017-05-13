@@ -69,7 +69,7 @@ namespace GUI
                 txtEmail.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
                 txtDCCD.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
                 txtDCTT.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-                txtTT.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+                txtTrangThai.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
                 btnXoa.Enabled = true;
                 btnCapNhat.Enabled = true;
             }
@@ -82,7 +82,7 @@ namespace GUI
         private void begin()
         {
             txtTenTruyCap.Text = null;
-            txtTT.Text = null;
+            txtTrangThai.Text = null;
             txtMatKhauTTC.Text = null;
             txtEmail.Text = null;
             txtDCTT.Text = null;
@@ -92,7 +92,7 @@ namespace GUI
 
         private void btnCapNhat_Click(object sender, EventArgs e)
         {
-            if (business.suaTaiKhoan(txtTenTruyCap.Text, txtMatKhauTTC.Text, txtMaHD.Text, txtEmail.Text, txtDCCD.Text, txtDCTT.Text, txtTT.Text))
+            if (business.suaTaiKhoan(txtTenTruyCap.Text, txtMatKhauTTC.Text, txtMaHD.Text, txtEmail.Text, txtDCCD.Text, txtDCTT.Text, txtTrangThai.Text))
             {
                 MessageBox.Show("Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -112,6 +112,21 @@ namespace GUI
 
         private void frmQuanLyTaiKhoan_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {   
+        }
+
+        private void comboBox1_DropDownStyleChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btChuaKichHoat_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = business.xemChuaKichHoat();
 
         }
     }

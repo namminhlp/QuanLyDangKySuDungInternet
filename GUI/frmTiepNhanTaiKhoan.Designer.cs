@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtTT = new System.Windows.Forms.TextBox();
             this.txtDCTT = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,14 +43,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAccept = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.txtTrangThai = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // txtTT
-            // 
-            this.txtTT.Location = new System.Drawing.Point(623, 36);
-            this.txtTT.Name = "txtTT";
-            this.txtTT.Size = new System.Drawing.Size(126, 20);
-            this.txtTT.TabIndex = 8;
             // 
             // txtDCTT
             // 
@@ -179,14 +172,26 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // txtTrangThai
+            // 
+            this.txtTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtTrangThai.FormattingEnabled = true;
+            this.txtTrangThai.Items.AddRange(new object[] {
+            "True",
+            "False"});
+            this.txtTrangThai.Location = new System.Drawing.Point(617, 36);
+            this.txtTrangThai.Name = "txtTrangThai";
+            this.txtTrangThai.Size = new System.Drawing.Size(88, 21);
+            this.txtTrangThai.TabIndex = 32;
+            // 
             // frmTiepNhanTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 224);
+            this.Controls.Add(this.txtTrangThai);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAccept);
-            this.Controls.Add(this.txtTT);
             this.Controls.Add(this.txtDCTT);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -209,7 +214,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtTT;
         private System.Windows.Forms.TextBox txtDCTT;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -225,5 +229,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.ComboBox txtTrangThai;
     }
 }

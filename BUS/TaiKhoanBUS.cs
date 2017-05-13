@@ -144,5 +144,13 @@ namespace BUS
             else return false;
 
         }
+        public List<TaiKhoan> xemChuaKichHoat ()
+        {
+            var query = (from u in db.TaiKhoans
+                         select u);
+            List<TaiKhoan> lsTaiKhoan = new List<TaiKhoan>();
+            lsTaiKhoan = query.Where(u => Convert.ToBoolean(u.TrangThai) == false ).ToList();
+            return lsTaiKhoan;
+        }
     }
 }

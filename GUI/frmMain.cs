@@ -61,5 +61,10 @@ namespace GUI
             QLTK.Show();
             QLTK.TroVeMain += QLTKForm_DangXuat;
         }
+
+        private void báoCáoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

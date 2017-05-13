@@ -184,8 +184,8 @@ namespace GUI
         {
             if (txtNgayDKHD.Text.Length == 0)
             {
-                txtNgayDKHD.Text = "mm/dd/yyy";
-                txtNgayDKHD.ForeColor = Color.Black;
+                txtNgayDKHD.Text = "mm/dd/yyyy";
+                txtNgayDKHD.ForeColor = Color.Gray;
             }
         }
     }

@@ -23,7 +23,7 @@ namespace GUI
             this.AcceptButton = btnAccept;
             txtMaHD.Text = MaHD;
             txtMaHD.Enabled = false;
-            txtTT.Enabled = false;
+            txtTrangThai.Enabled = false;
         }
         private void btnClose_Click(object sender, EventArgs e)
         {

@@ -42,6 +42,13 @@
             this.txtNgayDK = new System.Windows.Forms.TextBox();
             this.txtNgayDKHD = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.maHDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayDKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongTKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chiPhiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayKyHDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hopDongBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.btnXem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -50,13 +57,6 @@
             this.btDanhSachCho = new System.Windows.Forms.Button();
             this.btTaoTaiKhoan = new System.Windows.Forms.Button();
             this.btInHoaDon = new System.Windows.Forms.Button();
-            this.maHDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayDKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongTKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chiPhiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayKyHDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hopDongBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hopDongBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -180,6 +180,51 @@
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             this.dataGridView1.ColumnAdded += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dataGridView1_ColumnAdded);
             // 
+            // maHDDataGridViewTextBoxColumn
+            // 
+            this.maHDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.maHDDataGridViewTextBoxColumn.DataPropertyName = "MaHD";
+            this.maHDDataGridViewTextBoxColumn.HeaderText = "Mã hợp đồng";
+            this.maHDDataGridViewTextBoxColumn.Name = "maHDDataGridViewTextBoxColumn";
+            // 
+            // maKHDataGridViewTextBoxColumn
+            // 
+            this.maKHDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.maKHDataGridViewTextBoxColumn.DataPropertyName = "MaKH";
+            this.maKHDataGridViewTextBoxColumn.HeaderText = "Mã Khách hàng";
+            this.maKHDataGridViewTextBoxColumn.Name = "maKHDataGridViewTextBoxColumn";
+            // 
+            // ngayDKDataGridViewTextBoxColumn
+            // 
+            this.ngayDKDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ngayDKDataGridViewTextBoxColumn.DataPropertyName = "NgayDK";
+            this.ngayDKDataGridViewTextBoxColumn.HeaderText = "Ngày đăng kí";
+            this.ngayDKDataGridViewTextBoxColumn.Name = "ngayDKDataGridViewTextBoxColumn";
+            // 
+            // tongTKDataGridViewTextBoxColumn
+            // 
+            this.tongTKDataGridViewTextBoxColumn.DataPropertyName = "TongTK";
+            this.tongTKDataGridViewTextBoxColumn.HeaderText = "Tổng TK";
+            this.tongTKDataGridViewTextBoxColumn.Name = "tongTKDataGridViewTextBoxColumn";
+            // 
+            // chiPhiDataGridViewTextBoxColumn
+            // 
+            this.chiPhiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.chiPhiDataGridViewTextBoxColumn.DataPropertyName = "ChiPhi";
+            this.chiPhiDataGridViewTextBoxColumn.HeaderText = "Chi Phí";
+            this.chiPhiDataGridViewTextBoxColumn.Name = "chiPhiDataGridViewTextBoxColumn";
+            // 
+            // ngayKyHDDataGridViewTextBoxColumn
+            // 
+            this.ngayKyHDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ngayKyHDDataGridViewTextBoxColumn.DataPropertyName = "NgayKyHD";
+            this.ngayKyHDDataGridViewTextBoxColumn.HeaderText = "Ngày ký (Hóa đơn)";
+            this.ngayKyHDDataGridViewTextBoxColumn.Name = "ngayKyHDDataGridViewTextBoxColumn";
+            // 
+            // hopDongBindingSource
+            // 
+            this.hopDongBindingSource.DataSource = typeof(DAO.HopDong);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(606, 34);
@@ -232,9 +277,9 @@
             // 
             // btDanhSachCho
             // 
-            this.btDanhSachCho.Location = new System.Drawing.Point(102, 134);
+            this.btDanhSachCho.Location = new System.Drawing.Point(102, 126);
             this.btDanhSachCho.Name = "btDanhSachCho";
-            this.btDanhSachCho.Size = new System.Drawing.Size(89, 23);
+            this.btDanhSachCho.Size = new System.Drawing.Size(92, 39);
             this.btDanhSachCho.TabIndex = 7;
             this.btDanhSachCho.Text = "Danh sách chờ";
             this.btDanhSachCho.UseVisualStyleBackColor = true;
@@ -242,9 +287,9 @@
             // 
             // btTaoTaiKhoan
             // 
-            this.btTaoTaiKhoan.Location = new System.Drawing.Point(337, 134);
+            this.btTaoTaiKhoan.Location = new System.Drawing.Point(210, 126);
             this.btTaoTaiKhoan.Name = "btTaoTaiKhoan";
-            this.btTaoTaiKhoan.Size = new System.Drawing.Size(91, 23);
+            this.btTaoTaiKhoan.Size = new System.Drawing.Size(91, 39);
             this.btTaoTaiKhoan.TabIndex = 10;
             this.btTaoTaiKhoan.Text = "Tạo tài khoản";
             this.btTaoTaiKhoan.UseVisualStyleBackColor = true;
@@ -252,58 +297,13 @@
             // 
             // btInHoaDon
             // 
-            this.btInHoaDon.Location = new System.Drawing.Point(228, 134);
+            this.btInHoaDon.Location = new System.Drawing.Point(329, 134);
             this.btInHoaDon.Name = "btInHoaDon";
             this.btInHoaDon.Size = new System.Drawing.Size(75, 23);
             this.btInHoaDon.TabIndex = 11;
             this.btInHoaDon.Text = "In hóa đơn";
             this.btInHoaDon.UseVisualStyleBackColor = true;
             this.btInHoaDon.Click += new System.EventHandler(this.btInHoaDon_Click);
-            // 
-            // maHDDataGridViewTextBoxColumn
-            // 
-            this.maHDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maHDDataGridViewTextBoxColumn.DataPropertyName = "MaHD";
-            this.maHDDataGridViewTextBoxColumn.HeaderText = "Mã hợp đồng";
-            this.maHDDataGridViewTextBoxColumn.Name = "maHDDataGridViewTextBoxColumn";
-            // 
-            // maKHDataGridViewTextBoxColumn
-            // 
-            this.maKHDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maKHDataGridViewTextBoxColumn.DataPropertyName = "MaKH";
-            this.maKHDataGridViewTextBoxColumn.HeaderText = "Mã Khách hàng";
-            this.maKHDataGridViewTextBoxColumn.Name = "maKHDataGridViewTextBoxColumn";
-            // 
-            // ngayDKDataGridViewTextBoxColumn
-            // 
-            this.ngayDKDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ngayDKDataGridViewTextBoxColumn.DataPropertyName = "NgayDK";
-            this.ngayDKDataGridViewTextBoxColumn.HeaderText = "Ngày đăng kí";
-            this.ngayDKDataGridViewTextBoxColumn.Name = "ngayDKDataGridViewTextBoxColumn";
-            // 
-            // tongTKDataGridViewTextBoxColumn
-            // 
-            this.tongTKDataGridViewTextBoxColumn.DataPropertyName = "TongTK";
-            this.tongTKDataGridViewTextBoxColumn.HeaderText = "Tổng TK";
-            this.tongTKDataGridViewTextBoxColumn.Name = "tongTKDataGridViewTextBoxColumn";
-            // 
-            // chiPhiDataGridViewTextBoxColumn
-            // 
-            this.chiPhiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.chiPhiDataGridViewTextBoxColumn.DataPropertyName = "ChiPhi";
-            this.chiPhiDataGridViewTextBoxColumn.HeaderText = "Chi Phí";
-            this.chiPhiDataGridViewTextBoxColumn.Name = "chiPhiDataGridViewTextBoxColumn";
-            // 
-            // ngayKyHDDataGridViewTextBoxColumn
-            // 
-            this.ngayKyHDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ngayKyHDDataGridViewTextBoxColumn.DataPropertyName = "NgayKyHD";
-            this.ngayKyHDDataGridViewTextBoxColumn.HeaderText = "Ngày ký (Hóa đơn)";
-            this.ngayKyHDDataGridViewTextBoxColumn.Name = "ngayKyHDDataGridViewTextBoxColumn";
-            // 
-            // hopDongBindingSource
-            // 
-            this.hopDongBindingSource.DataSource = typeof(DAO.HopDong);
             // 
             // frmQuanLyHopDong
             // 
