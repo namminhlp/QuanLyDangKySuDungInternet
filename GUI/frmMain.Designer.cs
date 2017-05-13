@@ -36,6 +36,8 @@
             this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cướcPhíToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tìnhHìnhThanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phiếuBáoĐãLậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,9 +100,26 @@
             // 
             // cướcPhíToolStripMenuItem
             // 
+            this.cướcPhíToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.phiếuBáoĐãLậpToolStripMenuItem,
+            this.tìnhHìnhThanhToánToolStripMenuItem});
             this.cướcPhíToolStripMenuItem.Name = "cướcPhíToolStripMenuItem";
             this.cướcPhíToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.cướcPhíToolStripMenuItem.Text = "Cước phí";
+            // 
+            // tìnhHìnhThanhToánToolStripMenuItem
+            // 
+            this.tìnhHìnhThanhToánToolStripMenuItem.Name = "tìnhHìnhThanhToánToolStripMenuItem";
+            this.tìnhHìnhThanhToánToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.tìnhHìnhThanhToánToolStripMenuItem.Text = "Tình hình thanh toán";
+            this.tìnhHìnhThanhToánToolStripMenuItem.Click += new System.EventHandler(this.tìnhHìnhThanhToánToolStripMenuItem_Click);
+            // 
+            // phiếuBáoĐãLậpToolStripMenuItem
+            // 
+            this.phiếuBáoĐãLậpToolStripMenuItem.Name = "phiếuBáoĐãLậpToolStripMenuItem";
+            this.phiếuBáoĐãLậpToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.phiếuBáoĐãLậpToolStripMenuItem.Text = "Phiếu báo đã lập";
+            this.phiếuBáoĐãLậpToolStripMenuItem.Click += new System.EventHandler(this.phiếuBáoĐãLậpToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -129,5 +148,7 @@
         private System.Windows.Forms.ToolStripMenuItem trợGiúpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cướcPhíToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phiếuBáoĐãLậpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tìnhHìnhThanhToánToolStripMenuItem;
     }
 }

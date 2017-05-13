@@ -52,10 +52,10 @@ CREATE TABLE LoaiTG_TruyCap (
 
 CREATE TABLE ChiTiet_TruyCap (
 	MaLoai VARCHAR(10) FOREIGN KEY (MaLoai) REFERENCES LoaiTG_TruyCap(MaLoai),
-	MaPhieu VARCHAR(10) FOREIGN KEY (MaPhieu) REFERENCES PhieuBao(MaPhieu),
+	TenTruyCap VARCHAR(15) FOREIGN KEY (TenTruyCap) REFERENCES TaiKhoan(TenTruyCap),
 	Ngay SMALLDATETIME,
 	TongSoPhut INT,
-	CONSTRAINT PK_MA_CHITIET PRIMARY KEY (MaLoai,MaPhieu)
+	CONSTRAINT PK_TK_CHITIET PRIMARY KEY (MaLoai,TenTruyCap)
 );
 CREATE TABLE NhanVien (
 	MaNhanVien VARCHAR(10) PRIMARY KEY,
@@ -66,4 +66,25 @@ CREATE TABLE NhanVien (
 	MatKhau VARCHAR(20),
 	QuyenHan BIT
 )
+
+--- Thêm dữ liệu admin 
 insert into NhanVien values  ('NV0001', 'Đoàn Nam Minh', 'Bình Thuận', '25262323','namminhlp','3071997',1);
+
+--- Thêm dữ liệu cho loại thời gian truy cập
+insert into LoaiTG_TruyCap values ('1','Thuong',80,'07 AM','11 PM');
+insert into LoaiTG_TruyCap values ('2','Dac biet',40,'11 PM','07 AM')
+
+--- Thêm dữ liệu khách hàng
+insert into KhachHang values ('KH0002', 'Nam Minh','Thu Duc - TPHCM','2561271','Vip',0123456789);
+
+--- Them dữ liệu hợp đồng tương ứng với khách hàng
+insert into HopDong values ('HD0002','KH0002','05-12-2016',4,100000,'05-16-2016');
+
+--- Thêm dữ liệu về Tài khoản được cung cấp
+insert into TaiKhoan values ('namminh','3071997','namminh@gmail.com','HD0002','TPHCM','TPHCM',1);
+insert into TaiKhoan values ('namminh2','3071997','namminh@gmail.com','HD002','TPHCM','TPHCM',0);
+
+--- Thêm dữ liệu chi tiết truy cập
+insert into ChiTiet_TruyCap values ('1','namminh2','06-12-2016',30);
+insert into ChiTiet_TruyCap values ('2','namminh','06-13-2016',90);
+insert into ChiTiet_TruyCap values ('1', 'namminh','06-15-2016',60);

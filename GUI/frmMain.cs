@@ -66,5 +66,15 @@ namespace GUI
         {
 
         }
+
+        private void phiếuBáoĐãLậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tìnhHìnhThanhToánToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

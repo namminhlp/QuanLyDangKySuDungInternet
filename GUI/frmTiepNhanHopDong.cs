@@ -94,7 +94,15 @@ namespace GUI
 
         private void txtNgayDK_Leave(object sender, EventArgs e)
         {
-
+            if (txtNgayDK.Text.Length == 0)
+            {
+                txtNgayDK.Text = "mm/dd/yyyy";
+                txtNgayDK.ForeColor = Color.Gray;
+            }
+            else
+            {
+                txtNgayDK.ForeColor = Color.Black;
+            }
         }
     }
 }
