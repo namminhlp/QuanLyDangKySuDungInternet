@@ -278,7 +278,7 @@
             // 
             this.btDanhSachCho.Location = new System.Drawing.Point(102, 117);
             this.btDanhSachCho.Name = "btDanhSachCho";
-            this.btDanhSachCho.Size = new System.Drawing.Size(92, 39);
+            this.btDanhSachCho.Size = new System.Drawing.Size(98, 39);
             this.btDanhSachCho.TabIndex = 7;
             this.btDanhSachCho.Text = "Danh sách chờ";
             this.btDanhSachCho.UseVisualStyleBackColor = true;
@@ -286,9 +286,9 @@
             // 
             // btTaoTaiKhoan
             // 
-            this.btTaoTaiKhoan.Location = new System.Drawing.Point(220, 117);
+            this.btTaoTaiKhoan.Location = new System.Drawing.Point(206, 117);
             this.btTaoTaiKhoan.Name = "btTaoTaiKhoan";
-            this.btTaoTaiKhoan.Size = new System.Drawing.Size(91, 39);
+            this.btTaoTaiKhoan.Size = new System.Drawing.Size(100, 39);
             this.btTaoTaiKhoan.TabIndex = 10;
             this.btTaoTaiKhoan.Text = "Tạo tài khoản";
             this.btTaoTaiKhoan.UseVisualStyleBackColor = true;

@@ -49,8 +49,6 @@
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtTrangThai = new System.Windows.Forms.ComboBox();
-            this.btChuaKichHoat = new System.Windows.Forms.Button();
             this.tenTruyCapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matKhauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +57,8 @@
             this.diaChiThanhToanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trangThaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.taiKhoanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtTrangThai = new System.Windows.Forms.ComboBox();
+            this.btChuaKichHoat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -248,30 +248,6 @@
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // txtTrangThai
-            // 
-            this.txtTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtTrangThai.FormattingEnabled = true;
-            this.txtTrangThai.Items.AddRange(new object[] {
-            "True",
-            "False"});
-            this.txtTrangThai.Location = new System.Drawing.Point(581, 16);
-            this.txtTrangThai.Name = "txtTrangThai";
-            this.txtTrangThai.Size = new System.Drawing.Size(84, 21);
-            this.txtTrangThai.TabIndex = 21;
-            this.txtTrangThai.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.txtTrangThai.DropDownStyleChanged += new System.EventHandler(this.comboBox1_DropDownStyleChanged);
-            // 
-            // btChuaKichHoat
-            // 
-            this.btChuaKichHoat.Location = new System.Drawing.Point(96, 124);
-            this.btChuaKichHoat.Name = "btChuaKichHoat";
-            this.btChuaKichHoat.Size = new System.Drawing.Size(106, 41);
-            this.btChuaKichHoat.TabIndex = 22;
-            this.btChuaKichHoat.Text = "Danh sách đình chỉ truy cập";
-            this.btChuaKichHoat.UseVisualStyleBackColor = true;
-            this.btChuaKichHoat.Click += new System.EventHandler(this.btChuaKichHoat_Click);
-            // 
             // tenTruyCapDataGridViewTextBoxColumn
             // 
             this.tenTruyCapDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -322,6 +298,30 @@
             // taiKhoanBindingSource
             // 
             this.taiKhoanBindingSource.DataSource = typeof(DAO.TaiKhoan);
+            // 
+            // txtTrangThai
+            // 
+            this.txtTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtTrangThai.FormattingEnabled = true;
+            this.txtTrangThai.Items.AddRange(new object[] {
+            "True",
+            "False"});
+            this.txtTrangThai.Location = new System.Drawing.Point(581, 16);
+            this.txtTrangThai.Name = "txtTrangThai";
+            this.txtTrangThai.Size = new System.Drawing.Size(84, 21);
+            this.txtTrangThai.TabIndex = 21;
+            this.txtTrangThai.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.txtTrangThai.DropDownStyleChanged += new System.EventHandler(this.comboBox1_DropDownStyleChanged);
+            // 
+            // btChuaKichHoat
+            // 
+            this.btChuaKichHoat.Location = new System.Drawing.Point(96, 124);
+            this.btChuaKichHoat.Name = "btChuaKichHoat";
+            this.btChuaKichHoat.Size = new System.Drawing.Size(106, 41);
+            this.btChuaKichHoat.TabIndex = 22;
+            this.btChuaKichHoat.Text = "Danh sách đình chỉ truy cập";
+            this.btChuaKichHoat.UseVisualStyleBackColor = true;
+            this.btChuaKichHoat.Click += new System.EventHandler(this.btChuaKichHoat_Click);
             // 
             // frmQuanLyTaiKhoan
             // 

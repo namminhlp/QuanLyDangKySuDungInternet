@@ -66,5 +66,17 @@ namespace GUI
         {
 
         }
+        void QLPBForm_DangXuat(object sender, EventArgs e)
+        {
+            (sender as frmQuanLyPhieuBao).Close();
+            this.Show();
+        }
+        private void phiếuBáoĐãLậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuanLyPhieuBao frmQLPB = new frmQuanLyPhieuBao();
+            frmQLPB.Show();
+            frmQLPB.TroVeMain += QLPBForm_DangXuat;
+
+        }
     }
 }
