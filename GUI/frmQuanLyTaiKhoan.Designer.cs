@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Button btChiTietTruyCap;
+            this.btChiTietTruyCap = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,6 +49,8 @@
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtTrangThai = new System.Windows.Forms.ComboBox();
+            this.btChuaKichHoat = new System.Windows.Forms.Button();
             this.tenTruyCapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matKhauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,17 +59,24 @@
             this.diaChiThanhToanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trangThaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.taiKhoanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.txtTrangThai = new System.Windows.Forms.ComboBox();
-            this.btChuaKichHoat = new System.Windows.Forms.Button();
-            btChiTietTruyCap = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // btChiTietTruyCap
+            // 
+            this.btChiTietTruyCap.Location = new System.Drawing.Point(219, 124);
+            this.btChiTietTruyCap.Name = "btChiTietTruyCap";
+            this.btChiTietTruyCap.Size = new System.Drawing.Size(106, 41);
+            this.btChiTietTruyCap.TabIndex = 23;
+            this.btChiTietTruyCap.Text = "Chi tiết truy cập";
+            this.btChiTietTruyCap.UseVisualStyleBackColor = true;
+            this.btChiTietTruyCap.Click += new System.EventHandler(this.btChiTietTruyCap_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 36);
+            this.label1.Location = new System.Drawing.Point(20, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 0;
@@ -76,7 +85,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 69);
+            this.label2.Location = new System.Drawing.Point(20, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 1;
@@ -85,7 +94,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 101);
+            this.label3.Location = new System.Drawing.Point(20, 84);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 13);
             this.label3.TabIndex = 2;
@@ -93,14 +102,14 @@
             // 
             // txtTenTruyCap
             // 
-            this.txtTenTruyCap.Location = new System.Drawing.Point(96, 33);
+            this.txtTenTruyCap.Location = new System.Drawing.Point(96, 16);
             this.txtTenTruyCap.Name = "txtTenTruyCap";
             this.txtTenTruyCap.Size = new System.Drawing.Size(128, 20);
             this.txtTenTruyCap.TabIndex = 1;
             // 
             // txtMatKhauTTC
             // 
-            this.txtMatKhauTTC.Location = new System.Drawing.Point(96, 66);
+            this.txtMatKhauTTC.Location = new System.Drawing.Point(96, 49);
             this.txtMatKhauTTC.Name = "txtMatKhauTTC";
             this.txtMatKhauTTC.Size = new System.Drawing.Size(128, 20);
             this.txtMatKhauTTC.TabIndex = 2;
@@ -109,7 +118,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(249, 36);
+            this.label4.Location = new System.Drawing.Point(249, 19);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 5;
@@ -118,7 +127,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(249, 103);
+            this.label6.Location = new System.Drawing.Point(249, 86);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 13);
             this.label6.TabIndex = 7;
@@ -126,21 +135,21 @@
             // 
             // txtMaHD
             // 
-            this.txtMaHD.Location = new System.Drawing.Point(96, 100);
+            this.txtMaHD.Location = new System.Drawing.Point(96, 83);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(128, 20);
             this.txtMaHD.TabIndex = 3;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(349, 35);
+            this.txtEmail.Location = new System.Drawing.Point(349, 18);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(135, 20);
             this.txtEmail.TabIndex = 4;
             // 
             // txtDCCD
             // 
-            this.txtDCCD.Location = new System.Drawing.Point(349, 100);
+            this.txtDCCD.Location = new System.Drawing.Point(349, 83);
             this.txtDCCD.Name = "txtDCCD";
             this.txtDCCD.Size = new System.Drawing.Size(135, 20);
             this.txtDCCD.TabIndex = 6;
@@ -148,7 +157,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(249, 69);
+            this.label7.Location = new System.Drawing.Point(249, 52);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(94, 13);
             this.label7.TabIndex = 12;
@@ -157,7 +166,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(508, 35);
+            this.label8.Location = new System.Drawing.Point(508, 18);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 13);
             this.label8.TabIndex = 13;
@@ -165,14 +174,14 @@
             // 
             // txtDCTT
             // 
-            this.txtDCTT.Location = new System.Drawing.Point(349, 66);
+            this.txtDCTT.Location = new System.Drawing.Point(349, 49);
             this.txtDCTT.Name = "txtDCTT";
             this.txtDCTT.Size = new System.Drawing.Size(135, 20);
             this.txtDCTT.TabIndex = 7;
             // 
             // btnTiepNhan
             // 
-            this.btnTiepNhan.Location = new System.Drawing.Point(744, 25);
+            this.btnTiepNhan.Location = new System.Drawing.Point(744, 18);
             this.btnTiepNhan.Name = "btnTiepNhan";
             this.btnTiepNhan.Size = new System.Drawing.Size(75, 23);
             this.btnTiepNhan.TabIndex = 18;
@@ -182,7 +191,7 @@
             // 
             // btnXem
             // 
-            this.btnXem.Location = new System.Drawing.Point(838, 26);
+            this.btnXem.Location = new System.Drawing.Point(838, 19);
             this.btnXem.Name = "btnXem";
             this.btnXem.Size = new System.Drawing.Size(75, 23);
             this.btnXem.TabIndex = 18;
@@ -192,7 +201,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(838, 63);
+            this.btnXoa.Location = new System.Drawing.Point(838, 52);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 18;
@@ -202,7 +211,7 @@
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(744, 64);
+            this.btnCapNhat.Location = new System.Drawing.Point(744, 52);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(75, 23);
             this.btnCapNhat.TabIndex = 18;
@@ -212,7 +221,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(838, 103);
+            this.btnThoat.Location = new System.Drawing.Point(838, 84);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(75, 23);
             this.btnThoat.TabIndex = 19;
@@ -233,11 +242,35 @@
             this.diaChiThanhToanDataGridViewTextBoxColumn,
             this.trangThaiDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.taiKhoanBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 173);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 183);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(920, 376);
+            this.dataGridView1.Size = new System.Drawing.Size(920, 366);
             this.dataGridView1.TabIndex = 20;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // txtTrangThai
+            // 
+            this.txtTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtTrangThai.FormattingEnabled = true;
+            this.txtTrangThai.Items.AddRange(new object[] {
+            "True",
+            "False"});
+            this.txtTrangThai.Location = new System.Drawing.Point(581, 16);
+            this.txtTrangThai.Name = "txtTrangThai";
+            this.txtTrangThai.Size = new System.Drawing.Size(84, 21);
+            this.txtTrangThai.TabIndex = 21;
+            this.txtTrangThai.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.txtTrangThai.DropDownStyleChanged += new System.EventHandler(this.comboBox1_DropDownStyleChanged);
+            // 
+            // btChuaKichHoat
+            // 
+            this.btChuaKichHoat.Location = new System.Drawing.Point(96, 124);
+            this.btChuaKichHoat.Name = "btChuaKichHoat";
+            this.btChuaKichHoat.Size = new System.Drawing.Size(106, 41);
+            this.btChuaKichHoat.TabIndex = 22;
+            this.btChuaKichHoat.Text = "Danh sách đình chỉ truy cập";
+            this.btChuaKichHoat.UseVisualStyleBackColor = true;
+            this.btChuaKichHoat.Click += new System.EventHandler(this.btChuaKichHoat_Click);
             // 
             // tenTruyCapDataGridViewTextBoxColumn
             // 
@@ -290,45 +323,12 @@
             // 
             this.taiKhoanBindingSource.DataSource = typeof(DAO.TaiKhoan);
             // 
-            // txtTrangThai
-            // 
-            this.txtTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtTrangThai.FormattingEnabled = true;
-            this.txtTrangThai.Items.AddRange(new object[] {
-            "True",
-            "False"});
-            this.txtTrangThai.Location = new System.Drawing.Point(581, 33);
-            this.txtTrangThai.Name = "txtTrangThai";
-            this.txtTrangThai.Size = new System.Drawing.Size(84, 21);
-            this.txtTrangThai.TabIndex = 21;
-            this.txtTrangThai.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.txtTrangThai.DropDownStyleChanged += new System.EventHandler(this.comboBox1_DropDownStyleChanged);
-            // 
-            // btChuaKichHoat
-            // 
-            this.btChuaKichHoat.Location = new System.Drawing.Point(96, 126);
-            this.btChuaKichHoat.Name = "btChuaKichHoat";
-            this.btChuaKichHoat.Size = new System.Drawing.Size(106, 41);
-            this.btChuaKichHoat.TabIndex = 22;
-            this.btChuaKichHoat.Text = "Danh sách chưa kích hoạt";
-            this.btChuaKichHoat.UseVisualStyleBackColor = true;
-            this.btChuaKichHoat.Click += new System.EventHandler(this.btChuaKichHoat_Click);
-            // 
-            // btChiTietTruyCap
-            // 
-            btChiTietTruyCap.Location = new System.Drawing.Point(241, 126);
-            btChiTietTruyCap.Name = "btChiTietTruyCap";
-            btChiTietTruyCap.Size = new System.Drawing.Size(84, 41);
-            btChiTietTruyCap.TabIndex = 23;
-            btChiTietTruyCap.Text = "Chi tiết truy cập";
-            btChiTietTruyCap.UseVisualStyleBackColor = true;
-            // 
             // frmQuanLyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 561);
-            this.Controls.Add(btChiTietTruyCap);
+            this.Controls.Add(this.btChiTietTruyCap);
             this.Controls.Add(this.btChuaKichHoat);
             this.Controls.Add(this.txtTrangThai);
             this.Controls.Add(this.dataGridView1);
@@ -391,5 +391,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn diaChiThanhToanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn trangThaiDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource taiKhoanBindingSource;
+        private System.Windows.Forms.Button btChiTietTruyCap;
     }
 }

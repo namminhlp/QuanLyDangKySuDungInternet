@@ -14,7 +14,6 @@ namespace GUI
     public partial class frmQuanLyHopDong : Form
     {
         HopDongBUS business = new HopDongBUS();
-        private FormClosedEventHandler frmTNTK_FormClosed;
 
         public frmQuanLyHopDong()
         {
@@ -163,7 +162,10 @@ namespace GUI
         {
 
         }
-
+        private void frmTNTK_FormClosed (object sender, EventArgs e)
+        {
+            btnXem_Click(sender, e);
+        }
         private void btTaoTaiKhoan_Click(object sender, EventArgs e)
         {
             frmTiepNhanTaiKhoan frmTNTK = new frmTiepNhanTaiKhoan(txtMaHD.Text);

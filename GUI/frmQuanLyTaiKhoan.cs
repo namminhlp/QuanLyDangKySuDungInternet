@@ -18,6 +18,9 @@ namespace GUI
         {
             InitializeComponent();
             dataGridView1.DataSource = business.load();
+            btnCapNhat.Enabled = false;
+            btnXoa.Enabled = false;
+            btChiTietTruyCap.Enabled = false;
         }
 
         public event EventHandler TroVeMain;
@@ -55,6 +58,7 @@ namespace GUI
             }
             btnCapNhat.Enabled = false;
             btnXoa.Enabled = false;
+            btChiTietTruyCap.Enabled = false;
             begin();
             btnXem_Click(sender, e);
         }
@@ -72,6 +76,8 @@ namespace GUI
                 txtTrangThai.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
                 btnXoa.Enabled = true;
                 btnCapNhat.Enabled = true;
+                btChiTietTruyCap.Enabled = true;
+               
             }
             catch (Exception)
             {
@@ -100,12 +106,13 @@ namespace GUI
             {
                 MessageBox.Show("Thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (dataGridView1.CurrentRow == null)
+           /* if (dataGridView1.CurrentRow == null)
             {
                 btnCapNhat.Enabled = false;
-            }
+            }*/
             btnCapNhat.Enabled = false;
             btnXoa.Enabled = false;
+            btChiTietTruyCap.Enabled = false;
             begin();
             Refresh();
         }
@@ -129,5 +136,17 @@ namespace GUI
             dataGridView1.DataSource = business.xemChuaKichHoat();
 
         }
+        private void frmCTTC_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            btnXem_Click(sender, e);
+        }
+        private void btChiTietTruyCap_Click(object sender, EventArgs e)
+        {
+            frmChiTietTruyCap frmCTTC = new frmChiTietTruyCap(txtTenTruyCap.Text);
+            frmCTTC.Show();
+            frmCTTC.FormClosed += frmCTTC_FormClosed;
+        }
+
+
     }
 }
