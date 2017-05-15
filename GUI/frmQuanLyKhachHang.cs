@@ -12,7 +12,7 @@ namespace GUI
         public frmQuanLyKhachHang()
         {
             InitializeComponent();
-            dataGridView1.DataSource = business.xemTatCa();
+            dataGridView1.DataSource = business.load();
             btXoaKH.Enabled = false;
             btCapNhat.Enabled = false;
             btLapHopDong.Enabled = false;
@@ -40,7 +40,7 @@ namespace GUI
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = business.xemTatCa();
+            dataGridView1.DataSource = business.load();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

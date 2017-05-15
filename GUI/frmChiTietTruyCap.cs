@@ -22,7 +22,7 @@ namespace GUI
             InitializeComponent();
             textBox1.Text = "Thông tin chi tiết truy cập của tài khoản " + TenTruyCap + "";
             textBox1.Enabled = false;
-            dataGridView1.DataSource = business.xemChiTietTruyCap(TenTruyCap);
+            // dataGridView1.DataSource = business.xemChiTietTruyCap(TenTruyCap);
 
         }
         private void textBox1_TextChanged(object sender, EventArgs e)

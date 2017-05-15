@@ -65,6 +65,7 @@
             // 
             // btChiTietTruyCap
             // 
+            this.btChiTietTruyCap.Enabled = false;
             this.btChiTietTruyCap.Location = new System.Drawing.Point(219, 124);
             this.btChiTietTruyCap.Name = "btChiTietTruyCap";
             this.btChiTietTruyCap.Size = new System.Drawing.Size(106, 41);

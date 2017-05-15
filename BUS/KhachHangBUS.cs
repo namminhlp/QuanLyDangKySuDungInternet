@@ -9,7 +9,7 @@ namespace BUS
     public class KhachHangBUS
     {
         QLDKSDIDataContext db = new QLDKSDIDataContext();
-        public List<KhachHang> xemTatCa()
+        public List<KhachHang> load()
         {
             return db.KhachHangs.ToList();
         }

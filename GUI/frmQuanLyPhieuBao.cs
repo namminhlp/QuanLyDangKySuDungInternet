@@ -7,14 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BUS;
 namespace GUI
 {
     public partial class frmQuanLyPhieuBao : Form
     {
+        PhieuBaoBUS business = new PhieuBaoBUS();
         public frmQuanLyPhieuBao()
         {
             InitializeComponent();
+            dataGridView1.DataSource = business.lapPhieuBaoTuDong();
         }
 
         private void frmQuanLyPhieuBao_Load(object sender, EventArgs e)
@@ -65,6 +67,11 @@ namespace GUI
         private void btThoat_Click(object sender, EventArgs e)
         {
             TroVeMain(this, new EventArgs());
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }

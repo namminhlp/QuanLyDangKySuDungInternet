@@ -152,6 +152,7 @@ namespace BUS
             lsTaiKhoan = query.Where(u => Convert.ToBoolean(u.TrangThai) == false ).ToList();
             return lsTaiKhoan;
         }
+        /*
         public List<ChiTiet_TruyCap> xemChiTietTruyCap (string TenTruyCap)
         {
             var query = from u in db.ChiTiet_TruyCaps
@@ -160,6 +161,7 @@ namespace BUS
             lsCTTC = query.Where(u => u.TenTruyCap.ToString() == TenTruyCap).ToList();
             return lsCTTC;
         } 
+        */
         
     }
 }

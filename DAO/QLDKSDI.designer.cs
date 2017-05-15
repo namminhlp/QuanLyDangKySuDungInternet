@@ -30,12 +30,12 @@ namespace DAO
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertChiTiet_TruyCap(ChiTiet_TruyCap instance);
-    partial void UpdateChiTiet_TruyCap(ChiTiet_TruyCap instance);
-    partial void DeleteChiTiet_TruyCap(ChiTiet_TruyCap instance);
     partial void InsertTaiKhoan(TaiKhoan instance);
     partial void UpdateTaiKhoan(TaiKhoan instance);
     partial void DeleteTaiKhoan(TaiKhoan instance);
+    partial void InsertChiTiet_TruyCap(ChiTiet_TruyCap instance);
+    partial void UpdateChiTiet_TruyCap(ChiTiet_TruyCap instance);
+    partial void DeleteChiTiet_TruyCap(ChiTiet_TruyCap instance);
     partial void InsertHopDong(HopDong instance);
     partial void UpdateHopDong(HopDong instance);
     partial void DeleteHopDong(HopDong instance);
@@ -83,19 +83,19 @@ namespace DAO
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<ChiTiet_TruyCap> ChiTiet_TruyCaps
-		{
-			get
-			{
-				return this.GetTable<ChiTiet_TruyCap>();
-			}
-		}
-		
 		public System.Data.Linq.Table<TaiKhoan> TaiKhoans
 		{
 			get
 			{
 				return this.GetTable<TaiKhoan>();
+			}
+		}
+		
+		public System.Data.Linq.Table<ChiTiet_TruyCap> ChiTiet_TruyCaps
+		{
+			get
+			{
+				return this.GetTable<ChiTiet_TruyCap>();
 			}
 		}
 		
@@ -140,222 +140,6 @@ namespace DAO
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ChiTiet_TruyCap")]
-	public partial class ChiTiet_TruyCap : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _MaLoai;
-		
-		private string _TenTruyCap;
-		
-		private System.Nullable<System.DateTime> _Ngay;
-		
-		private System.Nullable<int> _TongSoPhut;
-		
-		private EntityRef<TaiKhoan> _TaiKhoan;
-		
-		private EntityRef<LoaiTG_TruyCap> _LoaiTG_TruyCap;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaLoaiChanging(string value);
-    partial void OnMaLoaiChanged();
-    partial void OnTenTruyCapChanging(string value);
-    partial void OnTenTruyCapChanged();
-    partial void OnNgayChanging(System.Nullable<System.DateTime> value);
-    partial void OnNgayChanged();
-    partial void OnTongSoPhutChanging(System.Nullable<int> value);
-    partial void OnTongSoPhutChanged();
-    #endregion
-		
-		public ChiTiet_TruyCap()
-		{
-			this._TaiKhoan = default(EntityRef<TaiKhoan>);
-			this._LoaiTG_TruyCap = default(EntityRef<LoaiTG_TruyCap>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLoai", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string MaLoai
-		{
-			get
-			{
-				return this._MaLoai;
-			}
-			set
-			{
-				if ((this._MaLoai != value))
-				{
-					if (this._LoaiTG_TruyCap.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnMaLoaiChanging(value);
-					this.SendPropertyChanging();
-					this._MaLoai = value;
-					this.SendPropertyChanged("MaLoai");
-					this.OnMaLoaiChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenTruyCap", DbType="VarChar(15) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string TenTruyCap
-		{
-			get
-			{
-				return this._TenTruyCap;
-			}
-			set
-			{
-				if ((this._TenTruyCap != value))
-				{
-					if (this._TaiKhoan.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnTenTruyCapChanging(value);
-					this.SendPropertyChanging();
-					this._TenTruyCap = value;
-					this.SendPropertyChanged("TenTruyCap");
-					this.OnTenTruyCapChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ngay", DbType="SmallDateTime")]
-		public System.Nullable<System.DateTime> Ngay
-		{
-			get
-			{
-				return this._Ngay;
-			}
-			set
-			{
-				if ((this._Ngay != value))
-				{
-					this.OnNgayChanging(value);
-					this.SendPropertyChanging();
-					this._Ngay = value;
-					this.SendPropertyChanged("Ngay");
-					this.OnNgayChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongSoPhut", DbType="Int")]
-		public System.Nullable<int> TongSoPhut
-		{
-			get
-			{
-				return this._TongSoPhut;
-			}
-			set
-			{
-				if ((this._TongSoPhut != value))
-				{
-					this.OnTongSoPhutChanging(value);
-					this.SendPropertyChanging();
-					this._TongSoPhut = value;
-					this.SendPropertyChanged("TongSoPhut");
-					this.OnTongSoPhutChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TaiKhoan_ChiTiet_TruyCap", Storage="_TaiKhoan", ThisKey="TenTruyCap", OtherKey="TenTruyCap", IsForeignKey=true)]
-		public TaiKhoan TaiKhoan
-		{
-			get
-			{
-				return this._TaiKhoan.Entity;
-			}
-			set
-			{
-				TaiKhoan previousValue = this._TaiKhoan.Entity;
-				if (((previousValue != value) 
-							|| (this._TaiKhoan.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._TaiKhoan.Entity = null;
-						previousValue.ChiTiet_TruyCaps.Remove(this);
-					}
-					this._TaiKhoan.Entity = value;
-					if ((value != null))
-					{
-						value.ChiTiet_TruyCaps.Add(this);
-						this._TenTruyCap = value.TenTruyCap;
-					}
-					else
-					{
-						this._TenTruyCap = default(string);
-					}
-					this.SendPropertyChanged("TaiKhoan");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiTG_TruyCap_ChiTiet_TruyCap", Storage="_LoaiTG_TruyCap", ThisKey="MaLoai", OtherKey="MaLoai", IsForeignKey=true)]
-		public LoaiTG_TruyCap LoaiTG_TruyCap
-		{
-			get
-			{
-				return this._LoaiTG_TruyCap.Entity;
-			}
-			set
-			{
-				LoaiTG_TruyCap previousValue = this._LoaiTG_TruyCap.Entity;
-				if (((previousValue != value) 
-							|| (this._LoaiTG_TruyCap.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._LoaiTG_TruyCap.Entity = null;
-						previousValue.ChiTiet_TruyCaps.Remove(this);
-					}
-					this._LoaiTG_TruyCap.Entity = value;
-					if ((value != null))
-					{
-						value.ChiTiet_TruyCaps.Add(this);
-						this._MaLoai = value.MaLoai;
-					}
-					else
-					{
-						this._MaLoai = default(string);
-					}
-					this.SendPropertyChanged("LoaiTG_TruyCap");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TaiKhoan")]
 	public partial class TaiKhoan : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -375,8 +159,6 @@ namespace DAO
 		private string _DiaChiThanhToan;
 		
 		private System.Nullable<bool> _TrangThai;
-		
-		private EntitySet<ChiTiet_TruyCap> _ChiTiet_TruyCaps;
 		
 		private EntitySet<PhieuBao> _PhieuBaos;
 		
@@ -404,7 +186,6 @@ namespace DAO
 		
 		public TaiKhoan()
 		{
-			this._ChiTiet_TruyCaps = new EntitySet<ChiTiet_TruyCap>(new Action<ChiTiet_TruyCap>(this.attach_ChiTiet_TruyCaps), new Action<ChiTiet_TruyCap>(this.detach_ChiTiet_TruyCaps));
 			this._PhieuBaos = new EntitySet<PhieuBao>(new Action<PhieuBao>(this.attach_PhieuBaos), new Action<PhieuBao>(this.detach_PhieuBaos));
 			this._HopDong = default(EntityRef<HopDong>);
 			OnCreated();
@@ -554,19 +335,6 @@ namespace DAO
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TaiKhoan_ChiTiet_TruyCap", Storage="_ChiTiet_TruyCaps", ThisKey="TenTruyCap", OtherKey="TenTruyCap")]
-		public EntitySet<ChiTiet_TruyCap> ChiTiet_TruyCaps
-		{
-			get
-			{
-				return this._ChiTiet_TruyCaps;
-			}
-			set
-			{
-				this._ChiTiet_TruyCaps.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TaiKhoan_PhieuBao", Storage="_PhieuBaos", ThisKey="TenTruyCap", OtherKey="TenTruyCap")]
 		public EntitySet<PhieuBao> PhieuBaos
 		{
@@ -634,18 +402,6 @@ namespace DAO
 			}
 		}
 		
-		private void attach_ChiTiet_TruyCaps(ChiTiet_TruyCap entity)
-		{
-			this.SendPropertyChanging();
-			entity.TaiKhoan = this;
-		}
-		
-		private void detach_ChiTiet_TruyCaps(ChiTiet_TruyCap entity)
-		{
-			this.SendPropertyChanging();
-			entity.TaiKhoan = null;
-		}
-		
 		private void attach_PhieuBaos(PhieuBao entity)
 		{
 			this.SendPropertyChanging();
@@ -656,6 +412,246 @@ namespace DAO
 		{
 			this.SendPropertyChanging();
 			entity.TaiKhoan = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ChiTiet_TruyCap")]
+	public partial class ChiTiet_TruyCap : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MaCTTC;
+		
+		private string _MaLoai;
+		
+		private string _MaPhieu;
+		
+		private System.Nullable<System.DateTime> _Ngay;
+		
+		private System.Nullable<int> _TongSoPhut;
+		
+		private EntityRef<LoaiTG_TruyCap> _LoaiTG_TruyCap;
+		
+		private EntityRef<PhieuBao> _PhieuBao;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaCTTCChanging(string value);
+    partial void OnMaCTTCChanged();
+    partial void OnMaLoaiChanging(string value);
+    partial void OnMaLoaiChanged();
+    partial void OnMaPhieuChanging(string value);
+    partial void OnMaPhieuChanged();
+    partial void OnNgayChanging(System.Nullable<System.DateTime> value);
+    partial void OnNgayChanged();
+    partial void OnTongSoPhutChanging(System.Nullable<int> value);
+    partial void OnTongSoPhutChanged();
+    #endregion
+		
+		public ChiTiet_TruyCap()
+		{
+			this._LoaiTG_TruyCap = default(EntityRef<LoaiTG_TruyCap>);
+			this._PhieuBao = default(EntityRef<PhieuBao>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaCTTC", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MaCTTC
+		{
+			get
+			{
+				return this._MaCTTC;
+			}
+			set
+			{
+				if ((this._MaCTTC != value))
+				{
+					this.OnMaCTTCChanging(value);
+					this.SendPropertyChanging();
+					this._MaCTTC = value;
+					this.SendPropertyChanged("MaCTTC");
+					this.OnMaCTTCChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLoai", DbType="VarChar(10)")]
+		public string MaLoai
+		{
+			get
+			{
+				return this._MaLoai;
+			}
+			set
+			{
+				if ((this._MaLoai != value))
+				{
+					if (this._LoaiTG_TruyCap.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaLoaiChanging(value);
+					this.SendPropertyChanging();
+					this._MaLoai = value;
+					this.SendPropertyChanged("MaLoai");
+					this.OnMaLoaiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaPhieu", DbType="VarChar(10)")]
+		public string MaPhieu
+		{
+			get
+			{
+				return this._MaPhieu;
+			}
+			set
+			{
+				if ((this._MaPhieu != value))
+				{
+					if (this._PhieuBao.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMaPhieuChanging(value);
+					this.SendPropertyChanging();
+					this._MaPhieu = value;
+					this.SendPropertyChanged("MaPhieu");
+					this.OnMaPhieuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ngay", DbType="SmallDateTime")]
+		public System.Nullable<System.DateTime> Ngay
+		{
+			get
+			{
+				return this._Ngay;
+			}
+			set
+			{
+				if ((this._Ngay != value))
+				{
+					this.OnNgayChanging(value);
+					this.SendPropertyChanging();
+					this._Ngay = value;
+					this.SendPropertyChanged("Ngay");
+					this.OnNgayChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongSoPhut", DbType="Int")]
+		public System.Nullable<int> TongSoPhut
+		{
+			get
+			{
+				return this._TongSoPhut;
+			}
+			set
+			{
+				if ((this._TongSoPhut != value))
+				{
+					this.OnTongSoPhutChanging(value);
+					this.SendPropertyChanging();
+					this._TongSoPhut = value;
+					this.SendPropertyChanged("TongSoPhut");
+					this.OnTongSoPhutChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiTG_TruyCap_ChiTiet_TruyCap", Storage="_LoaiTG_TruyCap", ThisKey="MaLoai", OtherKey="MaLoai", IsForeignKey=true)]
+		public LoaiTG_TruyCap LoaiTG_TruyCap
+		{
+			get
+			{
+				return this._LoaiTG_TruyCap.Entity;
+			}
+			set
+			{
+				LoaiTG_TruyCap previousValue = this._LoaiTG_TruyCap.Entity;
+				if (((previousValue != value) 
+							|| (this._LoaiTG_TruyCap.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._LoaiTG_TruyCap.Entity = null;
+						previousValue.ChiTiet_TruyCaps.Remove(this);
+					}
+					this._LoaiTG_TruyCap.Entity = value;
+					if ((value != null))
+					{
+						value.ChiTiet_TruyCaps.Add(this);
+						this._MaLoai = value.MaLoai;
+					}
+					else
+					{
+						this._MaLoai = default(string);
+					}
+					this.SendPropertyChanged("LoaiTG_TruyCap");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PhieuBao_ChiTiet_TruyCap", Storage="_PhieuBao", ThisKey="MaPhieu", OtherKey="MaPhieu", IsForeignKey=true)]
+		public PhieuBao PhieuBao
+		{
+			get
+			{
+				return this._PhieuBao.Entity;
+			}
+			set
+			{
+				PhieuBao previousValue = this._PhieuBao.Entity;
+				if (((previousValue != value) 
+							|| (this._PhieuBao.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._PhieuBao.Entity = null;
+						previousValue.ChiTiet_TruyCaps.Remove(this);
+					}
+					this._PhieuBao.Entity = value;
+					if ((value != null))
+					{
+						value.ChiTiet_TruyCaps.Add(this);
+						this._MaPhieu = value.MaPhieu;
+					}
+					else
+					{
+						this._MaPhieu = default(string);
+					}
+					this.SendPropertyChanged("PhieuBao");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 	
@@ -1534,6 +1530,8 @@ namespace DAO
 		
 		private string _HinhThucTT;
 		
+		private EntitySet<ChiTiet_TruyCap> _ChiTiet_TruyCaps;
+		
 		private EntityRef<TaiKhoan> _TaiKhoan;
 		
     #region Extensibility Method Definitions
@@ -1560,6 +1558,7 @@ namespace DAO
 		
 		public PhieuBao()
 		{
+			this._ChiTiet_TruyCaps = new EntitySet<ChiTiet_TruyCap>(new Action<ChiTiet_TruyCap>(this.attach_ChiTiet_TruyCaps), new Action<ChiTiet_TruyCap>(this.detach_ChiTiet_TruyCaps));
 			this._TaiKhoan = default(EntityRef<TaiKhoan>);
 			OnCreated();
 		}
@@ -1728,6 +1727,19 @@ namespace DAO
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PhieuBao_ChiTiet_TruyCap", Storage="_ChiTiet_TruyCaps", ThisKey="MaPhieu", OtherKey="MaPhieu")]
+		public EntitySet<ChiTiet_TruyCap> ChiTiet_TruyCaps
+		{
+			get
+			{
+				return this._ChiTiet_TruyCaps;
+			}
+			set
+			{
+				this._ChiTiet_TruyCaps.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TaiKhoan_PhieuBao", Storage="_TaiKhoan", ThisKey="TenTruyCap", OtherKey="TenTruyCap", IsForeignKey=true)]
 		public TaiKhoan TaiKhoan
 		{
@@ -1780,6 +1792,18 @@ namespace DAO
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_ChiTiet_TruyCaps(ChiTiet_TruyCap entity)
+		{
+			this.SendPropertyChanging();
+			entity.PhieuBao = this;
+		}
+		
+		private void detach_ChiTiet_TruyCaps(ChiTiet_TruyCap entity)
+		{
+			this.SendPropertyChanging();
+			entity.PhieuBao = null;
 		}
 	}
 }
