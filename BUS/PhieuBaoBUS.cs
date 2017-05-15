@@ -42,31 +42,71 @@ namespace BUS
         }
         public void lapPhieuBaoTuDong()
         {
-            DateTime HienTai = DateTime.Now;
-            List<PhieuBao> lsPhieuBao = new List<PhieuBao>();
-            var queryTK = from u in db.TaiKhoans
-                          where Convert.ToBoolean(u.TrangThai) == true
-                          select u;
-            foreach (var x in queryTK)
-            {
-                var query = from u in db.PhieuBaos
-                            where x.TenTruyCap == u.TenTruyCap && Convert.ToInt32(u.ThangLap) == HienTai.Month
-                            select u;
-                if (!query.Any())
+                DateTime HienTai = DateTime.Now;
+                var queryTK = from u in db.TaiKhoans
+                              where Convert.ToBoolean(u.TrangThai) == true
+                              select u;
+                foreach (var x in queryTK)
                 {
-                    PhieuBao item = new PhieuBao();
-                    item.MaPhieu = sinhMaTuDong();
-                    item.TenTruyCap = x.TenTruyCap;
-                    item.NgayLap = HienTai;
-                    item.ThangLap = HienTai.Month.ToString();
-                    item.TinhTrang = Convert.ToBoolean(false);
-                    item.NgayTT = null;
-                    item.HinhThucTT = null;
-                    item.TongTien = null;
-                    db.PhieuBaos.InsertOnSubmit(item);
-                    db.SubmitChanges();
-                }
-             }
+                    var query = from u in db.PhieuBaos
+                                where x.TenTruyCap == u.TenTruyCap && Convert.ToInt32(u.ThangLap) == HienTai.Month
+                                select u;
+                    if (!query.Any())
+                    {
+                        PhieuBao item = new PhieuBao();
+                        item.MaPhieu = sinhMaTuDong();
+                        item.TenTruyCap = x.TenTruyCap;
+                        item.NgayLap = HienTai;
+                        item.ThangLap = HienTai.Month.ToString();
+                        item.TinhTrang = Convert.ToBoolean(false);
+                        item.NgayTT = null;
+                        item.HinhThucTT = null;
+                        item.TongTien = 0;
+                        db.PhieuBaos.InsertOnSubmit(item);
+                        db.SubmitChanges();
+                    }
+                 }
+            
         }
-    }
+        public void tinhCuocPhiTuDong()
+        {
+
+            DateTime HienTai = DateTime.Now;
+            if (HienTai.Day == 15)
+            {
+                var queryPB = from u in db.PhieuBaos
+                              where Convert.ToDateTime(u.NgayLap).Month == (HienTai.Month -1) &&
+                                      Convert.ToDateTime(u.NgayLap).Year == HienTai.Year
+                              select u;
+                foreach (var x in queryPB)
+                {
+                    var queryChiTiet = from u in db.ChiTiet_TruyCaps
+                                       group u by new
+                                       {
+                                           u.MaPhieu,
+                                           u.MaLoai
+                                       } into grp
+                                       where grp.Key.MaPhieu == x.MaPhieu
+                                       select new
+                                       {
+                                           MaPhieu = grp.Key.MaPhieu,
+                                           MaLoai = grp.Key.MaLoai,
+                                           TongSoPhut = grp.Sum(g => g.TongSoPhut)
+                                       };
+                    foreach (var y in queryChiTiet)
+                    {
+                        LoaiTG_TruyCap loai = new LoaiTG_TruyCap();
+                        var queryLoaiTG = from u in db.LoaiTG_TruyCaps
+                                          where u.MaLoai == y.MaLoai
+                                          select u;
+                        if (queryLoaiTG.Any()) loai = queryLoaiTG.FirstOrDefault();
+                        x.TongTien += (y.TongSoPhut * loai.Gia);
+                        x.NgayLap = DateTime.Now;
+                        db.SubmitChanges();
+                    }
+                                                     
+                 }
+            }
+        }
+      }
 }

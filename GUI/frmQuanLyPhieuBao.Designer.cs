@@ -37,26 +37,27 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnXem = new System.Windows.Forms.Button();
             this.btnTiepNhan = new System.Windows.Forms.Button();
-            this.txtDCTT = new System.Windows.Forms.TextBox();
+            this.txtThangLap = new System.Windows.Forms.TextBox();
             this.lbThangLap = new System.Windows.Forms.Label();
-            this.txtDCCD = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtTinhTrang = new System.Windows.Forms.TextBox();
+            this.txtNgayLap = new System.Windows.Forms.TextBox();
             this.lbTinhTrang = new System.Windows.Forms.Label();
             this.lbNgayLap = new System.Windows.Forms.Label();
-            this.txtMatKhauTTC = new System.Windows.Forms.TextBox();
             this.txtTenTruyCap = new System.Windows.Forms.TextBox();
+            this.txtMaPhieuBao = new System.Windows.Forms.TextBox();
             this.lbTenTruyCap = new System.Windows.Forms.Label();
             this.lbMaPhieuBao = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textTongTien = new System.Windows.Forms.TextBox();
             this.lbTongTienTT = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textHinhThucTT = new System.Windows.Forms.TextBox();
             this.lbHinhThucTT = new System.Windows.Forms.Label();
             this.btXacNhanThanhToan = new System.Windows.Forms.Button();
             this.phieuBaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.maPhieuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenTruyCapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thangLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tinhTrangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tongTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayTTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,8 +91,8 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maPhieuDataGridViewTextBoxColumn,
             this.tenTruyCapDataGridViewTextBoxColumn,
-            this.ngayLapDataGridViewTextBoxColumn,
             this.thangLapDataGridViewTextBoxColumn,
+            this.ngayLapDataGridViewTextBoxColumn,
             this.tinhTrangDataGridViewTextBoxColumn,
             this.tongTienDataGridViewTextBoxColumn,
             this.ngayTTDataGridViewTextBoxColumn,
@@ -151,13 +152,13 @@
             this.btnTiepNhan.UseVisualStyleBackColor = true;
             this.btnTiepNhan.Click += new System.EventHandler(this.btnTiepNhan_Click);
             // 
-            // txtDCTT
+            // txtThangLap
             // 
-            this.txtDCTT.Location = new System.Drawing.Point(317, 47);
-            this.txtDCTT.Name = "txtDCTT";
-            this.txtDCTT.Size = new System.Drawing.Size(135, 20);
-            this.txtDCTT.TabIndex = 34;
-            this.txtDCTT.TextChanged += new System.EventHandler(this.txtDCTT_TextChanged);
+            this.txtThangLap.Location = new System.Drawing.Point(317, 47);
+            this.txtThangLap.Name = "txtThangLap";
+            this.txtThangLap.Size = new System.Drawing.Size(135, 20);
+            this.txtThangLap.TabIndex = 34;
+            this.txtThangLap.TextChanged += new System.EventHandler(this.txtDCTT_TextChanged);
             // 
             // lbThangLap
             // 
@@ -169,21 +170,21 @@
             this.lbThangLap.Text = "Tháng lập";
             this.lbThangLap.Click += new System.EventHandler(this.label7_Click);
             // 
-            // txtDCCD
+            // txtTinhTrang
             // 
-            this.txtDCCD.Location = new System.Drawing.Point(590, 17);
-            this.txtDCCD.Name = "txtDCCD";
-            this.txtDCCD.Size = new System.Drawing.Size(135, 20);
-            this.txtDCCD.TabIndex = 32;
-            this.txtDCCD.TextChanged += new System.EventHandler(this.txtDCCD_TextChanged);
+            this.txtTinhTrang.Location = new System.Drawing.Point(590, 17);
+            this.txtTinhTrang.Name = "txtTinhTrang";
+            this.txtTinhTrang.Size = new System.Drawing.Size(135, 20);
+            this.txtTinhTrang.TabIndex = 32;
+            this.txtTinhTrang.TextChanged += new System.EventHandler(this.txtDCCD_TextChanged);
             // 
-            // txtEmail
+            // txtNgayLap
             // 
-            this.txtEmail.Location = new System.Drawing.Point(317, 16);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(135, 20);
-            this.txtEmail.TabIndex = 30;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            this.txtNgayLap.Location = new System.Drawing.Point(317, 16);
+            this.txtNgayLap.Name = "txtNgayLap";
+            this.txtNgayLap.Size = new System.Drawing.Size(135, 20);
+            this.txtNgayLap.TabIndex = 30;
+            this.txtNgayLap.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // lbTinhTrang
             // 
@@ -205,20 +206,20 @@
             this.lbNgayLap.Text = "Ngày lập";
             this.lbNgayLap.Click += new System.EventHandler(this.label4_Click);
             // 
-            // txtMatKhauTTC
-            // 
-            this.txtMatKhauTTC.Location = new System.Drawing.Point(96, 47);
-            this.txtMatKhauTTC.Name = "txtMatKhauTTC";
-            this.txtMatKhauTTC.Size = new System.Drawing.Size(128, 20);
-            this.txtMatKhauTTC.TabIndex = 28;
-            this.txtMatKhauTTC.UseSystemPasswordChar = true;
-            // 
             // txtTenTruyCap
             // 
-            this.txtTenTruyCap.Location = new System.Drawing.Point(96, 14);
+            this.txtTenTruyCap.Location = new System.Drawing.Point(96, 47);
             this.txtTenTruyCap.Name = "txtTenTruyCap";
             this.txtTenTruyCap.Size = new System.Drawing.Size(128, 20);
-            this.txtTenTruyCap.TabIndex = 25;
+            this.txtTenTruyCap.TabIndex = 28;
+            this.txtTenTruyCap.UseSystemPasswordChar = true;
+            // 
+            // txtMaPhieuBao
+            // 
+            this.txtMaPhieuBao.Location = new System.Drawing.Point(96, 14);
+            this.txtMaPhieuBao.Name = "txtMaPhieuBao";
+            this.txtMaPhieuBao.Size = new System.Drawing.Size(128, 20);
+            this.txtMaPhieuBao.TabIndex = 25;
             // 
             // lbTenTruyCap
             // 
@@ -238,12 +239,12 @@
             this.lbMaPhieuBao.TabIndex = 24;
             this.lbMaPhieuBao.Text = "Mã phiếu báo";
             // 
-            // textBox1
+            // textTongTien
             // 
-            this.textBox1.Location = new System.Drawing.Point(590, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 20);
-            this.textBox1.TabIndex = 50;
+            this.textTongTien.Location = new System.Drawing.Point(590, 47);
+            this.textTongTien.Name = "textTongTien";
+            this.textTongTien.Size = new System.Drawing.Size(135, 20);
+            this.textTongTien.TabIndex = 50;
             // 
             // lbTongTienTT
             // 
@@ -254,12 +255,12 @@
             this.lbTongTienTT.TabIndex = 51;
             this.lbTongTienTT.Text = "Tổng tiền thanh toán";
             // 
-            // textBox2
+            // textHinhThucTT
             // 
-            this.textBox2.Location = new System.Drawing.Point(590, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 20);
-            this.textBox2.TabIndex = 48;
+            this.textHinhThucTT.Location = new System.Drawing.Point(590, 81);
+            this.textHinhThucTT.Name = "textHinhThucTT";
+            this.textHinhThucTT.Size = new System.Drawing.Size(135, 20);
+            this.textHinhThucTT.TabIndex = 48;
             // 
             // lbHinhThucTT
             // 
@@ -283,6 +284,16 @@
             // 
             this.phieuBaoBindingSource.DataSource = typeof(DAO.PhieuBao);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(493, 113);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 41);
+            this.button1.TabIndex = 53;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // maPhieuDataGridViewTextBoxColumn
             // 
             this.maPhieuDataGridViewTextBoxColumn.DataPropertyName = "MaPhieu";
@@ -295,12 +306,6 @@
             this.tenTruyCapDataGridViewTextBoxColumn.HeaderText = "Tên truy cập";
             this.tenTruyCapDataGridViewTextBoxColumn.Name = "tenTruyCapDataGridViewTextBoxColumn";
             // 
-            // ngayLapDataGridViewTextBoxColumn
-            // 
-            this.ngayLapDataGridViewTextBoxColumn.DataPropertyName = "NgayLap";
-            this.ngayLapDataGridViewTextBoxColumn.HeaderText = "Ngày lập";
-            this.ngayLapDataGridViewTextBoxColumn.Name = "ngayLapDataGridViewTextBoxColumn";
-            // 
             // thangLapDataGridViewTextBoxColumn
             // 
             this.thangLapDataGridViewTextBoxColumn.DataPropertyName = "ThangLap";
@@ -308,6 +313,12 @@
             this.thangLapDataGridViewTextBoxColumn.HeaderText = "Tháng lập";
             this.thangLapDataGridViewTextBoxColumn.Name = "thangLapDataGridViewTextBoxColumn";
             this.thangLapDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // ngayLapDataGridViewTextBoxColumn
+            // 
+            this.ngayLapDataGridViewTextBoxColumn.DataPropertyName = "NgayLap";
+            this.ngayLapDataGridViewTextBoxColumn.HeaderText = "Ngày lập";
+            this.ngayLapDataGridViewTextBoxColumn.Name = "ngayLapDataGridViewTextBoxColumn";
             // 
             // tinhTrangDataGridViewTextBoxColumn
             // 
@@ -342,10 +353,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 561);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btXacNhanThanhToan);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textTongTien);
             this.Controls.Add(this.lbTongTienTT);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textHinhThucTT);
             this.Controls.Add(this.lbHinhThucTT);
             this.Controls.Add(this.btXuatPhieuBao);
             this.Controls.Add(this.btDongPhiTre);
@@ -355,14 +367,14 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnXem);
             this.Controls.Add(this.btnTiepNhan);
-            this.Controls.Add(this.txtDCTT);
+            this.Controls.Add(this.txtThangLap);
             this.Controls.Add(this.lbThangLap);
-            this.Controls.Add(this.txtDCCD);
-            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtTinhTrang);
+            this.Controls.Add(this.txtNgayLap);
             this.Controls.Add(this.lbTinhTrang);
             this.Controls.Add(this.lbNgayLap);
-            this.Controls.Add(this.txtMatKhauTTC);
             this.Controls.Add(this.txtTenTruyCap);
+            this.Controls.Add(this.txtMaPhieuBao);
             this.Controls.Add(this.lbTenTruyCap);
             this.Controls.Add(this.lbMaPhieuBao);
             this.Name = "frmQuanLyPhieuBao";
@@ -385,29 +397,30 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnXem;
         private System.Windows.Forms.Button btnTiepNhan;
-        private System.Windows.Forms.TextBox txtDCTT;
+        private System.Windows.Forms.TextBox txtThangLap;
         private System.Windows.Forms.Label lbThangLap;
-        private System.Windows.Forms.TextBox txtDCCD;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtTinhTrang;
+        private System.Windows.Forms.TextBox txtNgayLap;
         private System.Windows.Forms.Label lbTinhTrang;
         private System.Windows.Forms.Label lbNgayLap;
-        private System.Windows.Forms.TextBox txtMatKhauTTC;
         private System.Windows.Forms.TextBox txtTenTruyCap;
+        private System.Windows.Forms.TextBox txtMaPhieuBao;
         private System.Windows.Forms.Label lbTenTruyCap;
         private System.Windows.Forms.Label lbMaPhieuBao;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textTongTien;
         private System.Windows.Forms.Label lbTongTienTT;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textHinhThucTT;
         private System.Windows.Forms.Label lbHinhThucTT;
         private System.Windows.Forms.Button btXacNhanThanhToan;
+        private System.Windows.Forms.BindingSource phieuBaoBindingSource;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn maPhieuDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenTruyCapDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngayLapDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn thangLapDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayLapDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tinhTrangDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tongTienDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayTTDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hinhThucTTDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource phieuBaoBindingSource;
     }
 }

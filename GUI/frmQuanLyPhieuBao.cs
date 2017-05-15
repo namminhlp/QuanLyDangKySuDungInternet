@@ -17,7 +17,9 @@ namespace GUI
         {
             InitializeComponent();
             business.lapPhieuBaoTuDong();
+            business.tinhCuocPhiTuDong();
             dataGridView1.DataSource = business.load();
+            button1.Enabled = false;
         }
 
         private void frmQuanLyPhieuBao_Load(object sender, EventArgs e)
@@ -72,7 +74,22 @@ namespace GUI
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            try
+            {
+                txtMaPhieuBao.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                button1.Enabled = true;
+            }
+            catch(Exception)
+            {
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmTest test = new frmTest(txtMaPhieuBao.Text);
+            test.Show();
+           
         }
     }
 }

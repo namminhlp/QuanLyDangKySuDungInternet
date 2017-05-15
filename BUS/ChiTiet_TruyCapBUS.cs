@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using DAO;
 namespace BUS
 {
-    class ChiTiet_TruyCapBUS
+   public class ChiTiet_TruyCapBUS
     {
+        QLDKSDIDataContext db = new QLDKSDIDataContext();
         public string sinhMaTuDong()
         {
             var q = (from u in db.PhieuBaos
@@ -34,6 +35,10 @@ namespace BUS
                     return "CT" + i.ToString();
             }
 
+        }
+        public List<ChiTiet_TruyCap> load()
+        {
+            return db.ChiTiet_TruyCaps.ToList();
         }
 
     }
