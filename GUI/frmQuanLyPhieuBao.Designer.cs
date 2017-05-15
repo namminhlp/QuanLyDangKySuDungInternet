@@ -32,6 +32,15 @@
             this.btXuatPhieuBao = new System.Windows.Forms.Button();
             this.btDongPhiTre = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.maPhieuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenTruyCapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thangLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tinhTrangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayTTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hinhThucTTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phieuBaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btThoat = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -47,28 +56,21 @@
             this.txtMaPhieuBao = new System.Windows.Forms.TextBox();
             this.lbTenTruyCap = new System.Windows.Forms.Label();
             this.lbMaPhieuBao = new System.Windows.Forms.Label();
-            this.textTongTien = new System.Windows.Forms.TextBox();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.lbTongTienTT = new System.Windows.Forms.Label();
-            this.textHinhThucTT = new System.Windows.Forms.TextBox();
+            this.txtHinhThucTT = new System.Windows.Forms.TextBox();
             this.lbHinhThucTT = new System.Windows.Forms.Label();
             this.btXacNhanThanhToan = new System.Windows.Forms.Button();
-            this.phieuBaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button1 = new System.Windows.Forms.Button();
-            this.maPhieuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenTruyCapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thangLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tinhTrangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayTTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hinhThucTTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNgayTT = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phieuBaoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btXuatPhieuBao
             // 
-            this.btXuatPhieuBao.Location = new System.Drawing.Point(232, 113);
+            this.btXuatPhieuBao.Location = new System.Drawing.Point(224, 113);
             this.btXuatPhieuBao.Name = "btXuatPhieuBao";
             this.btXuatPhieuBao.Size = new System.Drawing.Size(105, 41);
             this.btXuatPhieuBao.TabIndex = 45;
@@ -83,6 +85,7 @@
             this.btDongPhiTre.TabIndex = 44;
             this.btDongPhiTre.Text = "Danh sách đóng phí trễ";
             this.btDongPhiTre.UseVisualStyleBackColor = true;
+            this.btDongPhiTre.Click += new System.EventHandler(this.btDongPhiTre_Click);
             // 
             // dataGridView1
             // 
@@ -103,6 +106,65 @@
             this.dataGridView1.Size = new System.Drawing.Size(809, 366);
             this.dataGridView1.TabIndex = 42;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.Leave += new System.EventHandler(this.dataGridView1_Leave);
+            // 
+            // maPhieuDataGridViewTextBoxColumn
+            // 
+            this.maPhieuDataGridViewTextBoxColumn.DataPropertyName = "MaPhieu";
+            this.maPhieuDataGridViewTextBoxColumn.HeaderText = "Mã phiếu";
+            this.maPhieuDataGridViewTextBoxColumn.Name = "maPhieuDataGridViewTextBoxColumn";
+            // 
+            // tenTruyCapDataGridViewTextBoxColumn
+            // 
+            this.tenTruyCapDataGridViewTextBoxColumn.DataPropertyName = "TenTruyCap";
+            this.tenTruyCapDataGridViewTextBoxColumn.HeaderText = "Tên truy cập";
+            this.tenTruyCapDataGridViewTextBoxColumn.Name = "tenTruyCapDataGridViewTextBoxColumn";
+            // 
+            // thangLapDataGridViewTextBoxColumn
+            // 
+            this.thangLapDataGridViewTextBoxColumn.DataPropertyName = "ThangLap";
+            this.thangLapDataGridViewTextBoxColumn.FillWeight = 75F;
+            this.thangLapDataGridViewTextBoxColumn.HeaderText = "Tháng lập";
+            this.thangLapDataGridViewTextBoxColumn.Name = "thangLapDataGridViewTextBoxColumn";
+            this.thangLapDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // ngayLapDataGridViewTextBoxColumn
+            // 
+            this.ngayLapDataGridViewTextBoxColumn.DataPropertyName = "NgayLap";
+            this.ngayLapDataGridViewTextBoxColumn.HeaderText = "Ngày lập";
+            this.ngayLapDataGridViewTextBoxColumn.Name = "ngayLapDataGridViewTextBoxColumn";
+            // 
+            // tinhTrangDataGridViewTextBoxColumn
+            // 
+            this.tinhTrangDataGridViewTextBoxColumn.DataPropertyName = "TinhTrang";
+            this.tinhTrangDataGridViewTextBoxColumn.FillWeight = 75F;
+            this.tinhTrangDataGridViewTextBoxColumn.HeaderText = "Tình trạng";
+            this.tinhTrangDataGridViewTextBoxColumn.Name = "tinhTrangDataGridViewTextBoxColumn";
+            this.tinhTrangDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // tongTienDataGridViewTextBoxColumn
+            // 
+            this.tongTienDataGridViewTextBoxColumn.DataPropertyName = "TongTien";
+            this.tongTienDataGridViewTextBoxColumn.HeaderText = "Tổng tiền";
+            this.tongTienDataGridViewTextBoxColumn.Name = "tongTienDataGridViewTextBoxColumn";
+            // 
+            // ngayTTDataGridViewTextBoxColumn
+            // 
+            this.ngayTTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ngayTTDataGridViewTextBoxColumn.DataPropertyName = "NgayTT";
+            this.ngayTTDataGridViewTextBoxColumn.HeaderText = "Ngày TT";
+            this.ngayTTDataGridViewTextBoxColumn.Name = "ngayTTDataGridViewTextBoxColumn";
+            // 
+            // hinhThucTTDataGridViewTextBoxColumn
+            // 
+            this.hinhThucTTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.hinhThucTTDataGridViewTextBoxColumn.DataPropertyName = "HinhThucTT";
+            this.hinhThucTTDataGridViewTextBoxColumn.HeaderText = "Hình thức TT";
+            this.hinhThucTTDataGridViewTextBoxColumn.Name = "hinhThucTTDataGridViewTextBoxColumn";
+            // 
+            // phieuBaoBindingSource
+            // 
+            this.phieuBaoBindingSource.DataSource = typeof(DAO.PhieuBao);
             // 
             // btThoat
             // 
@@ -172,7 +234,7 @@
             // 
             // txtTinhTrang
             // 
-            this.txtTinhTrang.Location = new System.Drawing.Point(590, 17);
+            this.txtTinhTrang.Location = new System.Drawing.Point(317, 77);
             this.txtTinhTrang.Name = "txtTinhTrang";
             this.txtTinhTrang.Size = new System.Drawing.Size(135, 20);
             this.txtTinhTrang.TabIndex = 32;
@@ -189,11 +251,11 @@
             // lbTinhTrang
             // 
             this.lbTinhTrang.AutoSize = true;
-            this.lbTinhTrang.Location = new System.Drawing.Point(476, 20);
+            this.lbTinhTrang.Location = new System.Drawing.Point(244, 84);
             this.lbTinhTrang.Name = "lbTinhTrang";
-            this.lbTinhTrang.Size = new System.Drawing.Size(109, 13);
+            this.lbTinhTrang.Size = new System.Drawing.Size(55, 13);
             this.lbTinhTrang.TabIndex = 33;
-            this.lbTinhTrang.Text = "Tình trạng thanh toán";
+            this.lbTinhTrang.Text = "Tình trạng";
             this.lbTinhTrang.Click += new System.EventHandler(this.label6_Click);
             // 
             // lbNgayLap
@@ -239,12 +301,12 @@
             this.lbMaPhieuBao.TabIndex = 24;
             this.lbMaPhieuBao.Text = "Mã phiếu báo";
             // 
-            // textTongTien
+            // txtTongTien
             // 
-            this.textTongTien.Location = new System.Drawing.Point(590, 47);
-            this.textTongTien.Name = "textTongTien";
-            this.textTongTien.Size = new System.Drawing.Size(135, 20);
-            this.textTongTien.TabIndex = 50;
+            this.txtTongTien.Location = new System.Drawing.Point(590, 47);
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.Size = new System.Drawing.Size(135, 20);
+            this.txtTongTien.TabIndex = 50;
             // 
             // lbTongTienTT
             // 
@@ -255,12 +317,12 @@
             this.lbTongTienTT.TabIndex = 51;
             this.lbTongTienTT.Text = "Tổng tiền thanh toán";
             // 
-            // textHinhThucTT
+            // txtHinhThucTT
             // 
-            this.textHinhThucTT.Location = new System.Drawing.Point(590, 81);
-            this.textHinhThucTT.Name = "textHinhThucTT";
-            this.textHinhThucTT.Size = new System.Drawing.Size(135, 20);
-            this.textHinhThucTT.TabIndex = 48;
+            this.txtHinhThucTT.Location = new System.Drawing.Point(590, 81);
+            this.txtHinhThucTT.Name = "txtHinhThucTT";
+            this.txtHinhThucTT.Size = new System.Drawing.Size(135, 20);
+            this.txtHinhThucTT.TabIndex = 48;
             // 
             // lbHinhThucTT
             // 
@@ -273,16 +335,13 @@
             // 
             // btXacNhanThanhToan
             // 
-            this.btXacNhanThanhToan.Location = new System.Drawing.Point(367, 113);
+            this.btXacNhanThanhToan.Location = new System.Drawing.Point(357, 113);
             this.btXacNhanThanhToan.Name = "btXacNhanThanhToan";
             this.btXacNhanThanhToan.Size = new System.Drawing.Size(105, 41);
             this.btXacNhanThanhToan.TabIndex = 52;
             this.btXacNhanThanhToan.Text = "Xác nhận thanh toán";
             this.btXacNhanThanhToan.UseVisualStyleBackColor = true;
-            // 
-            // phieuBaoBindingSource
-            // 
-            this.phieuBaoBindingSource.DataSource = typeof(DAO.PhieuBao);
+            this.btXacNhanThanhToan.Click += new System.EventHandler(this.btXacNhanThanhToan_Click);
             // 
             // button1
             // 
@@ -294,70 +353,34 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // maPhieuDataGridViewTextBoxColumn
+            // txtNgayTT
             // 
-            this.maPhieuDataGridViewTextBoxColumn.DataPropertyName = "MaPhieu";
-            this.maPhieuDataGridViewTextBoxColumn.HeaderText = "Mã phiếu";
-            this.maPhieuDataGridViewTextBoxColumn.Name = "maPhieuDataGridViewTextBoxColumn";
+            this.txtNgayTT.Location = new System.Drawing.Point(590, 15);
+            this.txtNgayTT.Name = "txtNgayTT";
+            this.txtNgayTT.Size = new System.Drawing.Size(135, 20);
+            this.txtNgayTT.TabIndex = 54;
             // 
-            // tenTruyCapDataGridViewTextBoxColumn
+            // label1
             // 
-            this.tenTruyCapDataGridViewTextBoxColumn.DataPropertyName = "TenTruyCap";
-            this.tenTruyCapDataGridViewTextBoxColumn.HeaderText = "Tên truy cập";
-            this.tenTruyCapDataGridViewTextBoxColumn.Name = "tenTruyCapDataGridViewTextBoxColumn";
-            // 
-            // thangLapDataGridViewTextBoxColumn
-            // 
-            this.thangLapDataGridViewTextBoxColumn.DataPropertyName = "ThangLap";
-            this.thangLapDataGridViewTextBoxColumn.FillWeight = 75F;
-            this.thangLapDataGridViewTextBoxColumn.HeaderText = "Tháng lập";
-            this.thangLapDataGridViewTextBoxColumn.Name = "thangLapDataGridViewTextBoxColumn";
-            this.thangLapDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // ngayLapDataGridViewTextBoxColumn
-            // 
-            this.ngayLapDataGridViewTextBoxColumn.DataPropertyName = "NgayLap";
-            this.ngayLapDataGridViewTextBoxColumn.HeaderText = "Ngày lập";
-            this.ngayLapDataGridViewTextBoxColumn.Name = "ngayLapDataGridViewTextBoxColumn";
-            // 
-            // tinhTrangDataGridViewTextBoxColumn
-            // 
-            this.tinhTrangDataGridViewTextBoxColumn.DataPropertyName = "TinhTrang";
-            this.tinhTrangDataGridViewTextBoxColumn.FillWeight = 75F;
-            this.tinhTrangDataGridViewTextBoxColumn.HeaderText = "Tình trạng";
-            this.tinhTrangDataGridViewTextBoxColumn.Name = "tinhTrangDataGridViewTextBoxColumn";
-            this.tinhTrangDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // tongTienDataGridViewTextBoxColumn
-            // 
-            this.tongTienDataGridViewTextBoxColumn.DataPropertyName = "TongTien";
-            this.tongTienDataGridViewTextBoxColumn.HeaderText = "Tổng tiền";
-            this.tongTienDataGridViewTextBoxColumn.Name = "tongTienDataGridViewTextBoxColumn";
-            // 
-            // ngayTTDataGridViewTextBoxColumn
-            // 
-            this.ngayTTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ngayTTDataGridViewTextBoxColumn.DataPropertyName = "NgayTT";
-            this.ngayTTDataGridViewTextBoxColumn.HeaderText = "Ngày TT";
-            this.ngayTTDataGridViewTextBoxColumn.Name = "ngayTTDataGridViewTextBoxColumn";
-            // 
-            // hinhThucTTDataGridViewTextBoxColumn
-            // 
-            this.hinhThucTTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.hinhThucTTDataGridViewTextBoxColumn.DataPropertyName = "HinhThucTT";
-            this.hinhThucTTDataGridViewTextBoxColumn.HeaderText = "Hình thức TT";
-            this.hinhThucTTDataGridViewTextBoxColumn.Name = "hinhThucTTDataGridViewTextBoxColumn";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(476, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 13);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Ngày thanh toán";
             // 
             // frmQuanLyPhieuBao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 561);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtNgayTT);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btXacNhanThanhToan);
-            this.Controls.Add(this.textTongTien);
+            this.Controls.Add(this.txtTongTien);
             this.Controls.Add(this.lbTongTienTT);
-            this.Controls.Add(this.textHinhThucTT);
+            this.Controls.Add(this.txtHinhThucTT);
             this.Controls.Add(this.lbHinhThucTT);
             this.Controls.Add(this.btXuatPhieuBao);
             this.Controls.Add(this.btDongPhiTre);
@@ -407,9 +430,9 @@
         private System.Windows.Forms.TextBox txtMaPhieuBao;
         private System.Windows.Forms.Label lbTenTruyCap;
         private System.Windows.Forms.Label lbMaPhieuBao;
-        private System.Windows.Forms.TextBox textTongTien;
+        private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Label lbTongTienTT;
-        private System.Windows.Forms.TextBox textHinhThucTT;
+        private System.Windows.Forms.TextBox txtHinhThucTT;
         private System.Windows.Forms.Label lbHinhThucTT;
         private System.Windows.Forms.Button btXacNhanThanhToan;
         private System.Windows.Forms.BindingSource phieuBaoBindingSource;
@@ -422,5 +445,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tongTienDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayTTDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hinhThucTTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtNgayTT;
+        private System.Windows.Forms.Label label1;
     }
 }

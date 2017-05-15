@@ -286,7 +286,7 @@
             // 
             // btTaoTaiKhoan
             // 
-            this.btTaoTaiKhoan.Location = new System.Drawing.Point(206, 117);
+            this.btTaoTaiKhoan.Location = new System.Drawing.Point(248, 117);
             this.btTaoTaiKhoan.Name = "btTaoTaiKhoan";
             this.btTaoTaiKhoan.Size = new System.Drawing.Size(100, 39);
             this.btTaoTaiKhoan.TabIndex = 10;

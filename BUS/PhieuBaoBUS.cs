@@ -59,7 +59,7 @@ namespace BUS
                         item.NgayLap = HienTai;
                         item.ThangLap = HienTai.Month.ToString();
                         item.TinhTrang = Convert.ToBoolean(false);
-                        item.NgayTT = null;
+                        item.NgayTT = DateTime.MinValue;
                         item.HinhThucTT = null;
                         item.TongTien = 0;
                         db.PhieuBaos.InsertOnSubmit(item);
@@ -72,7 +72,7 @@ namespace BUS
         {
 
             DateTime HienTai = DateTime.Now;
-            if (HienTai.Day == 15)
+            if (HienTai.Day == 1)
             {
                 var queryPB = from u in db.PhieuBaos
                               where Convert.ToDateTime(u.NgayLap).Month == (HienTai.Month -1) &&
@@ -107,6 +107,60 @@ namespace BUS
                                                      
                  }
             }
+        }
+        public void dinhChiTruyCap()
+        {
+            DateTime HienTai = DateTime.Now;
+            if (HienTai.Day == 1)
+            {
+                var queryPB = from u in db.PhieuBaos
+                              select u;
+                foreach (var x in queryPB)
+                {
+                    if (Convert.ToDateTime(x.NgayLap).Year == HienTai.Year && 
+                        Convert.ToInt32(x.ThangLap) == (HienTai.Month -2)
+                        && Convert.ToBoolean(x.TinhTrang) == false)
+                    {
+                        var queryTK = from v in db.TaiKhoans
+                                      where x.TenTruyCap == v.TenTruyCap
+                                      select v;
+                        foreach(var y in queryTK)
+                        {
+                            y.TrangThai = false;
+                            db.SubmitChanges();
+                        }
+                    }
+            }
+            }
+            
+        }
+        public List<PhieuBao> dongPhiTre()
+        {
+            DateTime HienTai = DateTime.Now;
+            List<PhieuBao> ls = new List<PhieuBao>();
+            var query = from u in db.PhieuBaos
+                        where ((HienTai.Month - Convert.ToDateTime(u.NgayLap).Month >= 2)
+                            && (Convert.ToDateTime(u.NgayLap).Year == HienTai.Year)
+                            && (Convert.ToBoolean(u.TinhTrang) == false))
+                        select u;
+            ls = query.ToList();
+            return ls;
+
+        }
+        public bool xacNhanThanhToan(string MaPhieu, bool TinhTrang, string HinhThucTT)
+        {
+                var query = from u in db.PhieuBaos
+                            where u.MaPhieu == MaPhieu
+                            select u;
+                foreach (var y in query)
+                {
+                    y.HinhThucTT = HinhThucTT;
+                y.TinhTrang = Convert.ToBoolean(TinhTrang);
+                    y.NgayTT = DateTime.Now;
+                    db.SubmitChanges();
+                return true;
+                }
+            return false;
         }
       }
 }

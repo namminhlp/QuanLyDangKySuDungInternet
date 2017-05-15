@@ -38,7 +38,7 @@ namespace GUI
         {
             if (txtTaiKhoan.Text.Length == 0 && txtMatKhau.Text.Length == 0)
             {
-                MessageBox.Show("Nhập đàng hoàng coi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Tài khoản mật khẩu không được trống !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -55,7 +55,7 @@ namespace GUI
                     }
                     else
                     {
-                        MessageBox.Show("Xạo chó", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Tài khoản hay mật khẩu sai", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
@@ -68,7 +68,7 @@ namespace GUI
                     }
                     else
                     {
-                        MessageBox.Show("Xạo chó", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Tài khoản hay mật khẩu sai", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                
