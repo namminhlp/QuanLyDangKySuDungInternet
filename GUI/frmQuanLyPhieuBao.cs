@@ -16,7 +16,8 @@ namespace GUI
         public frmQuanLyPhieuBao()
         {
             InitializeComponent();
-            dataGridView1.DataSource = business.lapPhieuBaoTuDong();
+            business.lapPhieuBaoTuDong();
+            dataGridView1.DataSource = business.load();
         }
 
         private void frmQuanLyPhieuBao_Load(object sender, EventArgs e)

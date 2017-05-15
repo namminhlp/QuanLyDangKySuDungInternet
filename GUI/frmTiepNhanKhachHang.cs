@@ -54,5 +54,9 @@ namespace GUI
 
         }
 
+        private void frmTiepNhanKhachHang_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

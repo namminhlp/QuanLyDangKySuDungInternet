@@ -13,9 +13,14 @@ namespace BUS
         {
             return db.PhieuBaos.ToList();
         }
-        public string sinhMaTuDong(string st)
+        public string sinhMaTuDong()
         {
-
+            var q = (from u in db.PhieuBaos
+                     orderby u.MaPhieu descending
+                     select u);
+            PhieuBao pb = q.FirstOrDefault();
+            string st;
+            st = (pb == null)? "":pb.MaPhieu.ToString();
             if (st == null || st == "")
             {
                 return "PB0001";
@@ -35,9 +40,33 @@ namespace BUS
             }
 
         }
-        public List<ChiTiet_TruyCap> lapPhieuBaoTuDong()
+        public void lapPhieuBaoTuDong()
         {
-            return null;
+            DateTime HienTai = DateTime.Now;
+            List<PhieuBao> lsPhieuBao = new List<PhieuBao>();
+            var queryTK = from u in db.TaiKhoans
+                          where Convert.ToBoolean(u.TrangThai) == true
+                          select u;
+            foreach (var x in queryTK)
+            {
+                var query = from u in db.PhieuBaos
+                            where x.TenTruyCap == u.TenTruyCap && Convert.ToInt32(u.ThangLap) == HienTai.Month
+                            select u;
+                if (!query.Any())
+                {
+                    PhieuBao item = new PhieuBao();
+                    item.MaPhieu = sinhMaTuDong();
+                    item.TenTruyCap = x.TenTruyCap;
+                    item.NgayLap = HienTai;
+                    item.ThangLap = HienTai.Month.ToString();
+                    item.TinhTrang = Convert.ToBoolean(false);
+                    item.NgayTT = null;
+                    item.HinhThucTT = null;
+                    item.TongTien = null;
+                    db.PhieuBaos.InsertOnSubmit(item);
+                    db.SubmitChanges();
+                }
+             }
         }
     }
 }

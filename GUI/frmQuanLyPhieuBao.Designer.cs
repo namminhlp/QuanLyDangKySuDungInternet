@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btXuatPhieuBao = new System.Windows.Forms.Button();
             this.btDongPhiTre = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -51,7 +52,17 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.lbHinhThucTT = new System.Windows.Forms.Label();
             this.btXacNhanThanhToan = new System.Windows.Forms.Button();
+            this.phieuBaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.maPhieuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenTruyCapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thangLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tinhTrangDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tongTienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayTTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hinhThucTTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phieuBaoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btXuatPhieuBao
@@ -74,10 +85,21 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maPhieuDataGridViewTextBoxColumn,
+            this.tenTruyCapDataGridViewTextBoxColumn,
+            this.ngayLapDataGridViewTextBoxColumn,
+            this.thangLapDataGridViewTextBoxColumn,
+            this.tinhTrangDataGridViewTextBoxColumn,
+            this.tongTienDataGridViewTextBoxColumn,
+            this.ngayTTDataGridViewTextBoxColumn,
+            this.hinhThucTTDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.phieuBaoBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 181);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(713, 366);
+            this.dataGridView1.Size = new System.Drawing.Size(809, 366);
             this.dataGridView1.TabIndex = 42;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -257,6 +279,64 @@
             this.btXacNhanThanhToan.Text = "Xác nhận thanh toán";
             this.btXacNhanThanhToan.UseVisualStyleBackColor = true;
             // 
+            // phieuBaoBindingSource
+            // 
+            this.phieuBaoBindingSource.DataSource = typeof(DAO.PhieuBao);
+            // 
+            // maPhieuDataGridViewTextBoxColumn
+            // 
+            this.maPhieuDataGridViewTextBoxColumn.DataPropertyName = "MaPhieu";
+            this.maPhieuDataGridViewTextBoxColumn.HeaderText = "Mã phiếu";
+            this.maPhieuDataGridViewTextBoxColumn.Name = "maPhieuDataGridViewTextBoxColumn";
+            // 
+            // tenTruyCapDataGridViewTextBoxColumn
+            // 
+            this.tenTruyCapDataGridViewTextBoxColumn.DataPropertyName = "TenTruyCap";
+            this.tenTruyCapDataGridViewTextBoxColumn.HeaderText = "Tên truy cập";
+            this.tenTruyCapDataGridViewTextBoxColumn.Name = "tenTruyCapDataGridViewTextBoxColumn";
+            // 
+            // ngayLapDataGridViewTextBoxColumn
+            // 
+            this.ngayLapDataGridViewTextBoxColumn.DataPropertyName = "NgayLap";
+            this.ngayLapDataGridViewTextBoxColumn.HeaderText = "Ngày lập";
+            this.ngayLapDataGridViewTextBoxColumn.Name = "ngayLapDataGridViewTextBoxColumn";
+            // 
+            // thangLapDataGridViewTextBoxColumn
+            // 
+            this.thangLapDataGridViewTextBoxColumn.DataPropertyName = "ThangLap";
+            this.thangLapDataGridViewTextBoxColumn.FillWeight = 75F;
+            this.thangLapDataGridViewTextBoxColumn.HeaderText = "Tháng lập";
+            this.thangLapDataGridViewTextBoxColumn.Name = "thangLapDataGridViewTextBoxColumn";
+            this.thangLapDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // tinhTrangDataGridViewTextBoxColumn
+            // 
+            this.tinhTrangDataGridViewTextBoxColumn.DataPropertyName = "TinhTrang";
+            this.tinhTrangDataGridViewTextBoxColumn.FillWeight = 75F;
+            this.tinhTrangDataGridViewTextBoxColumn.HeaderText = "Tình trạng";
+            this.tinhTrangDataGridViewTextBoxColumn.Name = "tinhTrangDataGridViewTextBoxColumn";
+            this.tinhTrangDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // tongTienDataGridViewTextBoxColumn
+            // 
+            this.tongTienDataGridViewTextBoxColumn.DataPropertyName = "TongTien";
+            this.tongTienDataGridViewTextBoxColumn.HeaderText = "Tổng tiền";
+            this.tongTienDataGridViewTextBoxColumn.Name = "tongTienDataGridViewTextBoxColumn";
+            // 
+            // ngayTTDataGridViewTextBoxColumn
+            // 
+            this.ngayTTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ngayTTDataGridViewTextBoxColumn.DataPropertyName = "NgayTT";
+            this.ngayTTDataGridViewTextBoxColumn.HeaderText = "Ngày TT";
+            this.ngayTTDataGridViewTextBoxColumn.Name = "ngayTTDataGridViewTextBoxColumn";
+            // 
+            // hinhThucTTDataGridViewTextBoxColumn
+            // 
+            this.hinhThucTTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.hinhThucTTDataGridViewTextBoxColumn.DataPropertyName = "HinhThucTT";
+            this.hinhThucTTDataGridViewTextBoxColumn.HeaderText = "Hình thức TT";
+            this.hinhThucTTDataGridViewTextBoxColumn.Name = "hinhThucTTDataGridViewTextBoxColumn";
+            // 
             // frmQuanLyPhieuBao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +369,7 @@
             this.Text = "Quản lý phiếu báo";
             this.Load += new System.EventHandler(this.frmQuanLyPhieuBao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phieuBaoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,5 +400,14 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label lbHinhThucTT;
         private System.Windows.Forms.Button btXacNhanThanhToan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maPhieuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenTruyCapDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayLapDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thangLapDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tinhTrangDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tongTienDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayTTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hinhThucTTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource phieuBaoBindingSource;
     }
 }

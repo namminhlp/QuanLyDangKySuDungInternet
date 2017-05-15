@@ -196,6 +196,7 @@
             this.Controls.Add(this.label2);
             this.Name = "frmTiepNhanKhachHang";
             this.Text = "Tiếp Nhận Khách Hàng";
+            this.Load += new System.EventHandler(this.frmTiepNhanKhachHang_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

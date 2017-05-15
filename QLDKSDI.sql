@@ -51,11 +51,11 @@ CREATE TABLE LoaiTG_TruyCap (
 );
 
 CREATE TABLE ChiTiet_TruyCap (
+	MaCTTC VARCHAR(10) PRIMARY KEY,
 	MaLoai VARCHAR(10) FOREIGN KEY (MaLoai) REFERENCES LoaiTG_TruyCap(MaLoai),
 	MaPhieu VARCHAR(10) FOREIGN KEY (MaPhieu) REFERENCES PhieuBao(MaPhieu),
 	Ngay SMALLDATETIME,
 	TongSoPhut INT,
-	CONSTRAINT PK_MA_CHITIET PRIMARY KEY (MaLoai,MaPhieu)
 );
 ALTER TABLE ChiTiet_TruyCap 
 	ADD CHECK (Ngay < GETDATE())
@@ -70,5 +70,3 @@ CREATE TABLE NhanVien (
 )
 insert into NhanVien values  ('NV0001', 'Đoàn Nam Minh', 'Bình Thuận', '25262323','namminhlp','3071997',1);
 --- Thêm chi tiết truy cập
-insert into ChiTiet_TruyCap values ('1','namminh','2017-04-17',60);
-insert into ChiTiet_TruyCap values ('2','namminh','2017-04-18', 90);
