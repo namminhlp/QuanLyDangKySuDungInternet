@@ -118,5 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-
+  <data name="Fasticon-Fast-Icon-Users-Offline-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fasticon-Fast-Icon-Users-Offline-user.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4Hg5JFdO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4Hg5JFdO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1494947357_lock" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1494947357_lock.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ABC_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ABC_Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

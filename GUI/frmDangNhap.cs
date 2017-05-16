@@ -1,30 +1,58 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Header;
-
+using BUS;
 namespace GUI
 {
     public partial class frmDangNhap : Form
     {
-        BUS.NhanVienBUS busAdmin= new BUS.NhanVienBUS();
-        BUS.TaiKhoanBUS busKhachHang = new BUS.TaiKhoanBUS();
-
+        NhanVienBUS busAdmin = new NhanVienBUS();
+        TaiKhoanBUS busKhachHang = new TaiKhoanBUS();
         public frmDangNhap()
         {
             InitializeComponent();
-            this.AcceptButton = btDangNhap;
-            txtTaiKhoan.Text = "namminhlp";
+            // Màu mặc định 
+            pnHeader.BackColor = ColorTranslator.FromHtml("#2196F3");
+            btExit.BackColor = ColorTranslator.FromHtml("#2196F3");
+            pnFooter.BackColor = Color.Gray;
+            txtTenTruyCap.BackColor = ColorTranslator.FromHtml("#E7E7E7");
+            txtMatKhau.BackColor = ColorTranslator.FromHtml("#E7E7E7");
+            btDangNhap.BackColor = ColorTranslator.FromHtml("#2196F3");
+            btThoat.BackColor = ColorTranslator.FromHtml("#2196F3");
+            btDangKy.BackColor = ColorTranslator.FromHtml("#ff9800");
+            //Biến chỉ mặc định
+            radKhachHang.Checked = true;
+            //Set text Admin
+            txtTenTruyCap.Text = "namminhlp";
             txtMatKhau.Text = "3071997";
         }
 
         private void frmDangNhap_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -34,9 +62,49 @@ namespace GUI
 
         }
 
+        private void btExit_MouseHover(object sender, EventArgs e)
+        {
+            btExit.BackColor = Color.Red;
+        }
+
+        private void btExit_MouseLeave(object sender, EventArgs e)
+        {
+            btExit.BackColor = ColorTranslator.FromHtml("#2196F3");
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radKhachHang_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radAdmin_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btDangNhap_Click(object sender, EventArgs e)
         {
-            if (txtTaiKhoan.Text.Length == 0 && txtMatKhau.Text.Length == 0)
+            if (txtTenTruyCap.Text.Length == 0 && txtMatKhau.Text.Length == 0)
             {
                 MessageBox.Show("Tài khoản mật khẩu không được trống !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -45,13 +113,13 @@ namespace GUI
                 bool check;
                 if (radAdmin.Checked)
                 {
-                    if (busAdmin.checkDangNhap(txtTaiKhoan.Text, txtMatKhau.Text))
+                    if (busAdmin.checkDangNhap(txtTenTruyCap.Text, txtMatKhau.Text))
                     {
 
                         frmMain mainScreen = new frmMain();
                         this.Hide();
                         mainScreen.Show();
-                        mainScreen.TroVeLogin += MainForm_DangXuat;
+                        mainScreen.TroVeLogin += MainScreen_TroVeLogin;
                     }
                     else
                     {
@@ -60,7 +128,7 @@ namespace GUI
                 }
                 else
                 {
-                    if (check = busKhachHang.checkDangNhap(txtTaiKhoan.Text, txtMatKhau.Text))
+                    if (check = busKhachHang.checkDangNhap(txtTenTruyCap.Text, txtMatKhau.Text))
                     {
                         frmGiaoDienKhachHang khScreen = new frmGiaoDienKhachHang();
                         this.Hide();
@@ -71,49 +139,38 @@ namespace GUI
                         MessageBox.Show("Tài khoản hay mật khẩu sai", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
-               
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        void MainForm_DangXuat(object sender, EventArgs e)
+        private void MainScreen_TroVeLogin(object sender, EventArgs e)
         {
             (sender as frmMain).Close();
-            txtMatKhau.Text = null;
-            this.Show();
+            Show();
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void grpDangNhap_Enter(object sender, EventArgs e)
+        private void btThoat_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void lbDangKy_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void radAdmin_CheckedChanged(object sender, EventArgs e)
+        private void btDangKy_MouseLeave(object sender, EventArgs e)
         {
-
+           
         }
 
-        private void txtTaiKhoan_TextChanged(object sender, EventArgs e)
+        private void btDangKy_MouseHover(object sender, EventArgs e)
         {
-
+          
         }
     }
 }
