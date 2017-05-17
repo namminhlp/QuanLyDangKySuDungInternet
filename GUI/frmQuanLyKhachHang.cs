@@ -18,10 +18,13 @@ namespace GUI
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             dataGridView1.DataSource = business.load();
+
             btXoa.Enabled = false;
             btSua.Enabled = false;
             btLapHopDong.Enabled = false;
 
+            btKhachHang.BackColor = ColorTranslator.FromHtml("#2196F3");
+            
             pnMenu.BackColor = ColorTranslator.FromHtml("#2B569A");
             btHome.BackColor = ColorTranslator.FromHtml("#2B569A");
             btPhieuBao.BackColor = ColorTranslator.FromHtml("#2B569A");
@@ -278,7 +281,6 @@ namespace GUI
 
         private void txtTimKiem_Click(object sender, EventArgs e)
         {
-
             txtTimKiem.Text = null;
             txtTimKiem.ForeColor = Color.Black;
             // Xử lý khi nhấn một phím xuống

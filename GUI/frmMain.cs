@@ -21,7 +21,14 @@ namespace GUI
             // btMinimized.BackColor =  ColorTranslator.FromHtml("#2B569A");
             // pnMenu.BackColor = ColorTranslator.FromHtml("#2B569A");
             StartPosition = FormStartPosition.CenterScreen;
-
+            pnMenu.BackColor = ColorTranslator.FromHtml("#2B569A");
+            btKhachHang.BackColor = ColorTranslator.FromHtml("#2B569A");
+            btPhieuBao.BackColor = ColorTranslator.FromHtml("#2B569A");
+            btThoat.BackColor = ColorTranslator.FromHtml("#2B569A");
+            btTaiKhoan.BackColor = ColorTranslator.FromHtml("#2B569A");
+            btTroGiup.BackColor = ColorTranslator.FromHtml("#2B569A");
+            btHopDong.BackColor = ColorTranslator.FromHtml("#2B569A");
+            btHome.BackColor = ColorTranslator.FromHtml("#2196F3");
 
         }
         public event EventHandler TroVeLogin;

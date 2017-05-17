@@ -39,7 +39,6 @@
             this.btHome = new System.Windows.Forms.Button();
             this.btMinimized = new System.Windows.Forms.Button();
             this.btExit = new System.Windows.Forms.Button();
-            this.lbFooter = new System.Windows.Forms.Label();
             this.pnMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +61,7 @@
             // 
             // pnMenu
             // 
-            this.pnMenu.BackColor = System.Drawing.Color.DarkOrange;
+            this.pnMenu.BackColor = System.Drawing.Color.DodgerBlue;
             this.pnMenu.Controls.Add(this.btThoat);
             this.pnMenu.Controls.Add(this.btTroGiup);
             this.pnMenu.Controls.Add(this.btHopDong);
@@ -79,7 +78,7 @@
             // 
             // btThoat
             // 
-            this.btThoat.BackColor = System.Drawing.Color.DarkOrange;
+            this.btThoat.BackColor = System.Drawing.Color.DodgerBlue;
             this.btThoat.FlatAppearance.BorderSize = 0;
             this.btThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThoat.ForeColor = System.Drawing.Color.White;
@@ -97,7 +96,7 @@
             // 
             // btTroGiup
             // 
-            this.btTroGiup.BackColor = System.Drawing.Color.DarkOrange;
+            this.btTroGiup.BackColor = System.Drawing.Color.DodgerBlue;
             this.btTroGiup.FlatAppearance.BorderSize = 0;
             this.btTroGiup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btTroGiup.ForeColor = System.Drawing.Color.White;
@@ -115,7 +114,7 @@
             // 
             // btHopDong
             // 
-            this.btHopDong.BackColor = System.Drawing.Color.DarkOrange;
+            this.btHopDong.BackColor = System.Drawing.Color.DodgerBlue;
             this.btHopDong.FlatAppearance.BorderSize = 0;
             this.btHopDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btHopDong.ForeColor = System.Drawing.Color.White;
@@ -133,7 +132,7 @@
             // 
             // btTaiKhoan
             // 
-            this.btTaiKhoan.BackColor = System.Drawing.Color.DarkOrange;
+            this.btTaiKhoan.BackColor = System.Drawing.Color.DodgerBlue;
             this.btTaiKhoan.FlatAppearance.BorderSize = 0;
             this.btTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btTaiKhoan.ForeColor = System.Drawing.Color.White;
@@ -151,7 +150,7 @@
             // 
             // btPhieuBao
             // 
-            this.btPhieuBao.BackColor = System.Drawing.Color.DarkOrange;
+            this.btPhieuBao.BackColor = System.Drawing.Color.DodgerBlue;
             this.btPhieuBao.FlatAppearance.BorderSize = 0;
             this.btPhieuBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btPhieuBao.ForeColor = System.Drawing.Color.White;
@@ -169,7 +168,7 @@
             // 
             // btKhachHang
             // 
-            this.btKhachHang.BackColor = System.Drawing.Color.DarkOrange;
+            this.btKhachHang.BackColor = System.Drawing.Color.DodgerBlue;
             this.btKhachHang.FlatAppearance.BorderSize = 0;
             this.btKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btKhachHang.ForeColor = System.Drawing.Color.White;
@@ -235,25 +234,12 @@
             this.btExit.UseVisualStyleBackColor = false;
             this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
-            // lbFooter
-            // 
-            this.lbFooter.BackColor = System.Drawing.Color.DimGray;
-            this.lbFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbFooter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbFooter.ForeColor = System.Drawing.Color.White;
-            this.lbFooter.Location = new System.Drawing.Point(0, 580);
-            this.lbFooter.Name = "lbFooter";
-            this.lbFooter.Size = new System.Drawing.Size(960, 20);
-            this.lbFooter.TabIndex = 6;
-            this.lbFooter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(960, 600);
-            this.Controls.Add(this.lbFooter);
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.btMinimized);
             this.Controls.Add(this.btExit);
@@ -282,6 +268,5 @@
         private System.Windows.Forms.Button btKhachHang;
         private System.Windows.Forms.Button btThoat;
         private System.Windows.Forms.Button btTroGiup;
-        private System.Windows.Forms.Label lbFooter;
     }
 }

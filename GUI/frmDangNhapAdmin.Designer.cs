@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.pnHeader = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbHeader = new System.Windows.Forms.Label();
             this.pnFooter = new System.Windows.Forms.Panel();
-            this.lbThongTin = new System.Windows.Forms.Label();
+            this.lbFooter = new System.Windows.Forms.Label();
             this.btThoat = new System.Windows.Forms.Button();
             this.lbInfor = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.pnHeader.BackColor = System.Drawing.SystemColors.Window;
             this.pnHeader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnHeader.Controls.Add(this.btMinimized);
-            this.pnHeader.Controls.Add(this.label1);
+            this.pnHeader.Controls.Add(this.lbHeader);
             this.pnHeader.Controls.Add(this.btExit);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHeader.Location = new System.Drawing.Point(0, 0);
@@ -68,26 +68,26 @@
             this.pnHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnHeader_MouseDown);
             this.pnHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnHeader_MouseMove);
             // 
-            // label1
+            // lbHeader
             // 
-            this.label1.BackColor = System.Drawing.Color.DimGray;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(330, 35);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Tập đoàn dịch vụ viễn thông ABC";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
-            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
-            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
+            this.lbHeader.BackColor = System.Drawing.Color.DimGray;
+            this.lbHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbHeader.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeader.ForeColor = System.Drawing.Color.White;
+            this.lbHeader.Location = new System.Drawing.Point(0, 0);
+            this.lbHeader.Name = "lbHeader";
+            this.lbHeader.Size = new System.Drawing.Size(330, 35);
+            this.lbHeader.TabIndex = 1;
+            this.lbHeader.Text = "Tập đoàn dịch vụ viễn thông ABC";
+            this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbHeader.Click += new System.EventHandler(this.label1_Click_1);
+            this.lbHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
+            this.lbHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
             // pnFooter
             // 
             this.pnFooter.BackColor = System.Drawing.Color.DimGray;
-            this.pnFooter.Controls.Add(this.lbThongTin);
+            this.pnFooter.Controls.Add(this.lbFooter);
             this.pnFooter.Controls.Add(this.btThoat);
             this.pnFooter.Controls.Add(this.lbInfor);
             this.pnFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -97,15 +97,15 @@
             this.pnFooter.TabIndex = 1;
             this.pnFooter.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // lbThongTin
+            // lbFooter
             // 
-            this.lbThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThongTin.ForeColor = System.Drawing.Color.Transparent;
-            this.lbThongTin.Location = new System.Drawing.Point(12, 13);
-            this.lbThongTin.Name = "lbThongTin";
-            this.lbThongTin.Size = new System.Drawing.Size(376, 35);
-            this.lbThongTin.TabIndex = 5;
-            this.lbThongTin.Text = "Mọi thông tin chi tiết xin liên lạc về đường dây nóng: 190012340  Địa chỉ website" +
+            this.lbFooter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFooter.ForeColor = System.Drawing.Color.Transparent;
+            this.lbFooter.Location = new System.Drawing.Point(12, 13);
+            this.lbFooter.Name = "lbFooter";
+            this.lbFooter.Size = new System.Drawing.Size(376, 35);
+            this.lbFooter.TabIndex = 5;
+            this.lbFooter.Text = "Mọi thông tin chi tiết xin liên lạc về đường dây nóng: 190012340  Địa chỉ website" +
     ": abctech.vivu";
             // 
             // btThoat
@@ -220,7 +220,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox4.BackgroundImage = global::GUI.Properties.Resources._1494947357_lock;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(31, 268);
+            this.pictureBox4.Location = new System.Drawing.Point(33, 268);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(28, 28);
             this.pictureBox4.TabIndex = 7;
@@ -232,7 +232,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox2.BackgroundImage = global::GUI.Properties.Resources.Fasticon_Fast_Icon_Users_Offline_user;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(31, 218);
+            this.pictureBox2.Location = new System.Drawing.Point(33, 218);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 28);
             this.pictureBox2.TabIndex = 5;
@@ -323,7 +323,7 @@
         private System.Windows.Forms.Panel pnHeader;
         private System.Windows.Forms.Panel pnFooter;
         private System.Windows.Forms.Button btExit;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbHeader;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -335,7 +335,7 @@
         private System.Windows.Forms.Button btThoat;
         private System.Windows.Forms.Button btDangKy;
         private System.Windows.Forms.Label lbInfor;
-        private System.Windows.Forms.Label lbThongTin;
+        private System.Windows.Forms.Label lbFooter;
         private System.Windows.Forms.Button btMinimized;
     }
 }

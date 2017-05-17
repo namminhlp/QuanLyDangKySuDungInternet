@@ -16,10 +16,19 @@ namespace GUI
             txtTenTruyCap.BackColor = ColorTranslator.FromHtml("#E7E7E7");
             txtMatKhau.BackColor = ColorTranslator.FromHtml("#E7E7E7");
             StartPosition = FormStartPosition.CenterScreen;
+
             // Set text Admin
             txtTenTruyCap.Text = "admin1";
             txtMatKhau.Text = "3071997";
             btThoat.Hide();
+
+            //Set color
+            lbHeader.BackColor = ColorTranslator.FromHtml("#2B569A");
+            pnFooter.BackColor = ColorTranslator.FromHtml("#2B569A");
+            btMinimized.BackColor = ColorTranslator.FromHtml("#2B569A");
+            btExit.BackColor = ColorTranslator.FromHtml("#2B569A");
+            btDangNhap.BackColor = ColorTranslator.FromHtml("#2196F3");
+            btDangKy.BackColor = ColorTranslator.FromHtml("#2196F3");
 
         }
 
