@@ -106,24 +106,40 @@ namespace BUS
 
         public bool xoaKhachHang(string MaKH)
         {
-            var kh = db.KhachHangs.Single(t => t.MaKH == MaKH);
+            var queryKH = from u in db.KhachHangs
+                     where u.MaKH == MaKH
+                     select u;
             try
             {
-                var query = from u in db.HopDongs
-                            where u.MaKH == MaKH
-                            select u;
-                var items = query.ToList();
-                foreach (var item in items)
-                    db.HopDongs.DeleteOnSubmit(item);
-                db.KhachHangs.DeleteOnSubmit(kh);
-                db.SubmitChanges();
+                var queryHD = from u in db.HopDongs
+                              where u.MaKH == MaKH
+                              select u;
+                if (queryHD.Any())
+                {
+                    return false;
+                }
+                else
+                {
+                    foreach (var x in queryKH)
+                    {
+                        db.KhachHangs.DeleteOnSubmit(x);
+                         db.SubmitChanges();
+                    }
+                }
+
             }
             catch
             {
-                db.SubmitChanges();
                 return false;
             }
             return true;
+        }
+        public List<KhachHang> timKhachHang(string MaKH)
+        {
+            var queryKH = from u in db.KhachHangs
+                          where u.MaKH == MaKH
+                          select u;
+            return queryKH.ToList();
         }
     }
 }

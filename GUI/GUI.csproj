@@ -80,6 +80,18 @@
     <Compile Include="frmQuanLyTaiKhoan.Designer.cs">
       <DependentUpon>frmQuanLyTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTiepNhanHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTiepNhanHopDong.Designer.cs">
+      <DependentUpon>frmTiepNhanHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTiepNhanKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTiepNhanKhachHang.Designer.cs">
+      <DependentUpon>frmTiepNhanKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDangNhapAdmin.resx">
@@ -198,6 +210,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\handshake-icon-19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mobile_search_icon_x2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

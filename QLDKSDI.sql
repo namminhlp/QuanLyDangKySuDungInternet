@@ -1,5 +1,5 @@
 ﻿sCREATE DATABASE QLDKSDI
-
+GO
 USE QLDKSDI
 
 CREATE TABLE KhachHang (
@@ -59,14 +59,14 @@ CREATE TABLE ChiTiet_TruyCap (
 );
 ALTER TABLE ChiTiet_TruyCap 
 	ADD CHECK (Ngay < GETDATE())
+
 CREATE TABLE NhanVien (
-	MaNhanVien VARCHAR(10) PRIMARY KEY,
+	MaNhanVien VARCHAR(6) PRIMARY KEY,
 	HoTen VARCHAR(20),
 	DiaChi VARCHAR(50),
 	CMND VARCHAR(10),
-	TenTruyCap VARCHAR(15),
 	MatKhau VARCHAR(20),
 	QuyenHan BIT
 )
-insert into NhanVien values  ('NV0001', 'Đoàn Nam Minh', 'Bình Thuận', '25262323','namminhlp','3071997',1);
 --- Thêm chi tiết truy cập
+insert into NhanVien values ('admin1','Đoàn Nam Minh','Phan Thiet - Bình thuận','232731','3071997',1);

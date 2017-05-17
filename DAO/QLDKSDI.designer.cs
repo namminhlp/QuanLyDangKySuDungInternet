@@ -1316,8 +1316,6 @@ namespace DAO
 		
 		private string _CMND;
 		
-		private string _TenTruyCap;
-		
 		private string _MatKhau;
 		
 		private System.Nullable<bool> _QuyenHan;
@@ -1334,8 +1332,6 @@ namespace DAO
     partial void OnDiaChiChanged();
     partial void OnCMNDChanging(string value);
     partial void OnCMNDChanged();
-    partial void OnTenTruyCapChanging(string value);
-    partial void OnTenTruyCapChanged();
     partial void OnMatKhauChanging(string value);
     partial void OnMatKhauChanged();
     partial void OnQuyenHanChanging(System.Nullable<bool> value);
@@ -1347,7 +1343,7 @@ namespace DAO
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhanVien", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaNhanVien", DbType="VarChar(6) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string MaNhanVien
 		{
 			get
@@ -1423,26 +1419,6 @@ namespace DAO
 					this._CMND = value;
 					this.SendPropertyChanged("CMND");
 					this.OnCMNDChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenTruyCap", DbType="VarChar(15)")]
-		public string TenTruyCap
-		{
-			get
-			{
-				return this._TenTruyCap;
-			}
-			set
-			{
-				if ((this._TenTruyCap != value))
-				{
-					this.OnTenTruyCapChanging(value);
-					this.SendPropertyChanging();
-					this._TenTruyCap = value;
-					this.SendPropertyChanged("TenTruyCap");
-					this.OnTenTruyCapChanged();
 				}
 			}
 		}

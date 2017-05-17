@@ -59,11 +59,10 @@
   </Table>
   <Table Name="dbo.NhanVien" Member="NhanViens">
     <Type Name="NhanVien">
-      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaNhanVien" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="HoTen" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="DiaChi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="CMND" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
-      <Column Name="TenTruyCap" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
       <Column Name="MatKhau" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="QuyenHan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>

@@ -7,24 +7,20 @@ namespace GUI
     public partial class frmDangNhap : Form
     {
         NhanVienBUS busAdmin = new NhanVienBUS();
+        TaiKhoanBUS busKhachHang = new TaiKhoanBUS();
         Point click;
         public frmDangNhap()
         {
             InitializeComponent();
             // Màu mặc định 
-            pnFooter.BackColor = Color.DimGray;
             txtTenTruyCap.BackColor = ColorTranslator.FromHtml("#E7E7E7");
             txtMatKhau.BackColor = ColorTranslator.FromHtml("#E7E7E7");
-            // btDangKy.BackColor = ColorTranslator.FromHtml("#ff9800");
-            // label1.BackColor = ColorTranslator.FromHtml("#2196F3");
-            // btExit.BackColor = ColorTranslator.FromHtml("#2196F3");
-            // btMinimized.BackColor = ColorTranslator.FromHtml("#2196F3");
-            // btDangNhap.BackColor = ColorTranslator.FromHtml("#2196F3");
+            StartPosition = FormStartPosition.CenterScreen;
             // Set text Admin
-            txtTenTruyCap.Text = "namminhlp";
+            txtTenTruyCap.Text = "admin1";
             txtMatKhau.Text = "3071997";
             btThoat.Hide();
-            StartPosition = FormStartPosition.CenterScreen;
+
         }
 
         private void frmDangNhap_Load(object sender, EventArgs e)
@@ -108,33 +104,42 @@ namespace GUI
             }
             else
             {
+                if (txtTenTruyCap.Text.Length < 7)
+                {
                     if (busAdmin.checkDangNhap(txtTenTruyCap.Text, txtMatKhau.Text))
                     {
 
                         frmMain mainScreen = new frmMain();
-                        this.Hide();
+                        Hide();
                         mainScreen.Show();
-                        mainScreen.TroVeLogin += MainScreen_TroVeLogin;
                     }
                     else
                     {
                         MessageBox.Show("Tài khoản hay mật khẩu sai", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-             }
+                }
+                else
+                {
+                    if (busAdmin.checkDangNhap(txtTenTruyCap.Text, txtMatKhau.Text))
+                    {
+                        // Bung giao diện khách hàng
+                        MessageBox.Show("Giao diện khách hàng đang được xây dựng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Tài khoản hay mật khẩu sai", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }       
         }
-        // Bắt sự kiện đóng các form để quay trở lại màn hình đăng nhập
-
-        void MainScreen_TroVeLogin(object sender, EventArgs e)
+        private void MainScreen_TroVeLogin(object sender, EventArgs e)
         {
             (sender as frmMain).Close();
+            txtMatKhau.Text = null;
             Show();
+        }
 
-        }
-        void FromQuanLyKhachHang_TroVeLogin (object sender, EventArgs e)
-        {
-            (sender as frmQuanLyKhachHang).Close();
-            Show();
-        }
+        // Bắt sự kiện đóng các form để quay trở lại màn hình đăng nhập
 
         private void button1_Click_1(object sender, EventArgs e)
         {

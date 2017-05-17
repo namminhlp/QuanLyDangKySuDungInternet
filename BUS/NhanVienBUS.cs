@@ -16,7 +16,7 @@ namespace BUS
         public bool checkDangNhap(string strTK, string strMK)
         {
                  var query = from u in db.NhanViens
-                             where u.TenTruyCap == strTK && u.MatKhau == strMK && Convert.ToBoolean(u.QuyenHan) == true
+                             where u.MaNhanVien == strTK && u.MatKhau == strMK && Convert.ToBoolean(u.QuyenHan) == true
                              select u;
                  if (query.Any())
                  {
