@@ -42,7 +42,7 @@ namespace GUI
 
         private void btHide_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void lbHeader_MouseMove(object sender, MouseEventArgs e)
@@ -71,7 +71,7 @@ namespace GUI
 
         private void lbHeader_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void pnHeader_Paint(object sender, PaintEventArgs e)
@@ -112,7 +112,7 @@ namespace GUI
 
         private void btHopDong_Click(object sender, EventArgs e)
         {
-            frmQuanLyHopDong frmQLHD = new frmQuanLyHopDong ();
+            frmQuanLyHopDong frmQLHD = new frmQuanLyHopDong();
             Close();
             frmQLHD.Show();
         }
