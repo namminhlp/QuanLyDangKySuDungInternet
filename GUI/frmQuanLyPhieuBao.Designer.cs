@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class frmGiaoDienKhachHang
+    partial class frmQuanLyPhieuBao
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "frmGiaoDienKhachHang";
+            this.Text = "frmQuanLyPhieuBao";
         }
 
         #endregion

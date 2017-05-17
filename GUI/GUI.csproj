@@ -44,17 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmDangNhap.cs">
+    <Compile Include="frmDangNhapAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDangNhap.Designer.cs">
-      <DependentUpon>frmDangNhap.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmGiaoDienKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGiaoDienKhachHang.Designer.cs">
-      <DependentUpon>frmGiaoDienKhachHang.cs</DependentUpon>
+    <Compile Include="frmDangNhapAdmin.Designer.cs">
+      <DependentUpon>frmDangNhapAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -62,13 +56,40 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmQuanLyHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyHopDong.Designer.cs">
+      <DependentUpon>frmQuanLyHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyKhachHang.Designer.cs">
+      <DependentUpon>frmQuanLyKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyPhieuBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyPhieuBao.Designer.cs">
+      <DependentUpon>frmQuanLyPhieuBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>frmQuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmDangNhap.resx">
-      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    <EmbeddedResource Include="frmDangNhapAdmin.resx">
+      <DependentUpon>frmDangNhapAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyKhachHang.resx">
+      <DependentUpon>frmQuanLyKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -123,6 +144,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ABC_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PageImage-515435-3918738-home_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AtHome_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-people.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-contract.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\incon-key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-contract1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon-call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn-carousel-arrow-right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-Button.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-xxl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Soft-Scraps-Button-Refresh.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\handshake-icon-19.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

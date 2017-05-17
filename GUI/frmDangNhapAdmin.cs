@@ -7,24 +7,24 @@ namespace GUI
     public partial class frmDangNhap : Form
     {
         NhanVienBUS busAdmin = new NhanVienBUS();
-        TaiKhoanBUS busKhachHang = new TaiKhoanBUS();
+        Point click;
         public frmDangNhap()
         {
             InitializeComponent();
             // Màu mặc định 
-            pnHeader.BackColor = ColorTranslator.FromHtml("#2196F3");
-            btExit.BackColor = ColorTranslator.FromHtml("#2196F3");
-            pnFooter.BackColor = Color.Gray;
+            pnFooter.BackColor = Color.DimGray;
             txtTenTruyCap.BackColor = ColorTranslator.FromHtml("#E7E7E7");
             txtMatKhau.BackColor = ColorTranslator.FromHtml("#E7E7E7");
-            btDangNhap.BackColor = ColorTranslator.FromHtml("#2196F3");
-            btThoat.BackColor = ColorTranslator.FromHtml("#2196F3");
-            btDangKy.BackColor = ColorTranslator.FromHtml("#ff9800");
-            //Biến chỉ mặc định
-            radKhachHang.Checked = true;
-            //Set text Admin
+            // btDangKy.BackColor = ColorTranslator.FromHtml("#ff9800");
+            // label1.BackColor = ColorTranslator.FromHtml("#2196F3");
+            // btExit.BackColor = ColorTranslator.FromHtml("#2196F3");
+            // btMinimized.BackColor = ColorTranslator.FromHtml("#2196F3");
+            // btDangNhap.BackColor = ColorTranslator.FromHtml("#2196F3");
+            // Set text Admin
             txtTenTruyCap.Text = "namminhlp";
             txtMatKhau.Text = "3071997";
+            btThoat.Hide();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void frmDangNhap_Load(object sender, EventArgs e)
@@ -64,12 +64,10 @@ namespace GUI
 
         private void btExit_MouseHover(object sender, EventArgs e)
         {
-            btExit.BackColor = Color.Red;
         }
 
         private void btExit_MouseLeave(object sender, EventArgs e)
         {
-            btExit.BackColor = ColorTranslator.FromHtml("#2196F3");
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -110,9 +108,6 @@ namespace GUI
             }
             else
             {
-                bool check;
-                if (radAdmin.Checked)
-                {
                     if (busAdmin.checkDangNhap(txtTenTruyCap.Text, txtMatKhau.Text))
                     {
 
@@ -125,26 +120,19 @@ namespace GUI
                     {
                         MessageBox.Show("Tài khoản hay mật khẩu sai", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                }
-                else
-                {
-                    if (check = busKhachHang.checkDangNhap(txtTenTruyCap.Text, txtMatKhau.Text))
-                    {
-                        frmGiaoDienKhachHang khScreen = new frmGiaoDienKhachHang();
-                        this.Hide();
-                        khScreen.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Tài khoản hay mật khẩu sai", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-            }
+             }
         }
+        // Bắt sự kiện đóng các form để quay trở lại màn hình đăng nhập
 
-        private void MainScreen_TroVeLogin(object sender, EventArgs e)
+        void MainScreen_TroVeLogin(object sender, EventArgs e)
         {
             (sender as frmMain).Close();
+            Show();
+
+        }
+        void FromQuanLyKhachHang_TroVeLogin (object sender, EventArgs e)
+        {
+            (sender as frmQuanLyKhachHang).Close();
             Show();
         }
 
@@ -155,7 +143,7 @@ namespace GUI
 
         private void btThoat_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void lbDangKy_Click(object sender, EventArgs e)
@@ -171,6 +159,47 @@ namespace GUI
         private void btDangKy_MouseHover(object sender, EventArgs e)
         {
           
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnHeader_MouseMove(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void pnHeader_MouseDown(object sender, MouseEventArgs e)
+        {
+      
+        }
+
+        private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            click = e.Location;
+        }
+
+        private void label1_MouseMove(object sender, MouseEventArgs e)
+        {
+            // Xử lý sự kiện kéo windows
+            if (e.Button == MouseButtons.Left)
+            {
+                Left += e.X - click.X;
+                Top += e.Y - click.Y;
+            }
+        }
+
+        private void txtTenTruyCap_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            // Nút minimized
+            WindowState = FormWindowState.Minimized;
         }
     }
 }
