@@ -155,7 +155,7 @@ namespace BUS
                 foreach (var y in query)
                 {
                     y.HinhThucTT = HinhThucTT;
-                y.TinhTrang = Convert.ToBoolean(TinhTrang);
+                    y.TinhTrang = Convert.ToBoolean(TinhTrang);
                     y.NgayTT = DateTime.Now;
                     db.SubmitChanges();
                 return true;

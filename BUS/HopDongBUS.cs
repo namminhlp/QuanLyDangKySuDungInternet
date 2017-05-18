@@ -138,9 +138,12 @@ namespace BUS
                             select u;
                 var items = query.ToList();
                 foreach (var item in items)
+                {
                     db.TaiKhoans.DeleteOnSubmit(item);
+                }
                 db.HopDongs.DeleteOnSubmit(hd);
                 db.SubmitChanges();
+
             }
             catch
             {

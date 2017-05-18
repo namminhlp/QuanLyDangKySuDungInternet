@@ -22,9 +22,8 @@ namespace GUI
             btXoa.Enabled = false;
             btSua.Enabled = false;
             btLapHopDong.Enabled = false;
-
-            btKhachHang.BackColor = ColorTranslator.FromHtml("#2196F3");
-            
+            // Màu của form hiện tại
+            btKhachHang.BackColor = ColorTranslator.FromHtml("#2196F3");   
             pnMenu.BackColor = ColorTranslator.FromHtml("#2B569A");
             btHome.BackColor = ColorTranslator.FromHtml("#2B569A");
             btPhieuBao.BackColor = ColorTranslator.FromHtml("#2B569A");
@@ -323,6 +322,13 @@ namespace GUI
         private void toolStripKhachHang_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void btHopDong_Click(object sender, EventArgs e)
+        {
+            frmQuanLyHopDong frmQLHD = new frmQuanLyHopDong();
+            frmQLHD.Show();
+            Close();
         }
     }
 }

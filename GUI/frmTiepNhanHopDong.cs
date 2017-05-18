@@ -16,6 +16,11 @@ namespace GUI
         public frmTiepNhanHopDong()
         {
             InitializeComponent();
+            label1.BackColor = ColorTranslator.FromHtml("#2B569A");
+            StartPosition = FormStartPosition.Manual;
+
+            txtNgayDK.Text = "Nhập mm/dd/yyyy";
+            txtNgayDK.ForeColor = Color.DimGray;
         }
         public frmTiepNhanHopDong(string MaKH)
         {

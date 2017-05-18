@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.pnHeader = new System.Windows.Forms.Panel();
+            this.btMinimized = new System.Windows.Forms.Button();
+            this.lbHeader = new System.Windows.Forms.Label();
+            this.btExit = new System.Windows.Forms.Button();
             this.pnFooter = new System.Windows.Forms.Panel();
             this.lbFooter = new System.Windows.Forms.Label();
             this.lbInfor = new System.Windows.Forms.Label();
@@ -38,12 +41,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btDangNhap = new System.Windows.Forms.Button();
             this.btDangKy = new System.Windows.Forms.Button();
-            this.lbHeader = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btMinimized = new System.Windows.Forms.Button();
-            this.btExit = new System.Windows.Forms.Button();
             this.pnHeader.SuspendLayout();
             this.pnFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -67,13 +67,64 @@
             this.pnHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnHeader_MouseDown);
             this.pnHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnHeader_MouseMove);
             // 
+            // btMinimized
+            // 
+            this.btMinimized.BackColor = System.Drawing.Color.DimGray;
+            this.btMinimized.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btMinimized.FlatAppearance.BorderSize = 0;
+            this.btMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMinimized.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMinimized.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btMinimized.Image = global::GUI.Properties.Resources.icon_mini;
+            this.btMinimized.Location = new System.Drawing.Point(330, 0);
+            this.btMinimized.Name = "btMinimized";
+            this.btMinimized.Size = new System.Drawing.Size(35, 35);
+            this.btMinimized.TabIndex = 2;
+            this.btMinimized.UseVisualStyleBackColor = false;
+            this.btMinimized.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // lbHeader
+            // 
+            this.lbHeader.BackColor = System.Drawing.Color.DimGray;
+            this.lbHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbHeader.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeader.ForeColor = System.Drawing.Color.White;
+            this.lbHeader.Location = new System.Drawing.Point(0, 0);
+            this.lbHeader.Name = "lbHeader";
+            this.lbHeader.Size = new System.Drawing.Size(330, 35);
+            this.lbHeader.TabIndex = 1;
+            this.lbHeader.Text = "Tập đoàn dịch vụ viễn thông ABC";
+            this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbHeader.Click += new System.EventHandler(this.label1_Click_1);
+            this.lbHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
+            this.lbHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
+            // 
+            // btExit
+            // 
+            this.btExit.AutoSize = true;
+            this.btExit.BackColor = System.Drawing.Color.DimGray;
+            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btExit.FlatAppearance.BorderSize = 0;
+            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btExit.Image = global::GUI.Properties.Resources.icon_exit;
+            this.btExit.Location = new System.Drawing.Point(365, 0);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(35, 35);
+            this.btExit.TabIndex = 0;
+            this.btExit.UseVisualStyleBackColor = false;
+            this.btExit.Click += new System.EventHandler(this.button1_Click);
+            this.btExit.MouseLeave += new System.EventHandler(this.btExit_MouseLeave);
+            this.btExit.MouseHover += new System.EventHandler(this.btExit_MouseHover);
+            // 
             // pnFooter
             // 
             this.pnFooter.BackColor = System.Drawing.Color.DimGray;
             this.pnFooter.Controls.Add(this.lbFooter);
             this.pnFooter.Controls.Add(this.lbInfor);
             this.pnFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnFooter.Location = new System.Drawing.Point(0, 560);
+            this.pnFooter.Location = new System.Drawing.Point(0, 460);
             this.pnFooter.Name = "pnFooter";
             this.pnFooter.Size = new System.Drawing.Size(400, 40);
             this.pnFooter.TabIndex = 1;
@@ -83,9 +134,9 @@
             // 
             this.lbFooter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbFooter.ForeColor = System.Drawing.Color.Transparent;
-            this.lbFooter.Location = new System.Drawing.Point(3, 0);
+            this.lbFooter.Location = new System.Drawing.Point(12, 5);
             this.lbFooter.Name = "lbFooter";
-            this.lbFooter.Size = new System.Drawing.Size(394, 35);
+            this.lbFooter.Size = new System.Drawing.Size(376, 35);
             this.lbFooter.TabIndex = 5;
             this.lbFooter.Text = "Mọi thông tin chi tiết xin liên lạc về đường dây nóng: 190012340  Địa chỉ website" +
     ": abctech.vivu";
@@ -158,7 +209,7 @@
             this.btDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btDangNhap.Location = new System.Drawing.Point(61, 344);
+            this.btDangNhap.Location = new System.Drawing.Point(61, 332);
             this.btDangNhap.Name = "btDangNhap";
             this.btDangNhap.Size = new System.Drawing.Size(263, 35);
             this.btDangNhap.TabIndex = 15;
@@ -173,7 +224,7 @@
             this.btDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDangKy.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDangKy.ForeColor = System.Drawing.Color.White;
-            this.btDangKy.Location = new System.Drawing.Point(61, 406);
+            this.btDangKy.Location = new System.Drawing.Point(61, 387);
             this.btDangKy.Name = "btDangKy";
             this.btDangKy.Size = new System.Drawing.Size(263, 35);
             this.btDangKy.TabIndex = 16;
@@ -182,22 +233,6 @@
             this.btDangKy.Click += new System.EventHandler(this.button1_Click_1);
             this.btDangKy.MouseLeave += new System.EventHandler(this.btDangKy_MouseLeave);
             this.btDangKy.MouseHover += new System.EventHandler(this.btDangKy_MouseHover);
-            // 
-            // lbHeader
-            // 
-            this.lbHeader.BackColor = System.Drawing.Color.DimGray;
-            this.lbHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbHeader.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHeader.ForeColor = System.Drawing.Color.White;
-            this.lbHeader.Location = new System.Drawing.Point(0, 0);
-            this.lbHeader.Name = "lbHeader";
-            this.lbHeader.Size = new System.Drawing.Size(330, 35);
-            this.lbHeader.TabIndex = 1;
-            this.lbHeader.Text = "Tập đoàn dịch vụ viễn thông ABC";
-            this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbHeader.Click += new System.EventHandler(this.label1_Click_1);
-            this.lbHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
-            this.lbHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
             // pictureBox4
             // 
@@ -233,47 +268,12 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // btMinimized
-            // 
-            this.btMinimized.BackColor = System.Drawing.Color.DimGray;
-            this.btMinimized.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btMinimized.FlatAppearance.BorderSize = 0;
-            this.btMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btMinimized.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btMinimized.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btMinimized.Image = global::GUI.Properties.Resources.icon_mini;
-            this.btMinimized.Location = new System.Drawing.Point(330, 0);
-            this.btMinimized.Name = "btMinimized";
-            this.btMinimized.Size = new System.Drawing.Size(35, 35);
-            this.btMinimized.TabIndex = 2;
-            this.btMinimized.UseVisualStyleBackColor = false;
-            this.btMinimized.Click += new System.EventHandler(this.button1_Click_2);
-            // 
-            // btExit
-            // 
-            this.btExit.AutoSize = true;
-            this.btExit.BackColor = System.Drawing.Color.DimGray;
-            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btExit.FlatAppearance.BorderSize = 0;
-            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btExit.Image = global::GUI.Properties.Resources.icon_exit;
-            this.btExit.Location = new System.Drawing.Point(365, 0);
-            this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(35, 35);
-            this.btExit.TabIndex = 0;
-            this.btExit.UseVisualStyleBackColor = false;
-            this.btExit.Click += new System.EventHandler(this.button1_Click);
-            this.btExit.MouseLeave += new System.EventHandler(this.btExit_MouseLeave);
-            this.btExit.MouseHover += new System.EventHandler(this.btExit_MouseHover);
-            // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(400, 600);
+            this.ClientSize = new System.Drawing.Size(400, 500);
             this.Controls.Add(this.btDangKy);
             this.Controls.Add(this.btDangNhap);
             this.Controls.Add(this.label3);

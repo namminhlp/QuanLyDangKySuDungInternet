@@ -39,11 +39,11 @@ namespace GUI
         {
             if (business.themKhachHang(txtMaKhachHang.Text, txtHoTen.Text, txtDiaChi.Text, txtCMND.Text, txtLoaiKH.Text, txtSDT.Text))
             {
-                MessageBox.Show("Thông báo", "Thêm khách hàng thành công !", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show("Thêm khách hàng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
             else
             {
-                MessageBox.Show("Thông báo", "Thêm khách hàng thất bại !", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Thêm khách hàng thất bại!", "Thông báo",  MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
             }
 

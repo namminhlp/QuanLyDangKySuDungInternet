@@ -273,6 +273,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Male_user_add_icon {
+            get {
+                object obj = ResourceManager.GetObject("Male-user-add-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mobile_search_icon_x2 {
             get {
                 object obj = ResourceManager.GetObject("mobile_search_icon_x2", resourceCulture);
@@ -296,6 +306,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap search_icon {
             get {
                 object obj = ResourceManager.GetObject("search-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap waiting_icon_8619 {
+            get {
+                object obj = ResourceManager.GetObject("waiting-icon-8619", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

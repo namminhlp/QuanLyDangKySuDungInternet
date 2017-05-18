@@ -43,7 +43,7 @@ namespace BUS
             }
             else
             {
-                // Tìm trong tài khoản có chưa, nếu có rồi
+                // Tìm trong tài khoản có chưa, nếu có rồi thì thôi
                 var query = from u in db.TaiKhoans
                             select u;
                 if (query.Any())
@@ -124,6 +124,13 @@ namespace BUS
             var tk = db.TaiKhoans.Single(t => t.TenTruyCap == TenTruyCap);
             try
             {
+                var queryPB = from u in db.PhieuBaos
+                              where u.TenTruyCap == TenTruyCap
+                              select u;
+                foreach ( var x in queryPB)
+                {
+                    db.PhieuBaos.DeleteOnSubmit(x);
+                }
                 db.TaiKhoans.DeleteOnSubmit(tk);
                 db.SubmitChanges();
             }
