@@ -16,5 +16,50 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void txtHoTen_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbMaKhachHang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmQuanLyHopDong_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbTongTK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCMND_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtLoaiKH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbChiPhi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbNgayKyHD_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

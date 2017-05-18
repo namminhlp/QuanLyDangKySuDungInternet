@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.pnHeader = new System.Windows.Forms.Panel();
-            this.lbHeader = new System.Windows.Forms.Label();
             this.pnFooter = new System.Windows.Forms.Panel();
             this.lbFooter = new System.Windows.Forms.Label();
-            this.btThoat = new System.Windows.Forms.Button();
             this.lbInfor = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenTruyCap = new System.Windows.Forms.TextBox();
@@ -40,6 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btDangNhap = new System.Windows.Forms.Button();
             this.btDangKy = new System.Windows.Forms.Button();
+            this.lbHeader = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -68,32 +67,15 @@
             this.pnHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnHeader_MouseDown);
             this.pnHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnHeader_MouseMove);
             // 
-            // lbHeader
-            // 
-            this.lbHeader.BackColor = System.Drawing.Color.DimGray;
-            this.lbHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbHeader.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHeader.ForeColor = System.Drawing.Color.White;
-            this.lbHeader.Location = new System.Drawing.Point(0, 0);
-            this.lbHeader.Name = "lbHeader";
-            this.lbHeader.Size = new System.Drawing.Size(330, 35);
-            this.lbHeader.TabIndex = 1;
-            this.lbHeader.Text = "Tập đoàn dịch vụ viễn thông ABC";
-            this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbHeader.Click += new System.EventHandler(this.label1_Click_1);
-            this.lbHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
-            this.lbHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
-            // 
             // pnFooter
             // 
             this.pnFooter.BackColor = System.Drawing.Color.DimGray;
             this.pnFooter.Controls.Add(this.lbFooter);
-            this.pnFooter.Controls.Add(this.btThoat);
             this.pnFooter.Controls.Add(this.lbInfor);
             this.pnFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnFooter.Location = new System.Drawing.Point(0, 454);
+            this.pnFooter.Location = new System.Drawing.Point(0, 560);
             this.pnFooter.Name = "pnFooter";
-            this.pnFooter.Size = new System.Drawing.Size(400, 68);
+            this.pnFooter.Size = new System.Drawing.Size(400, 40);
             this.pnFooter.TabIndex = 1;
             this.pnFooter.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -101,26 +83,12 @@
             // 
             this.lbFooter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbFooter.ForeColor = System.Drawing.Color.Transparent;
-            this.lbFooter.Location = new System.Drawing.Point(12, 13);
+            this.lbFooter.Location = new System.Drawing.Point(3, 0);
             this.lbFooter.Name = "lbFooter";
-            this.lbFooter.Size = new System.Drawing.Size(376, 35);
+            this.lbFooter.Size = new System.Drawing.Size(394, 35);
             this.lbFooter.TabIndex = 5;
             this.lbFooter.Text = "Mọi thông tin chi tiết xin liên lạc về đường dây nóng: 190012340  Địa chỉ website" +
     ": abctech.vivu";
-            // 
-            // btThoat
-            // 
-            this.btThoat.FlatAppearance.BorderSize = 0;
-            this.btThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btThoat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThoat.ForeColor = System.Drawing.Color.White;
-            this.btThoat.Location = new System.Drawing.Point(61, 13);
-            this.btThoat.Name = "btThoat";
-            this.btThoat.Size = new System.Drawing.Size(150, 35);
-            this.btThoat.TabIndex = 16;
-            this.btThoat.Text = "THOÁT";
-            this.btThoat.UseVisualStyleBackColor = true;
-            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
             // lbInfor
             // 
@@ -153,9 +121,9 @@
             // 
             this.txtTenTruyCap.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenTruyCap.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenTruyCap.Location = new System.Drawing.Point(61, 218);
+            this.txtTenTruyCap.Location = new System.Drawing.Point(90, 218);
             this.txtTenTruyCap.Name = "txtTenTruyCap";
-            this.txtTenTruyCap.Size = new System.Drawing.Size(304, 28);
+            this.txtTenTruyCap.Size = new System.Drawing.Size(234, 28);
             this.txtTenTruyCap.TabIndex = 10;
             this.txtTenTruyCap.TextChanged += new System.EventHandler(this.txtTenTruyCap_TextChanged);
             // 
@@ -163,9 +131,9 @@
             // 
             this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau.Location = new System.Drawing.Point(61, 268);
+            this.txtMatKhau.Location = new System.Drawing.Point(90, 268);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(304, 28);
+            this.txtMatKhau.Size = new System.Drawing.Size(234, 28);
             this.txtMatKhau.TabIndex = 12;
             this.txtMatKhau.UseSystemPasswordChar = true;
             this.txtMatKhau.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -190,9 +158,9 @@
             this.btDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDangNhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btDangNhap.Location = new System.Drawing.Point(31, 326);
+            this.btDangNhap.Location = new System.Drawing.Point(61, 344);
             this.btDangNhap.Name = "btDangNhap";
-            this.btDangNhap.Size = new System.Drawing.Size(334, 35);
+            this.btDangNhap.Size = new System.Drawing.Size(263, 35);
             this.btDangNhap.TabIndex = 15;
             this.btDangNhap.Text = "ĐĂNG NHẬP";
             this.btDangNhap.UseVisualStyleBackColor = false;
@@ -205,9 +173,9 @@
             this.btDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDangKy.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDangKy.ForeColor = System.Drawing.Color.White;
-            this.btDangKy.Location = new System.Drawing.Point(29, 382);
+            this.btDangKy.Location = new System.Drawing.Point(61, 406);
             this.btDangKy.Name = "btDangKy";
-            this.btDangKy.Size = new System.Drawing.Size(334, 35);
+            this.btDangKy.Size = new System.Drawing.Size(263, 35);
             this.btDangKy.TabIndex = 16;
             this.btDangKy.Text = "ĐĂNG KÍ ONLINE ?";
             this.btDangKy.UseVisualStyleBackColor = false;
@@ -215,12 +183,28 @@
             this.btDangKy.MouseLeave += new System.EventHandler(this.btDangKy_MouseLeave);
             this.btDangKy.MouseHover += new System.EventHandler(this.btDangKy_MouseHover);
             // 
+            // lbHeader
+            // 
+            this.lbHeader.BackColor = System.Drawing.Color.DimGray;
+            this.lbHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbHeader.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeader.ForeColor = System.Drawing.Color.White;
+            this.lbHeader.Location = new System.Drawing.Point(0, 0);
+            this.lbHeader.Name = "lbHeader";
+            this.lbHeader.Size = new System.Drawing.Size(330, 35);
+            this.lbHeader.TabIndex = 1;
+            this.lbHeader.Text = "Tập đoàn dịch vụ viễn thông ABC";
+            this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbHeader.Click += new System.EventHandler(this.label1_Click_1);
+            this.lbHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
+            this.lbHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
+            // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox4.BackgroundImage = global::GUI.Properties.Resources._1494947357_lock;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(33, 268);
+            this.pictureBox4.Location = new System.Drawing.Point(61, 268);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(28, 28);
             this.pictureBox4.TabIndex = 7;
@@ -232,7 +216,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.pictureBox2.BackgroundImage = global::GUI.Properties.Resources.Fasticon_Fast_Icon_Users_Offline_user;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(33, 218);
+            this.pictureBox2.Location = new System.Drawing.Point(61, 218);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 28);
             this.pictureBox2.TabIndex = 5;
@@ -289,7 +273,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(400, 522);
+            this.ClientSize = new System.Drawing.Size(400, 600);
             this.Controls.Add(this.btDangKy);
             this.Controls.Add(this.btDangNhap);
             this.Controls.Add(this.label3);
@@ -322,8 +306,6 @@
 
         private System.Windows.Forms.Panel pnHeader;
         private System.Windows.Forms.Panel pnFooter;
-        private System.Windows.Forms.Button btExit;
-        private System.Windows.Forms.Label lbHeader;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -332,10 +314,11 @@
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btDangNhap;
-        private System.Windows.Forms.Button btThoat;
         private System.Windows.Forms.Button btDangKy;
         private System.Windows.Forms.Label lbInfor;
         private System.Windows.Forms.Label lbFooter;
         private System.Windows.Forms.Button btMinimized;
+        private System.Windows.Forms.Label lbHeader;
+        private System.Windows.Forms.Button btExit;
     }
 }

@@ -61,7 +61,7 @@
             // 
             // pnMenu
             // 
-            this.pnMenu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.pnMenu.BackColor = System.Drawing.Color.DarkBlue;
             this.pnMenu.Controls.Add(this.btThoat);
             this.pnMenu.Controls.Add(this.btTroGiup);
             this.pnMenu.Controls.Add(this.btHopDong);
@@ -78,7 +78,7 @@
             // 
             // btThoat
             // 
-            this.btThoat.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btThoat.BackColor = System.Drawing.Color.DarkBlue;
             this.btThoat.FlatAppearance.BorderSize = 0;
             this.btThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btThoat.ForeColor = System.Drawing.Color.White;
@@ -96,7 +96,7 @@
             // 
             // btTroGiup
             // 
-            this.btTroGiup.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btTroGiup.BackColor = System.Drawing.Color.DarkBlue;
             this.btTroGiup.FlatAppearance.BorderSize = 0;
             this.btTroGiup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btTroGiup.ForeColor = System.Drawing.Color.White;
@@ -114,7 +114,7 @@
             // 
             // btHopDong
             // 
-            this.btHopDong.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btHopDong.BackColor = System.Drawing.Color.DarkBlue;
             this.btHopDong.FlatAppearance.BorderSize = 0;
             this.btHopDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btHopDong.ForeColor = System.Drawing.Color.White;
@@ -132,7 +132,7 @@
             // 
             // btTaiKhoan
             // 
-            this.btTaiKhoan.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btTaiKhoan.BackColor = System.Drawing.Color.DarkBlue;
             this.btTaiKhoan.FlatAppearance.BorderSize = 0;
             this.btTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btTaiKhoan.ForeColor = System.Drawing.Color.White;
@@ -150,7 +150,7 @@
             // 
             // btPhieuBao
             // 
-            this.btPhieuBao.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btPhieuBao.BackColor = System.Drawing.Color.DarkBlue;
             this.btPhieuBao.FlatAppearance.BorderSize = 0;
             this.btPhieuBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btPhieuBao.ForeColor = System.Drawing.Color.White;
@@ -168,7 +168,7 @@
             // 
             // btKhachHang
             // 
-            this.btKhachHang.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btKhachHang.BackColor = System.Drawing.Color.DarkBlue;
             this.btKhachHang.FlatAppearance.BorderSize = 0;
             this.btKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btKhachHang.ForeColor = System.Drawing.Color.White;
@@ -186,7 +186,7 @@
             // 
             // btHome
             // 
-            this.btHome.BackColor = System.Drawing.Color.DimGray;
+            this.btHome.BackColor = System.Drawing.Color.DodgerBlue;
             this.btHome.FlatAppearance.BorderSize = 0;
             this.btHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btHome.ForeColor = System.Drawing.Color.White;

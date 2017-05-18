@@ -12,9 +12,41 @@ namespace GUI
 {
     public partial class frmTiepNhanKhachHang : Form
     {
+        BUS.KhachHangBUS business = new BUS.KhachHangBUS();
         public frmTiepNhanKhachHang()
         {
             InitializeComponent();
+            label1.BackColor = ColorTranslator.FromHtml("#2B569A");
+            StartPosition = FormStartPosition.Manual;
+        }
+
+        private void lbLoaiKH_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmTiepNhanKhachHang_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btHuy_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btDongY_Click(object sender, EventArgs e)
+        {
+            if (business.themKhachHang(txtMaKhachHang.Text, txtHoTen.Text, txtDiaChi.Text, txtCMND.Text, txtLoaiKH.Text, txtSDT.Text))
+            {
+                MessageBox.Show("Thông báo", "Thêm khách hàng thành công !", MessageBoxButtons.OK, MessageBoxIcon.None);
+            }
+            else
+            {
+                MessageBox.Show("Thông báo", "Thêm khách hàng thất bại !", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+            }
+
         }
     }
 }

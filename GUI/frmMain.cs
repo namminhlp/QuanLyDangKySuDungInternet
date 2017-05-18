@@ -16,10 +16,7 @@ namespace GUI
         public frmMain()
         {
             InitializeComponent();
-            // lbHeader.BackColor = ColorTranslator.FromHtml("#2B569A");
-            // btExit.BackColor = ColorTranslator.FromHtml("#2B569A");
-            // btMinimized.BackColor =  ColorTranslator.FromHtml("#2B569A");
-            // pnMenu.BackColor = ColorTranslator.FromHtml("#2B569A");
+
             StartPosition = FormStartPosition.CenterScreen;
             pnMenu.BackColor = ColorTranslator.FromHtml("#2B569A");
             btKhachHang.BackColor = ColorTranslator.FromHtml("#2B569A");
@@ -31,7 +28,6 @@ namespace GUI
             btHome.BackColor = ColorTranslator.FromHtml("#2196F3");
 
         }
-        public event EventHandler TroVeLogin;
         private void frmMain_Load(object sender, EventArgs e)
         {
 

@@ -29,30 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbHeader = new System.Windows.Forms.Label();
             this.pnMenu = new System.Windows.Forms.Panel();
-            this.btThoat = new System.Windows.Forms.Button();
-            this.btTroGiup = new System.Windows.Forms.Button();
-            this.btHopDong = new System.Windows.Forms.Button();
-            this.btTaiKhoan = new System.Windows.Forms.Button();
-            this.btPhieuBao = new System.Windows.Forms.Button();
-            this.btKhachHang = new System.Windows.Forms.Button();
-            this.btHome = new System.Windows.Forms.Button();
             this.toolStripKhachHang = new System.Windows.Forms.ToolStrip();
-            this.btXem = new System.Windows.Forms.ToolStripButton();
-            this.btThem = new System.Windows.Forms.ToolStripButton();
-            this.btSua = new System.Windows.Forms.ToolStripButton();
-            this.btXoa = new System.Windows.Forms.ToolStripButton();
-            this.btLapHopDong = new System.Windows.Forms.ToolStripButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.maKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diaChiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cMNDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loaiKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soDTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtTimKiem = new System.Windows.Forms.RichTextBox();
             this.lbMaKhachHang = new System.Windows.Forms.Label();
             this.txtMaKhachHang = new System.Windows.Forms.TextBox();
@@ -66,14 +47,33 @@
             this.lbLoaiKH = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.lbSDT = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.maKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaChiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cMNDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loaiKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soDTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btXem = new System.Windows.Forms.ToolStripButton();
+            this.btThem = new System.Windows.Forms.ToolStripButton();
+            this.btSua = new System.Windows.Forms.ToolStripButton();
+            this.btXoa = new System.Windows.Forms.ToolStripButton();
+            this.btLapHopDong = new System.Windows.Forms.ToolStripButton();
+            this.btThoat = new System.Windows.Forms.Button();
+            this.btTroGiup = new System.Windows.Forms.Button();
+            this.btHopDong = new System.Windows.Forms.Button();
+            this.btTaiKhoan = new System.Windows.Forms.Button();
+            this.btPhieuBao = new System.Windows.Forms.Button();
+            this.btKhachHang = new System.Windows.Forms.Button();
+            this.btHome = new System.Windows.Forms.Button();
             this.btMinimized = new System.Windows.Forms.Button();
             this.btExit = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnMenu.SuspendLayout();
             this.toolStripKhachHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lbHeader
@@ -95,7 +95,7 @@
             // 
             // pnMenu
             // 
-            this.pnMenu.BackColor = System.Drawing.Color.DarkOrange;
+            this.pnMenu.BackColor = System.Drawing.Color.MediumBlue;
             this.pnMenu.Controls.Add(this.btThoat);
             this.pnMenu.Controls.Add(this.btTroGiup);
             this.pnMenu.Controls.Add(this.btHopDong);
@@ -108,129 +108,6 @@
             this.pnMenu.Name = "pnMenu";
             this.pnMenu.Size = new System.Drawing.Size(960, 70);
             this.pnMenu.TabIndex = 9;
-            // 
-            // btThoat
-            // 
-            this.btThoat.BackColor = System.Drawing.Color.DarkOrange;
-            this.btThoat.FlatAppearance.BorderSize = 0;
-            this.btThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btThoat.ForeColor = System.Drawing.Color.White;
-            this.btThoat.Image = global::GUI.Properties.Resources.btn_carousel_arrow_right;
-            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btThoat.Location = new System.Drawing.Point(425, 0);
-            this.btThoat.Name = "btThoat";
-            this.btThoat.Size = new System.Drawing.Size(70, 70);
-            this.btThoat.TabIndex = 6;
-            this.btThoat.Text = "Thoát";
-            this.btThoat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btThoat.UseVisualStyleBackColor = false;
-            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
-            // 
-            // btTroGiup
-            // 
-            this.btTroGiup.BackColor = System.Drawing.Color.DarkOrange;
-            this.btTroGiup.FlatAppearance.BorderSize = 0;
-            this.btTroGiup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btTroGiup.ForeColor = System.Drawing.Color.White;
-            this.btTroGiup.Image = global::GUI.Properties.Resources.icon_call;
-            this.btTroGiup.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btTroGiup.Location = new System.Drawing.Point(355, 0);
-            this.btTroGiup.Name = "btTroGiup";
-            this.btTroGiup.Size = new System.Drawing.Size(70, 70);
-            this.btTroGiup.TabIndex = 5;
-            this.btTroGiup.Text = "Trợ giúp";
-            this.btTroGiup.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btTroGiup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btTroGiup.UseVisualStyleBackColor = false;
-            // 
-            // btHopDong
-            // 
-            this.btHopDong.BackColor = System.Drawing.Color.DarkOrange;
-            this.btHopDong.FlatAppearance.BorderSize = 0;
-            this.btHopDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btHopDong.ForeColor = System.Drawing.Color.White;
-            this.btHopDong.Image = global::GUI.Properties.Resources.icon_contract;
-            this.btHopDong.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btHopDong.Location = new System.Drawing.Point(145, 0);
-            this.btHopDong.Name = "btHopDong";
-            this.btHopDong.Size = new System.Drawing.Size(70, 70);
-            this.btHopDong.TabIndex = 4;
-            this.btHopDong.Text = "Hợp đồng";
-            this.btHopDong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btHopDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btHopDong.UseVisualStyleBackColor = false;
-            // 
-            // btTaiKhoan
-            // 
-            this.btTaiKhoan.BackColor = System.Drawing.Color.DarkOrange;
-            this.btTaiKhoan.FlatAppearance.BorderSize = 0;
-            this.btTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btTaiKhoan.ForeColor = System.Drawing.Color.White;
-            this.btTaiKhoan.Image = global::GUI.Properties.Resources.incon_key;
-            this.btTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btTaiKhoan.Location = new System.Drawing.Point(215, 0);
-            this.btTaiKhoan.Name = "btTaiKhoan";
-            this.btTaiKhoan.Size = new System.Drawing.Size(70, 70);
-            this.btTaiKhoan.TabIndex = 3;
-            this.btTaiKhoan.Text = "Tài khoản";
-            this.btTaiKhoan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btTaiKhoan.UseVisualStyleBackColor = false;
-            // 
-            // btPhieuBao
-            // 
-            this.btPhieuBao.BackColor = System.Drawing.Color.DarkOrange;
-            this.btPhieuBao.FlatAppearance.BorderSize = 0;
-            this.btPhieuBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btPhieuBao.ForeColor = System.Drawing.Color.White;
-            this.btPhieuBao.Image = global::GUI.Properties.Resources.email_icon;
-            this.btPhieuBao.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btPhieuBao.Location = new System.Drawing.Point(285, 0);
-            this.btPhieuBao.Name = "btPhieuBao";
-            this.btPhieuBao.Size = new System.Drawing.Size(70, 70);
-            this.btPhieuBao.TabIndex = 2;
-            this.btPhieuBao.Text = "Phiếu báo";
-            this.btPhieuBao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btPhieuBao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btPhieuBao.UseVisualStyleBackColor = false;
-            this.btPhieuBao.Click += new System.EventHandler(this.btPhieuBao_Click);
-            // 
-            // btKhachHang
-            // 
-            this.btKhachHang.BackColor = System.Drawing.Color.Gray;
-            this.btKhachHang.FlatAppearance.BorderSize = 0;
-            this.btKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btKhachHang.ForeColor = System.Drawing.Color.White;
-            this.btKhachHang.Image = global::GUI.Properties.Resources.icon_people;
-            this.btKhachHang.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btKhachHang.Location = new System.Drawing.Point(70, 0);
-            this.btKhachHang.Name = "btKhachHang";
-            this.btKhachHang.Size = new System.Drawing.Size(75, 70);
-            this.btKhachHang.TabIndex = 1;
-            this.btKhachHang.Text = "Khách hàng";
-            this.btKhachHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btKhachHang.UseVisualStyleBackColor = false;
-            this.btKhachHang.Click += new System.EventHandler(this.btKhachHang_Click);
-            // 
-            // btHome
-            // 
-            this.btHome.BackColor = System.Drawing.Color.DarkOrange;
-            this.btHome.FlatAppearance.BorderSize = 0;
-            this.btHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btHome.ForeColor = System.Drawing.Color.White;
-            this.btHome.Image = global::GUI.Properties.Resources.home_icon;
-            this.btHome.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btHome.Location = new System.Drawing.Point(0, 0);
-            this.btHome.Name = "btHome";
-            this.btHome.Size = new System.Drawing.Size(70, 70);
-            this.btHome.TabIndex = 0;
-            this.btHome.Text = "Trang chủ";
-            this.btHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btHome.UseVisualStyleBackColor = false;
-            this.btHome.Click += new System.EventHandler(this.btHome_Click);
             // 
             // toolStripKhachHang
             // 
@@ -249,6 +126,264 @@
             this.toolStripKhachHang.TabIndex = 11;
             this.toolStripKhachHang.Text = "toolStrip1";
             this.toolStripKhachHang.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStripKhachHang_ItemClicked);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maKHDataGridViewTextBoxColumn,
+            this.hoTenDataGridViewTextBoxColumn,
+            this.diaChiDataGridViewTextBoxColumn,
+            this.cMNDDataGridViewTextBoxColumn,
+            this.loaiKHDataGridViewTextBoxColumn,
+            this.soDTDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.khachHangBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 300);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(959, 300);
+            this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseLeave);
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTimKiem.BackColor = System.Drawing.Color.White;
+            this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(30, 130);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(0);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(332, 25);
+            this.txtTimKiem.TabIndex = 1;
+            this.txtTimKiem.Text = "";
+            this.txtTimKiem.Click += new System.EventHandler(this.txtTimKiem_Click);
+            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            this.txtTimKiem.Leave += new System.EventHandler(this.txtTimKiem_Leave);
+            this.txtTimKiem.MouseLeave += new System.EventHandler(this.txtTimKiem_MouseLeave);
+            // 
+            // lbMaKhachHang
+            // 
+            this.lbMaKhachHang.BackColor = System.Drawing.Color.Transparent;
+            this.lbMaKhachHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaKhachHang.ForeColor = System.Drawing.Color.Black;
+            this.lbMaKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbMaKhachHang.Location = new System.Drawing.Point(30, 180);
+            this.lbMaKhachHang.Name = "lbMaKhachHang";
+            this.lbMaKhachHang.Size = new System.Drawing.Size(121, 22);
+            this.lbMaKhachHang.TabIndex = 14;
+            this.lbMaKhachHang.Text = "Mã khách hàng";
+            this.lbMaKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbMaKhachHang.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtMaKhachHang
+            // 
+            this.txtMaKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMaKhachHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaKhachHang.Location = new System.Drawing.Point(149, 180);
+            this.txtMaKhachHang.Name = "txtMaKhachHang";
+            this.txtMaKhachHang.Size = new System.Drawing.Size(170, 22);
+            this.txtMaKhachHang.TabIndex = 2;
+            this.txtMaKhachHang.TextChanged += new System.EventHandler(this.txtMaKhachHang_TextChanged);
+            // 
+            // txtHoTen
+            // 
+            this.txtHoTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtHoTen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHoTen.Location = new System.Drawing.Point(149, 219);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(170, 22);
+            this.txtHoTen.TabIndex = 3;
+            this.txtHoTen.TextChanged += new System.EventHandler(this.txtHoTen_TextChanged);
+            // 
+            // lbHoTen
+            // 
+            this.lbHoTen.BackColor = System.Drawing.Color.Transparent;
+            this.lbHoTen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHoTen.ForeColor = System.Drawing.Color.Black;
+            this.lbHoTen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbHoTen.Location = new System.Drawing.Point(30, 218);
+            this.lbHoTen.Name = "lbHoTen";
+            this.lbHoTen.Size = new System.Drawing.Size(115, 22);
+            this.lbHoTen.TabIndex = 16;
+            this.lbHoTen.Text = "Họ tên";
+            this.lbHoTen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbHoTen.Click += new System.EventHandler(this.lbHoTen_Click);
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Location = new System.Drawing.Point(149, 256);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(170, 22);
+            this.txtDiaChi.TabIndex = 4;
+            this.txtDiaChi.TextChanged += new System.EventHandler(this.txtDiaChi_TextChanged);
+            // 
+            // lbDiaChi
+            // 
+            this.lbDiaChi.BackColor = System.Drawing.Color.Transparent;
+            this.lbDiaChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDiaChi.ForeColor = System.Drawing.Color.Black;
+            this.lbDiaChi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbDiaChi.Location = new System.Drawing.Point(30, 256);
+            this.lbDiaChi.Name = "lbDiaChi";
+            this.lbDiaChi.Size = new System.Drawing.Size(115, 22);
+            this.lbDiaChi.TabIndex = 18;
+            this.lbDiaChi.Text = "Địa chỉ";
+            this.lbDiaChi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbDiaChi.Click += new System.EventHandler(this.lbDiaChi_Click);
+            // 
+            // txtCMND
+            // 
+            this.txtCMND.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCMND.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCMND.Location = new System.Drawing.Point(466, 180);
+            this.txtCMND.Name = "txtCMND";
+            this.txtCMND.Size = new System.Drawing.Size(170, 22);
+            this.txtCMND.TabIndex = 5;
+            this.txtCMND.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // lbCMND
+            // 
+            this.lbCMND.BackColor = System.Drawing.Color.Transparent;
+            this.lbCMND.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCMND.ForeColor = System.Drawing.Color.Black;
+            this.lbCMND.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbCMND.Location = new System.Drawing.Point(340, 180);
+            this.lbCMND.Name = "lbCMND";
+            this.lbCMND.Size = new System.Drawing.Size(120, 22);
+            this.lbCMND.TabIndex = 20;
+            this.lbCMND.Text = "CMND";
+            this.lbCMND.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbCMND.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // txtLoaiKH
+            // 
+            this.txtLoaiKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLoaiKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoaiKH.Location = new System.Drawing.Point(466, 219);
+            this.txtLoaiKH.Name = "txtLoaiKH";
+            this.txtLoaiKH.Size = new System.Drawing.Size(170, 22);
+            this.txtLoaiKH.TabIndex = 6;
+            this.txtLoaiKH.TextChanged += new System.EventHandler(this.txtLoaiKH_TextChanged);
+            // 
+            // lbLoaiKH
+            // 
+            this.lbLoaiKH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbLoaiKH.BackColor = System.Drawing.Color.Transparent;
+            this.lbLoaiKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLoaiKH.ForeColor = System.Drawing.Color.Black;
+            this.lbLoaiKH.Location = new System.Drawing.Point(340, 217);
+            this.lbLoaiKH.Name = "lbLoaiKH";
+            this.lbLoaiKH.Size = new System.Drawing.Size(120, 22);
+            this.lbLoaiKH.TabIndex = 22;
+            this.lbLoaiKH.Text = "Loại KH";
+            this.lbLoaiKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbLoaiKH.Click += new System.EventHandler(this.lbLoaiKH_Click);
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSDT.Location = new System.Drawing.Point(466, 256);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(170, 22);
+            this.txtSDT.TabIndex = 7;
+            this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
+            // 
+            // lbSDT
+            // 
+            this.lbSDT.BackColor = System.Drawing.Color.Transparent;
+            this.lbSDT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSDT.ForeColor = System.Drawing.Color.Black;
+            this.lbSDT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbSDT.Location = new System.Drawing.Point(340, 256);
+            this.lbSDT.Name = "lbSDT";
+            this.lbSDT.Size = new System.Drawing.Size(120, 22);
+            this.lbSDT.TabIndex = 24;
+            this.lbSDT.Text = "Số điện thoại";
+            this.lbSDT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbSDT.Click += new System.EventHandler(this.lbSDT_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox2.BackgroundImage = global::GUI.Properties.Resources.mobile_search_icon_x2;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(337, 130);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.TabIndex = 27;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
+            // 
+            // maKHDataGridViewTextBoxColumn
+            // 
+            this.maKHDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.maKHDataGridViewTextBoxColumn.DataPropertyName = "MaKH";
+            this.maKHDataGridViewTextBoxColumn.HeaderText = "Mã khách hàng";
+            this.maKHDataGridViewTextBoxColumn.Name = "maKHDataGridViewTextBoxColumn";
+            // 
+            // hoTenDataGridViewTextBoxColumn
+            // 
+            this.hoTenDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
+            this.hoTenDataGridViewTextBoxColumn.HeaderText = "Họ tên";
+            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
+            // 
+            // diaChiDataGridViewTextBoxColumn
+            // 
+            this.diaChiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.diaChiDataGridViewTextBoxColumn.DataPropertyName = "DiaChi";
+            this.diaChiDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
+            this.diaChiDataGridViewTextBoxColumn.Name = "diaChiDataGridViewTextBoxColumn";
+            // 
+            // cMNDDataGridViewTextBoxColumn
+            // 
+            this.cMNDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cMNDDataGridViewTextBoxColumn.DataPropertyName = "CMND";
+            this.cMNDDataGridViewTextBoxColumn.HeaderText = "CMND";
+            this.cMNDDataGridViewTextBoxColumn.Name = "cMNDDataGridViewTextBoxColumn";
+            // 
+            // loaiKHDataGridViewTextBoxColumn
+            // 
+            this.loaiKHDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.loaiKHDataGridViewTextBoxColumn.DataPropertyName = "LoaiKH";
+            this.loaiKHDataGridViewTextBoxColumn.HeaderText = "Loại khách hàng";
+            this.loaiKHDataGridViewTextBoxColumn.Name = "loaiKHDataGridViewTextBoxColumn";
+            // 
+            // soDTDataGridViewTextBoxColumn
+            // 
+            this.soDTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.soDTDataGridViewTextBoxColumn.DataPropertyName = "SoDT";
+            this.soDTDataGridViewTextBoxColumn.HeaderText = "Số điện thoại";
+            this.soDTDataGridViewTextBoxColumn.Name = "soDTDataGridViewTextBoxColumn";
+            // 
+            // khachHangBindingSource
+            // 
+            this.khachHangBindingSource.DataSource = typeof(DAO.KhachHang);
             // 
             // btXem
             // 
@@ -315,249 +450,128 @@
             this.btLapHopDong.Text = "Lập hợp đồng";
             this.btLapHopDong.Click += new System.EventHandler(this.btLapHopDong_Click);
             // 
-            // dataGridView1
+            // btThoat
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maKHDataGridViewTextBoxColumn,
-            this.hoTenDataGridViewTextBoxColumn,
-            this.diaChiDataGridViewTextBoxColumn,
-            this.cMNDDataGridViewTextBoxColumn,
-            this.loaiKHDataGridViewTextBoxColumn,
-            this.soDTDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.khachHangBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 300);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(959, 300);
-            this.dataGridView1.TabIndex = 12;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellMouseLeave);
+            this.btThoat.BackColor = System.Drawing.Color.MediumBlue;
+            this.btThoat.FlatAppearance.BorderSize = 0;
+            this.btThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThoat.ForeColor = System.Drawing.Color.White;
+            this.btThoat.Image = global::GUI.Properties.Resources.btn_carousel_arrow_right;
+            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btThoat.Location = new System.Drawing.Point(425, 0);
+            this.btThoat.Name = "btThoat";
+            this.btThoat.Size = new System.Drawing.Size(70, 70);
+            this.btThoat.TabIndex = 6;
+            this.btThoat.Text = "Thoát";
+            this.btThoat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btThoat.UseVisualStyleBackColor = false;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
-            // maKHDataGridViewTextBoxColumn
+            // btTroGiup
             // 
-            this.maKHDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maKHDataGridViewTextBoxColumn.DataPropertyName = "MaKH";
-            this.maKHDataGridViewTextBoxColumn.HeaderText = "Mã khách hàng";
-            this.maKHDataGridViewTextBoxColumn.Name = "maKHDataGridViewTextBoxColumn";
+            this.btTroGiup.BackColor = System.Drawing.Color.MediumBlue;
+            this.btTroGiup.FlatAppearance.BorderSize = 0;
+            this.btTroGiup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTroGiup.ForeColor = System.Drawing.Color.White;
+            this.btTroGiup.Image = global::GUI.Properties.Resources.icon_call;
+            this.btTroGiup.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btTroGiup.Location = new System.Drawing.Point(355, 0);
+            this.btTroGiup.Name = "btTroGiup";
+            this.btTroGiup.Size = new System.Drawing.Size(70, 70);
+            this.btTroGiup.TabIndex = 5;
+            this.btTroGiup.Text = "Trợ giúp";
+            this.btTroGiup.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btTroGiup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btTroGiup.UseVisualStyleBackColor = false;
             // 
-            // hoTenDataGridViewTextBoxColumn
+            // btHopDong
             // 
-            this.hoTenDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn.HeaderText = "Họ tên";
-            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
+            this.btHopDong.BackColor = System.Drawing.Color.MediumBlue;
+            this.btHopDong.FlatAppearance.BorderSize = 0;
+            this.btHopDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btHopDong.ForeColor = System.Drawing.Color.White;
+            this.btHopDong.Image = global::GUI.Properties.Resources.icon_contract;
+            this.btHopDong.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btHopDong.Location = new System.Drawing.Point(145, 0);
+            this.btHopDong.Name = "btHopDong";
+            this.btHopDong.Size = new System.Drawing.Size(70, 70);
+            this.btHopDong.TabIndex = 4;
+            this.btHopDong.Text = "Hợp đồng";
+            this.btHopDong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btHopDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btHopDong.UseVisualStyleBackColor = false;
             // 
-            // diaChiDataGridViewTextBoxColumn
+            // btTaiKhoan
             // 
-            this.diaChiDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.diaChiDataGridViewTextBoxColumn.DataPropertyName = "DiaChi";
-            this.diaChiDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
-            this.diaChiDataGridViewTextBoxColumn.Name = "diaChiDataGridViewTextBoxColumn";
+            this.btTaiKhoan.BackColor = System.Drawing.Color.MediumBlue;
+            this.btTaiKhoan.FlatAppearance.BorderSize = 0;
+            this.btTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTaiKhoan.ForeColor = System.Drawing.Color.White;
+            this.btTaiKhoan.Image = global::GUI.Properties.Resources.incon_key;
+            this.btTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btTaiKhoan.Location = new System.Drawing.Point(215, 0);
+            this.btTaiKhoan.Name = "btTaiKhoan";
+            this.btTaiKhoan.Size = new System.Drawing.Size(70, 70);
+            this.btTaiKhoan.TabIndex = 3;
+            this.btTaiKhoan.Text = "Tài khoản";
+            this.btTaiKhoan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btTaiKhoan.UseVisualStyleBackColor = false;
             // 
-            // cMNDDataGridViewTextBoxColumn
+            // btPhieuBao
             // 
-            this.cMNDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cMNDDataGridViewTextBoxColumn.DataPropertyName = "CMND";
-            this.cMNDDataGridViewTextBoxColumn.HeaderText = "CMND";
-            this.cMNDDataGridViewTextBoxColumn.Name = "cMNDDataGridViewTextBoxColumn";
+            this.btPhieuBao.BackColor = System.Drawing.Color.MediumBlue;
+            this.btPhieuBao.FlatAppearance.BorderSize = 0;
+            this.btPhieuBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPhieuBao.ForeColor = System.Drawing.Color.White;
+            this.btPhieuBao.Image = global::GUI.Properties.Resources.email_icon;
+            this.btPhieuBao.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btPhieuBao.Location = new System.Drawing.Point(285, 0);
+            this.btPhieuBao.Name = "btPhieuBao";
+            this.btPhieuBao.Size = new System.Drawing.Size(70, 70);
+            this.btPhieuBao.TabIndex = 2;
+            this.btPhieuBao.Text = "Phiếu báo";
+            this.btPhieuBao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btPhieuBao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btPhieuBao.UseVisualStyleBackColor = false;
+            this.btPhieuBao.Click += new System.EventHandler(this.btPhieuBao_Click);
             // 
-            // loaiKHDataGridViewTextBoxColumn
+            // btKhachHang
             // 
-            this.loaiKHDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.loaiKHDataGridViewTextBoxColumn.DataPropertyName = "LoaiKH";
-            this.loaiKHDataGridViewTextBoxColumn.HeaderText = "Loại khách hàng";
-            this.loaiKHDataGridViewTextBoxColumn.Name = "loaiKHDataGridViewTextBoxColumn";
+            this.btKhachHang.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btKhachHang.FlatAppearance.BorderSize = 0;
+            this.btKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btKhachHang.ForeColor = System.Drawing.Color.White;
+            this.btKhachHang.Image = global::GUI.Properties.Resources.icon_people;
+            this.btKhachHang.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btKhachHang.Location = new System.Drawing.Point(70, 0);
+            this.btKhachHang.Name = "btKhachHang";
+            this.btKhachHang.Size = new System.Drawing.Size(75, 70);
+            this.btKhachHang.TabIndex = 1;
+            this.btKhachHang.Text = "Khách hàng";
+            this.btKhachHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btKhachHang.UseVisualStyleBackColor = false;
+            this.btKhachHang.Click += new System.EventHandler(this.btKhachHang_Click);
             // 
-            // soDTDataGridViewTextBoxColumn
+            // btHome
             // 
-            this.soDTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.soDTDataGridViewTextBoxColumn.DataPropertyName = "SoDT";
-            this.soDTDataGridViewTextBoxColumn.HeaderText = "Số điện thoại";
-            this.soDTDataGridViewTextBoxColumn.Name = "soDTDataGridViewTextBoxColumn";
-            // 
-            // khachHangBindingSource
-            // 
-            this.khachHangBindingSource.DataSource = typeof(DAO.KhachHang);
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTimKiem.BackColor = System.Drawing.Color.White;
-            this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(30, 130);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(0);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(332, 25);
-            this.txtTimKiem.TabIndex = 13;
-            this.txtTimKiem.Text = "";
-            this.txtTimKiem.Click += new System.EventHandler(this.txtTimKiem_Click);
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
-            this.txtTimKiem.Leave += new System.EventHandler(this.txtTimKiem_Leave);
-            this.txtTimKiem.MouseLeave += new System.EventHandler(this.txtTimKiem_MouseLeave);
-            // 
-            // lbMaKhachHang
-            // 
-            this.lbMaKhachHang.BackColor = System.Drawing.Color.Transparent;
-            this.lbMaKhachHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaKhachHang.ForeColor = System.Drawing.Color.Black;
-            this.lbMaKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbMaKhachHang.Location = new System.Drawing.Point(30, 180);
-            this.lbMaKhachHang.Name = "lbMaKhachHang";
-            this.lbMaKhachHang.Size = new System.Drawing.Size(100, 22);
-            this.lbMaKhachHang.TabIndex = 14;
-            this.lbMaKhachHang.Text = "Mã khách hàng";
-            this.lbMaKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbMaKhachHang.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtMaKhachHang
-            // 
-            this.txtMaKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMaKhachHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKhachHang.Location = new System.Drawing.Point(128, 180);
-            this.txtMaKhachHang.Name = "txtMaKhachHang";
-            this.txtMaKhachHang.Size = new System.Drawing.Size(170, 22);
-            this.txtMaKhachHang.TabIndex = 15;
-            this.txtMaKhachHang.TextChanged += new System.EventHandler(this.txtMaKhachHang_TextChanged);
-            // 
-            // txtHoTen
-            // 
-            this.txtHoTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtHoTen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.Location = new System.Drawing.Point(128, 218);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(170, 22);
-            this.txtHoTen.TabIndex = 17;
-            this.txtHoTen.TextChanged += new System.EventHandler(this.txtHoTen_TextChanged);
-            // 
-            // lbHoTen
-            // 
-            this.lbHoTen.BackColor = System.Drawing.Color.Transparent;
-            this.lbHoTen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHoTen.ForeColor = System.Drawing.Color.Black;
-            this.lbHoTen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbHoTen.Location = new System.Drawing.Point(30, 218);
-            this.lbHoTen.Name = "lbHoTen";
-            this.lbHoTen.Size = new System.Drawing.Size(100, 22);
-            this.lbHoTen.TabIndex = 16;
-            this.lbHoTen.Text = "Họ tên";
-            this.lbHoTen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbHoTen.Click += new System.EventHandler(this.lbHoTen_Click);
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(128, 256);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(170, 22);
-            this.txtDiaChi.TabIndex = 19;
-            this.txtDiaChi.TextChanged += new System.EventHandler(this.txtDiaChi_TextChanged);
-            // 
-            // lbDiaChi
-            // 
-            this.lbDiaChi.BackColor = System.Drawing.Color.Transparent;
-            this.lbDiaChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDiaChi.ForeColor = System.Drawing.Color.Black;
-            this.lbDiaChi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbDiaChi.Location = new System.Drawing.Point(30, 256);
-            this.lbDiaChi.Name = "lbDiaChi";
-            this.lbDiaChi.Size = new System.Drawing.Size(100, 22);
-            this.lbDiaChi.TabIndex = 18;
-            this.lbDiaChi.Text = "Địa chỉ";
-            this.lbDiaChi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbDiaChi.Click += new System.EventHandler(this.lbDiaChi_Click);
-            // 
-            // txtCMND
-            // 
-            this.txtCMND.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCMND.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCMND.Location = new System.Drawing.Point(407, 180);
-            this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(170, 22);
-            this.txtCMND.TabIndex = 21;
-            this.txtCMND.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // lbCMND
-            // 
-            this.lbCMND.BackColor = System.Drawing.Color.Transparent;
-            this.lbCMND.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCMND.ForeColor = System.Drawing.Color.Black;
-            this.lbCMND.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbCMND.Location = new System.Drawing.Point(308, 180);
-            this.lbCMND.Name = "lbCMND";
-            this.lbCMND.Size = new System.Drawing.Size(100, 22);
-            this.lbCMND.TabIndex = 20;
-            this.lbCMND.Text = "CMND";
-            this.lbCMND.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbCMND.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // txtLoaiKH
-            // 
-            this.txtLoaiKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLoaiKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoaiKH.Location = new System.Drawing.Point(407, 217);
-            this.txtLoaiKH.Name = "txtLoaiKH";
-            this.txtLoaiKH.Size = new System.Drawing.Size(170, 22);
-            this.txtLoaiKH.TabIndex = 23;
-            this.txtLoaiKH.TextChanged += new System.EventHandler(this.txtLoaiKH_TextChanged);
-            // 
-            // lbLoaiKH
-            // 
-            this.lbLoaiKH.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbLoaiKH.BackColor = System.Drawing.Color.Transparent;
-            this.lbLoaiKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLoaiKH.ForeColor = System.Drawing.Color.Black;
-            this.lbLoaiKH.Location = new System.Drawing.Point(308, 217);
-            this.lbLoaiKH.Name = "lbLoaiKH";
-            this.lbLoaiKH.Size = new System.Drawing.Size(100, 22);
-            this.lbLoaiKH.TabIndex = 22;
-            this.lbLoaiKH.Text = "Loại KH";
-            this.lbLoaiKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbLoaiKH.Click += new System.EventHandler(this.lbLoaiKH_Click);
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.Location = new System.Drawing.Point(407, 256);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(170, 22);
-            this.txtSDT.TabIndex = 25;
-            this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
-            // 
-            // lbSDT
-            // 
-            this.lbSDT.BackColor = System.Drawing.Color.Transparent;
-            this.lbSDT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSDT.ForeColor = System.Drawing.Color.Black;
-            this.lbSDT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbSDT.Location = new System.Drawing.Point(308, 256);
-            this.lbSDT.Name = "lbSDT";
-            this.lbSDT.Size = new System.Drawing.Size(100, 22);
-            this.lbSDT.TabIndex = 24;
-            this.lbSDT.Text = "Số điện thoại";
-            this.lbSDT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbSDT.Click += new System.EventHandler(this.lbSDT_Click);
+            this.btHome.BackColor = System.Drawing.Color.MediumBlue;
+            this.btHome.FlatAppearance.BorderSize = 0;
+            this.btHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btHome.ForeColor = System.Drawing.Color.White;
+            this.btHome.Image = global::GUI.Properties.Resources.home_icon;
+            this.btHome.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btHome.Location = new System.Drawing.Point(0, 0);
+            this.btHome.Name = "btHome";
+            this.btHome.Size = new System.Drawing.Size(70, 70);
+            this.btHome.TabIndex = 0;
+            this.btHome.Text = "Trang chủ";
+            this.btHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btHome.UseVisualStyleBackColor = false;
+            this.btHome.Click += new System.EventHandler(this.btHome_Click);
             // 
             // btMinimized
             // 
@@ -591,20 +605,6 @@
             this.btExit.TabIndex = 7;
             this.btExit.UseVisualStyleBackColor = false;
             this.btExit.Click += new System.EventHandler(this.btExit_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox2.BackgroundImage = global::GUI.Properties.Resources.mobile_search_icon_x2;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(337, 130);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.TabIndex = 27;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
             // frmQuanLyKhachHang
             // 
@@ -640,8 +640,8 @@
             this.toolStripKhachHang.ResumeLayout(false);
             this.toolStripKhachHang.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

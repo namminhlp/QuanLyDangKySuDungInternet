@@ -20,18 +20,15 @@ namespace GUI
             // Set text Admin
             txtTenTruyCap.Text = "admin1";
             txtMatKhau.Text = "3071997";
-            btThoat.Hide();
 
             //Set color
             lbHeader.BackColor = ColorTranslator.FromHtml("#2B569A");
-            pnFooter.BackColor = ColorTranslator.FromHtml("#2B569A");
             btMinimized.BackColor = ColorTranslator.FromHtml("#2B569A");
             btExit.BackColor = ColorTranslator.FromHtml("#2B569A");
             btDangNhap.BackColor = ColorTranslator.FromHtml("#2196F3");
             btDangKy.BackColor = ColorTranslator.FromHtml("#2196F3");
 
         }
-
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
 

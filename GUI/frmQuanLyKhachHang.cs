@@ -262,8 +262,16 @@ namespace GUI
 
         private void btLapHopDong_Click(object sender, EventArgs e)
         {
-
+            frmTiepNhanHopDong frmTNHD = new frmTiepNhanHopDong(txtMaKhachHang.Text);
+            frmTNHD.Show();
+            frmTNHD.FormClosed += FrmTNHD_FormClosed;
         }
+
+        private void FrmTNHD_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            btXem_Click(sender, e);
+        }
+
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
             
