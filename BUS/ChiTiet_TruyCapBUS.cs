@@ -42,7 +42,8 @@ namespace BUS
         }
         public List<ChiTiet_TruyCap> xemChiTietTruyCap (string MaPhieuBao)
         {
-            var query = from u in db.ChiTiet_TruyCaps
+            var query = from u in db.ChiTiet_TruyCaps join v in db.PhieuBaos
+                        on u.MaPhieu equals v.MaPhieu
                         where u.MaPhieu == MaPhieuBao
                         select u;
             return query.ToList();

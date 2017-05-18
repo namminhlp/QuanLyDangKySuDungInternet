@@ -135,5 +135,70 @@ namespace GUI
             fMain.Show();
             Close();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+                txtMaPhieuBao.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                txtTenTruyCap.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                txtNgayLap.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                txtThangLap.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                txtTongTien.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                // txtTinhTrangTT.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                bool tempTinhTrangTT = Convert.ToBoolean(dataGridView1.CurrentRow.Cells[5].Value);
+                if (tempTinhTrangTT == true)
+                {
+                    txtTinhTrangTT.Text = "Đã thanh toán";
+                }
+                else
+                {
+                    txtTinhTrangTT.Text = "Chưa thanh toán";
+                }
+                // Do Ngày TT không có, null nên convert ta string ko dc nên phải sử dụng gián tiếp
+                DateTime tempNgayTT = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[6].Value);
+                txtNgayTT.Text = (tempNgayTT == DateTime.MinValue ? "" : tempNgayTT.ToString());
+                // Tương tự với hình thức thanh toán
+                string tempHinhThucTT = Convert.ToString(dataGridView1.CurrentRow.Cells[7].Value);
+                txtHinhThucTT.Text = (tempHinhThucTT == null ? "" : tempHinhThucTT.ToString());
+                if (tempTinhTrangTT == false)
+                 {
+                        btXacNhan.Enabled = true;
+                  }
+            btXoa.Enabled = true;
+                btChiTietTruyCap.Enabled = true;
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+                txtMaPhieuBao.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+                txtTenTruyCap.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+                txtNgayLap.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                txtThangLap.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+                txtTongTien.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+                // txtTinhTrangTT.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+                bool tempTinhTrangTT = Convert.ToBoolean(dataGridView1.CurrentRow.Cells[5].Value);
+                if (tempTinhTrangTT == true)
+                {
+                    txtTinhTrangTT.Text = "Đã thanh toán";
+                } 
+                else
+                {
+                    txtTinhTrangTT.Text = "Chưa thanh toán";
+                }
+                // Do Ngày TT không có, null nên convert ta string ko dc nên phải sử dụng gián tiếp
+                DateTime tempNgayTT = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[6].Value);
+                txtNgayTT.Text = (tempNgayTT == DateTime.MinValue ? "" : tempNgayTT.ToString());
+                // Tương tự với hình thức thanh toán
+                string tempHinhThucTT = Convert.ToString(dataGridView1.CurrentRow.Cells[7].Value);
+                txtHinhThucTT.Text = (tempHinhThucTT == null ? "" : tempHinhThucTT.ToString());
+                if (tempTinhTrangTT == false)
+                {
+                 btXacNhan.Enabled = true;
+                }
+                btXoa.Enabled = true;
+                btChiTietTruyCap.Enabled = true;
+
+            
+        }
     }
 }

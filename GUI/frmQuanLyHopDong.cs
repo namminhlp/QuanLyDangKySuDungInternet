@@ -298,5 +298,17 @@ namespace GUI
                 txtNgayKyHD.ForeColor = Color.Gray;
             }
         }
+
+        private void btPhieuBao_Click(object sender, EventArgs e)
+        {
+            frmQuanLyPhieuBao fPB = new frmQuanLyPhieuBao();
+            fPB.Show();
+            Close();
+        }
+
+        private void btHopDong_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

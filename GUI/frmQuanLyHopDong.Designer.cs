@@ -416,6 +416,7 @@
             this.btHopDong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btHopDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btHopDong.UseVisualStyleBackColor = false;
+            this.btHopDong.Click += new System.EventHandler(this.btHopDong_Click);
             // 
             // btTaiKhoan
             // 
@@ -451,6 +452,7 @@
             this.btPhieuBao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btPhieuBao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btPhieuBao.UseVisualStyleBackColor = false;
+            this.btPhieuBao.Click += new System.EventHandler(this.btPhieuBao_Click);
             // 
             // btKhachHang
             // 
