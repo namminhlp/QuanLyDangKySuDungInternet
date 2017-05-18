@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtNgayKyHD = new System.Windows.Forms.TextBox();
             this.lbNgayKyHD = new System.Windows.Forms.Label();
             this.txtChiPhi = new System.Windows.Forms.TextBox();
@@ -85,7 +85,9 @@
             this.txtNgayKyHD.Name = "txtNgayKyHD";
             this.txtNgayKyHD.Size = new System.Drawing.Size(170, 22);
             this.txtNgayKyHD.TabIndex = 46;
+            this.txtNgayKyHD.Click += new System.EventHandler(this.txtNgayKyHD_Click);
             this.txtNgayKyHD.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
+            this.txtNgayKyHD.Leave += new System.EventHandler(this.txtNgayKyHD_Leave);
             // 
             // lbNgayKyHD
             // 
@@ -273,14 +275,14 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maHDDataGridViewTextBoxColumn,
@@ -308,10 +310,10 @@
             this.toolStripHopDong.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btXem,
             this.btThem,
-            this.toolStripButton1,
             this.btSua,
             this.btXoa,
-            this.btTaoTaiKhoan});
+            this.btTaoTaiKhoan,
+            this.toolStripButton1});
             this.toolStripHopDong.Location = new System.Drawing.Point(0, 100);
             this.toolStripHopDong.Name = "toolStripHopDong";
             this.toolStripHopDong.Size = new System.Drawing.Size(960, 30);
@@ -431,6 +433,7 @@
             this.btTaiKhoan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btTaiKhoan.UseVisualStyleBackColor = false;
+            this.btTaiKhoan.Click += new System.EventHandler(this.btTaiKhoan_Click);
             // 
             // btPhieuBao
             // 
@@ -566,8 +569,8 @@
             this.btSua.Image = global::GUI.Properties.Resources._15_512;
             this.btSua.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(60, 30);
-            this.btSua.Text = "Sửa";
+            this.btSua.Size = new System.Drawing.Size(80, 30);
+            this.btSua.Text = "Cập nhật";
             this.btSua.Click += new System.EventHandler(this.btSua_Click);
             // 
             // btXoa
@@ -585,19 +588,21 @@
             // 
             // btTaoTaiKhoan
             // 
+            this.btTaoTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTaoTaiKhoan.Image = global::GUI.Properties.Resources.Male_user_add_icon;
             this.btTaoTaiKhoan.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btTaoTaiKhoan.Name = "btTaoTaiKhoan";
-            this.btTaoTaiKhoan.Size = new System.Drawing.Size(99, 27);
+            this.btTaoTaiKhoan.Size = new System.Drawing.Size(107, 27);
             this.btTaoTaiKhoan.Text = "Tạo tài khoản";
             this.btTaoTaiKhoan.Click += new System.EventHandler(this.btTaoTaiKhoan_Click);
             // 
             // toolStripButton1
             // 
+            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripButton1.Image = global::GUI.Properties.Resources.waiting_icon_8619;
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(122, 27);
+            this.toolStripButton1.Size = new System.Drawing.Size(133, 27);
             this.toolStripButton1.Text = "Danh sách HĐ đợi";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 

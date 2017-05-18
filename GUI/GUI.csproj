@@ -44,11 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmDangNhapAdmin.cs">
+    <Compile Include="frmChiTietTruyCap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDangNhapAdmin.Designer.cs">
-      <DependentUpon>frmDangNhapAdmin.cs</DependentUpon>
+    <Compile Include="frmChiTietTruyCap.Designer.cs">
+      <DependentUpon>frmChiTietTruyCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -92,10 +98,19 @@
     <Compile Include="frmTiepNhanKhachHang.Designer.cs">
       <DependentUpon>frmTiepNhanKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTiepNhanTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTiepNhanTaiKhoan.Designer.cs">
+      <DependentUpon>frmTiepNhanTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmDangNhapAdmin.resx">
-      <DependentUpon>frmDangNhapAdmin.cs</DependentUpon>
+    <EmbeddedResource Include="frmChiTietTruyCap.resx">
+      <DependentUpon>frmChiTietTruyCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -106,11 +121,20 @@
     <EmbeddedResource Include="frmQuanLyKhachHang.resx">
       <DependentUpon>frmQuanLyKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyPhieuBao.resx">
+      <DependentUpon>frmQuanLyPhieuBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuanLyTaiKhoan.resx">
+      <DependentUpon>frmQuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTiepNhanHopDong.resx">
       <DependentUpon>frmTiepNhanHopDong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTiepNhanKhachHang.resx">
       <DependentUpon>frmTiepNhanKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTiepNhanTaiKhoan.resx">
+      <DependentUpon>frmTiepNhanTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -231,6 +255,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\waiting-icon-8619.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\678134-sign-check-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel__Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attorney.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thumbnail_nred_padlockicon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

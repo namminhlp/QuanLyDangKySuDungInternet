@@ -94,6 +94,7 @@
             this.txtNgayDK.Size = new System.Drawing.Size(170, 22);
             this.txtNgayDK.TabIndex = 2;
             this.txtNgayDK.Click += new System.EventHandler(this.txtNgayDK_Click);
+            this.txtNgayDK.TextChanged += new System.EventHandler(this.txtNgayDK_TextChanged);
             this.txtNgayDK.Leave += new System.EventHandler(this.txtNgayDK_Leave);
             // 
             // lbNgayDK

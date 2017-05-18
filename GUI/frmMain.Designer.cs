@@ -200,6 +200,7 @@
             this.btHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btHome.UseVisualStyleBackColor = false;
+            this.btHome.Click += new System.EventHandler(this.btHome_Click);
             // 
             // btMinimized
             // 
@@ -238,7 +239,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(960, 600);
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.btMinimized);

@@ -35,9 +35,11 @@ namespace BUS
             return db.TaiKhoans.ToList();
         }
 
-        public bool themTaiKhoan(string TenTruyCap, string Matkhau, string MaHD, string Email, string DCCD, string DCTT)
+        public bool themTaiKhoan(string TenTruyCap, string Matkhau, string MaHD, string Email, string DCCD, string DCTT, string TrangThai)
         {
-            if (TenTruyCap == "" || Matkhau == "" || MaHD == "" || Email == ""  || DCCD == "" || DCTT == "")
+            if (TenTruyCap == "" || Matkhau == "" || MaHD == "" || Email == "" 
+                || DCCD == "" || DCTT == "" || TrangThai == null || TrangThai == ""
+                || TenTruyCap.Length <= 6)
             {
                 return false;
             }
@@ -66,7 +68,7 @@ namespace BUS
                             tk.TenTruyCap = TenTruyCap;
                             tk.MatKhau = Matkhau;
                             tk.Email = Email;
-                            tk.TrangThai = false;
+                            tk.TrangThai = Convert.ToBoolean(TrangThai);
                             tk.MaHD = MaHD;
                             tk.DiaChiCaiDat = DCCD;
                             tk.DiaChiThanhToan = DCTT;
@@ -82,22 +84,13 @@ namespace BUS
                 }
                 else
                 {
-                    TaiKhoan tk = new TaiKhoan();
-                    tk.TenTruyCap = TenTruyCap;
-                    tk.MatKhau = Matkhau;
-                    tk.Email = Email;
-                    tk.TrangThai = false;
-                    tk.MaHD = MaHD;
-                    tk.DiaChiCaiDat = DCCD;
-                    tk.DiaChiThanhToan = DCTT;
-                    db.TaiKhoans.InsertOnSubmit(tk);
-                    db.SubmitChanges();
-                    return true;
+                    return false;
                 }
+             
             }
         }
 
-        public bool suaTaiKhoan(string TenTruyCap, string Matkhau, string MaHD, string Email, string DCCD, string DCTT,string TT)
+        public bool suaTaiKhoan(string TenTruyCap, string Matkhau, string MaHD, string Email, string DCCD, string DCTT,string TrangThai)
         {
             try
             {
@@ -108,7 +101,7 @@ namespace BUS
                 tk.Email = Email;
                 tk.DiaChiCaiDat = DCCD;
                 tk.DiaChiThanhToan = DCTT;
-                tk.TrangThai = bool.Parse(TT);
+                tk.TrangThai = Convert.ToBoolean(TrangThai);
                 db.SubmitChanges();
                 return true;
             }

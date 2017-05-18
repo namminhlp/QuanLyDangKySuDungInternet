@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace GUI
@@ -31,6 +32,9 @@ namespace GUI
             btTaiKhoan.BackColor = ColorTranslator.FromHtml("#2B569A");
             btTroGiup.BackColor = ColorTranslator.FromHtml("#2B569A");
             btHopDong.BackColor = ColorTranslator.FromHtml("#2B569A");
+
+
+           
         }
 
         private void frmQuanLyKhachHang_Load(object sender, EventArgs e)
@@ -161,12 +165,14 @@ namespace GUI
 
         private void btPhieuBao_Click(object sender, EventArgs e)
         {
-
+            frmQuanLyPhieuBao fQLPB = new frmQuanLyPhieuBao();
+            fQLPB.Show();
+            Close();
         }
 
         private void btKhachHang_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btXem_Click(object sender, EventArgs e)
@@ -326,9 +332,21 @@ namespace GUI
 
         private void btHopDong_Click(object sender, EventArgs e)
         {
-            frmQuanLyHopDong frmQLHD = new frmQuanLyHopDong();
-            frmQLHD.Show();
+            frmQuanLyHopDong fQLHD = new frmQuanLyHopDong();
+            fQLHD.Show();
             Close();
+        }
+
+        private void btTaiKhoan_Click(object sender, EventArgs e)
+        {
+            frmQuanLyTaiKhoan fQLTK = new frmQuanLyTaiKhoan();
+            fQLTK.Show();
+            Close();
+        }
+
+        private void btTroGiup_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

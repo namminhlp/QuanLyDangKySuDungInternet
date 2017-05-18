@@ -18,13 +18,13 @@ namespace GUI
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
             dataGridView1.DataSource = business.load();
+
             // Set giao diện mặc định
             btXoa.Enabled = false;
             btSua.Enabled = false;
             btTaoTaiKhoan.Enabled = false;
-            txtNgayKyHD.Enabled = false;
             btHopDong.BackColor =  ColorTranslator.FromHtml("#2196F3");
-
+            
             pnMenu.BackColor = ColorTranslator.FromHtml("#2B569A");
             btHome.BackColor = ColorTranslator.FromHtml("#2B569A");
             btPhieuBao.BackColor = ColorTranslator.FromHtml("#2B569A");
@@ -93,7 +93,7 @@ namespace GUI
                 txtNgayKyHD.Text = (tempNgayKyHD == DateTime.MinValue ? "" : tempNgayKyHD.ToString());
                 btXoa.Enabled = true;
                 btSua.Enabled = true;
-                if (txtNgayKyHD.Text.Length == 0)
+                if (txtNgayKyHD.Text.Length == 0 || txtNgayKyHD.Text == "mm/dd/yyyy")
                 {
                     txtNgayKyHD.Text = "mm/dd/yyyy";
                     txtNgayKyHD.ForeColor = Color.Gray;
@@ -130,10 +130,11 @@ namespace GUI
                 txtNgayKyHD.Text = (tempNgayKyHD == DateTime.MinValue ? "" : tempNgayKyHD.ToString());
                 btXoa.Enabled = true;
                 btSua.Enabled = true;
-                if (txtNgayKyHD.Text.Length == 0)
+                if (txtNgayKyHD.Text.Length == 0 || txtNgayKyHD.Text == "mm/dd/yyyy")
                 {
-                    txtNgayKyHD.Text = "mm/dd/yyyy";
                     txtNgayKyHD.ForeColor = Color.Gray;
+                    txtNgayKyHD.Text = "mm/dd/yyyy";
+
                 }
                 else
                 {
@@ -218,7 +219,7 @@ namespace GUI
             }
             else
             {
-                MessageBox.Show("Xóa hợp đồng thất bại, có thể do tồn tại tài khoản trong hợp đồng đang sử dụng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Xóa hợp đồng thất bại! \n có thể do tồn tại tài khoản trong hợp đồng đang sử dụng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             if (dataGridView1.CurrentRow == null)
             {
@@ -231,7 +232,14 @@ namespace GUI
 
         private void btTaoTaiKhoan_Click(object sender, EventArgs e)
         {
+            frmTiepNhanTaiKhoan fTNTK = new frmTiepNhanTaiKhoan(txtMaHopDong.Text);
+            fTNTK.Show();
+            fTNTK.FormClosed += FTNTK_FormClosed;
+        }
 
+        private void FTNTK_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            btXem_Click(sender, e);
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -267,6 +275,28 @@ namespace GUI
         private void lbHeader_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btTaiKhoan_Click(object sender, EventArgs e)
+        {
+            frmQuanLyTaiKhoan fQLTK = new frmQuanLyTaiKhoan();
+            fQLTK.Show();
+            Close();
+        }
+
+        private void txtNgayKyHD_Click(object sender, EventArgs e)
+        {
+            txtNgayKyHD.Text = null;
+            txtNgayKyHD.ForeColor = Color.Black;
+        }
+
+        private void txtNgayKyHD_Leave(object sender, EventArgs e)
+        {
+             if (txtNgayKyHD.Text.Length == 0)
+            {
+                txtNgayKyHD.Text = "mm/dd/yyyy";
+                txtNgayKyHD.ForeColor = Color.Gray;
+            }
         }
     }
 }

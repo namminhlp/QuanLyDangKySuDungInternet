@@ -25,8 +25,8 @@ namespace GUI
             lbHeader.BackColor = ColorTranslator.FromHtml("#2B569A");
             btMinimized.BackColor = ColorTranslator.FromHtml("#2B569A");
             btExit.BackColor = ColorTranslator.FromHtml("#2B569A");
-            btDangNhap.BackColor = ColorTranslator.FromHtml("#2196F3");
-            btDangKy.BackColor = ColorTranslator.FromHtml("#2196F3");
+            btDangNhap.BackColor = ColorTranslator.FromHtml("#2B569A");
+            btDangKy.BackColor = ColorTranslator.FromHtml("#2B569A");
 
         }
         private void frmDangNhap_Load(object sender, EventArgs e)
@@ -211,6 +211,11 @@ namespace GUI
         {
             // Nút minimized
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -162,5 +162,25 @@ namespace BUS
                 }
             return false;
         }
+        public bool xoaPhieuBao (string MaPhieuBao)
+        {
+            try
+            {
+                var query = from u in db.PhieuBaos
+                            where u.MaPhieu == MaPhieuBao
+                            select u;
+                foreach (var x in query)
+                {
+                    db.PhieuBaos.DeleteOnSubmit(x);
+                }
+                db.SubmitChanges();
+                return true;
+            }
+            catch(Exception)
+            {
+                return false;
+            }
+            
+        }
       }
 }

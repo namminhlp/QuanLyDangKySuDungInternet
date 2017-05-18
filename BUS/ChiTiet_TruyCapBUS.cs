@@ -40,6 +40,13 @@ namespace BUS
         {
             return db.ChiTiet_TruyCaps.ToList();
         }
+        public List<ChiTiet_TruyCap> xemChiTietTruyCap (string MaPhieuBao)
+        {
+            var query = from u in db.ChiTiet_TruyCaps
+                        where u.MaPhieu == MaPhieuBao
+                        select u;
+            return query.ToList();
+        }
 
     }
 }

@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI
@@ -102,8 +101,9 @@ namespace GUI
         private void btKhachHang_Click(object sender, EventArgs e)
         {
             frmQuanLyKhachHang frmQLKH = new frmQuanLyKhachHang();
-            Close();
             frmQLKH.Show();
+            
+            Close();
         }
 
         private void btThoat_Click(object sender, EventArgs e)
@@ -116,8 +116,9 @@ namespace GUI
         private void btHopDong_Click(object sender, EventArgs e)
         {
             frmQuanLyHopDong frmQLHD = new frmQuanLyHopDong();
-            Close();
+        
             frmQLHD.Show();
+            Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -125,6 +126,11 @@ namespace GUI
             frmQuanLyPhieuBao frmQLPB = new frmQuanLyPhieuBao();
             Close();
             frmQLPB.Show();
+        }
+
+        private void btHome_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

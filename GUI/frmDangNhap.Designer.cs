@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.pnHeader = new System.Windows.Forms.Panel();
-            this.btMinimized = new System.Windows.Forms.Button();
             this.lbHeader = new System.Windows.Forms.Label();
-            this.btExit = new System.Windows.Forms.Button();
             this.pnFooter = new System.Windows.Forms.Panel();
             this.lbFooter = new System.Windows.Forms.Label();
             this.lbInfor = new System.Windows.Forms.Label();
@@ -44,6 +42,8 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btMinimized = new System.Windows.Forms.Button();
+            this.btExit = new System.Windows.Forms.Button();
             this.pnHeader.SuspendLayout();
             this.pnFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -67,22 +67,6 @@
             this.pnHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnHeader_MouseDown);
             this.pnHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnHeader_MouseMove);
             // 
-            // btMinimized
-            // 
-            this.btMinimized.BackColor = System.Drawing.Color.DimGray;
-            this.btMinimized.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btMinimized.FlatAppearance.BorderSize = 0;
-            this.btMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btMinimized.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btMinimized.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btMinimized.Image = global::GUI.Properties.Resources.icon_mini;
-            this.btMinimized.Location = new System.Drawing.Point(330, 0);
-            this.btMinimized.Name = "btMinimized";
-            this.btMinimized.Size = new System.Drawing.Size(35, 35);
-            this.btMinimized.TabIndex = 2;
-            this.btMinimized.UseVisualStyleBackColor = false;
-            this.btMinimized.Click += new System.EventHandler(this.button1_Click_2);
-            // 
             // lbHeader
             // 
             this.lbHeader.BackColor = System.Drawing.Color.DimGray;
@@ -98,25 +82,6 @@
             this.lbHeader.Click += new System.EventHandler(this.label1_Click_1);
             this.lbHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             this.lbHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
-            // 
-            // btExit
-            // 
-            this.btExit.AutoSize = true;
-            this.btExit.BackColor = System.Drawing.Color.DimGray;
-            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btExit.FlatAppearance.BorderSize = 0;
-            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btExit.Image = global::GUI.Properties.Resources.icon_exit;
-            this.btExit.Location = new System.Drawing.Point(365, 0);
-            this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(35, 35);
-            this.btExit.TabIndex = 0;
-            this.btExit.UseVisualStyleBackColor = false;
-            this.btExit.Click += new System.EventHandler(this.button1_Click);
-            this.btExit.MouseLeave += new System.EventHandler(this.btExit_MouseLeave);
-            this.btExit.MouseHover += new System.EventHandler(this.btExit_MouseHover);
             // 
             // pnFooter
             // 
@@ -237,9 +202,9 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox4.BackgroundImage = global::GUI.Properties.Resources._1494947357_lock;
+            this.pictureBox4.BackgroundImage = global::GUI.Properties.Resources.thumbnail_nred_padlockicon;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox4.Location = new System.Drawing.Point(61, 268);
+            this.pictureBox4.Location = new System.Drawing.Point(62, 268);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(28, 28);
             this.pictureBox4.TabIndex = 7;
@@ -249,13 +214,14 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pictureBox2.BackgroundImage = global::GUI.Properties.Resources.Fasticon_Fast_Icon_Users_Offline_user;
+            this.pictureBox2.BackgroundImage = global::GUI.Properties.Resources.attorney;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox2.Location = new System.Drawing.Point(61, 218);
+            this.pictureBox2.Location = new System.Drawing.Point(62, 218);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 28);
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -267,6 +233,41 @@
             this.pictureBox1.Size = new System.Drawing.Size(130, 130);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // btMinimized
+            // 
+            this.btMinimized.BackColor = System.Drawing.Color.DimGray;
+            this.btMinimized.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btMinimized.FlatAppearance.BorderSize = 0;
+            this.btMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMinimized.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMinimized.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btMinimized.Image = global::GUI.Properties.Resources.icon_mini;
+            this.btMinimized.Location = new System.Drawing.Point(330, 0);
+            this.btMinimized.Name = "btMinimized";
+            this.btMinimized.Size = new System.Drawing.Size(35, 35);
+            this.btMinimized.TabIndex = 2;
+            this.btMinimized.UseVisualStyleBackColor = false;
+            this.btMinimized.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // btExit
+            // 
+            this.btExit.AutoSize = true;
+            this.btExit.BackColor = System.Drawing.Color.DimGray;
+            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btExit.FlatAppearance.BorderSize = 0;
+            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btExit.Image = global::GUI.Properties.Resources.icon_exit;
+            this.btExit.Location = new System.Drawing.Point(365, 0);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(35, 35);
+            this.btExit.TabIndex = 0;
+            this.btExit.UseVisualStyleBackColor = false;
+            this.btExit.Click += new System.EventHandler(this.button1_Click);
+            this.btExit.MouseLeave += new System.EventHandler(this.btExit_MouseLeave);
+            this.btExit.MouseHover += new System.EventHandler(this.btExit_MouseHover);
             // 
             // frmDangNhap
             // 

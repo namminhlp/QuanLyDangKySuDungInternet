@@ -43,11 +43,11 @@ namespace GUI
         {
             if (business.themHopDong(txtMaHopDong.Text, txtMaKhachHang.Text, txtTongTK.Text, txtChiPhi.Text, txtNgayDK.Text))
             {
-                MessageBox.Show("Thông báo", "Thêm hợp đồng thành công !", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show("Thêm hợp đồng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
             else
             {
-                MessageBox.Show("Thông báo", "Thêm hợp đồng thất bại !", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Thêm hợp đồng thất bại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
             }
         }
@@ -75,6 +75,11 @@ namespace GUI
         private void btHuy_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void txtNgayDK_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
