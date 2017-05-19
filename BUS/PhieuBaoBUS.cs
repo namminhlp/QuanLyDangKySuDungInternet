@@ -147,20 +147,28 @@ namespace BUS
             return ls;
 
         }
-        public bool xacNhanThanhToan(string MaPhieu, bool TinhTrang, string HinhThucTT)
+        public bool xacNhanThanhToan(string MaPhieu,DateTime NgayThanhToan, string HinhThucTT)
         {
+            
                 var query = from u in db.PhieuBaos
                             where u.MaPhieu == MaPhieu
                             select u;
+                
                 foreach (var y in query)
                 {
-                    y.HinhThucTT = HinhThucTT;
-                    y.TinhTrang = Convert.ToBoolean(TinhTrang);
-                    y.NgayTT = DateTime.Now;
-                    db.SubmitChanges();
-                return true;
+                if (NgayThanhToan > DateTime.Now || NgayThanhToan < y.NgayLap)
+                {
+                    return false;
                 }
-            return false;
+                else
+                {
+                    y.HinhThucTT = HinhThucTT;
+                    y.TinhTrang = true;
+                    y.NgayTT = NgayThanhToan;
+                    db.SubmitChanges();
+                }
+                }
+                return true;
         }
         public bool xoaPhieuBao (string MaPhieuBao)
         {
@@ -181,6 +189,13 @@ namespace BUS
                 return false;
             }
             
+        }
+        public List<PhieuBao> timPhieuBao (string MaPhieu)
+        {
+            var query = from u in db.PhieuBaos
+                        where u.MaPhieu == MaPhieu
+                        select u;
+            return query.ToList();
         }
       }
 }

@@ -14,7 +14,33 @@ namespace BUS
         {
             return db.HopDongs.ToList();
         }
+        public string sinhMaTuDong()
+        {
+            var q = (from u in db.HopDongs
+                     orderby u.MaHD descending
+                     select u);
+            HopDong hd = q.FirstOrDefault();
+            string st;
+            st = (hd == null) ? "" : hd.MaHD.ToString();
+            if (st == null || st == "")
+            {
+                return "KH0001";
+            }
+            else
+            {
+                int i = int.Parse(st.Substring(2));
+                i += 1;
+                if (i < 10)
+                    return "KH000" + i.ToString();
+                else if (i >= 10 && i < 100)
+                    return "KH00" + i.ToString();
+                else if (i >= 100 && i < 1000)
+                    return "KH0" + i.ToString();
+                else
+                    return "KH" + i.ToString();
+            }
 
+        }
         public bool themHopDong(string MaHD, string MaKH, string TongTK, string ChiPhi, string NgayDK)
         {
             if (MaHD == "" || MaKH == "" || TongTK == "" || ChiPhi == "" || NgayDK=="")
@@ -160,6 +186,12 @@ namespace BUS
             lsHopDong = query.Where(u => u.NgayKyHD.ToString() == "" || u.NgayKyHD == null).ToList();
             return lsHopDong;
         }
-
+        public List<HopDong> timHopDong(string MaHD)
+        {
+            var query = from u in db.HopDongs
+                          where u.MaHD == MaHD
+                          select u;
+            return query.ToList();
+        }
     }
 }

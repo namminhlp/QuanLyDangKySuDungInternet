@@ -218,5 +218,47 @@ namespace GUI
             fQLPB.Show();
             Close();
         }
+
+        private void txtTimKiem_Leave(object sender, EventArgs e)
+        {
+            txtTimKiem.Text = "Tìm kiếm với Tên truy cập...";
+            txtTimKiem.ForeColor = Color.Gray;
+        }
+
+        private void txtTimKiem_Click(object sender, EventArgs e)
+        {
+            txtTimKiem.Text = null;
+            txtTimKiem.ForeColor = Color.Black;
+            // Xử lý khi nhấn một phím xuống
+            txtTimKiem.KeyDown += new KeyEventHandler(txtTimkiem_KeyDown);
+        }
+
+        private void txtTimkiem_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dataGridView1.DataSource = business.timTaiKhoan(txtTenTruyCap.Text);
+            }
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = business.timTaiKhoan(txtTenTruyCap.Text);
+        }
+
+        private void pictureBox2_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox2.BackColor = Color.DarkOrange;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox2.BackColor = Color.WhiteSmoke;
+        }
     }
 }

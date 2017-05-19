@@ -13,9 +13,14 @@ namespace BUS
         {
             return db.KhachHangs.ToList();
         }
-        public string sinhMaTuDong(string st)
+        public string sinhMaTuDong()
         {
-
+            var q = (from u in db.KhachHangs
+                     orderby u.MaKH descending
+                     select u);
+            KhachHang kh = q.FirstOrDefault();
+            string st;
+            st = (kh == null) ? "" : kh.MaKH.ToString();
             if (st == null || st == "")
             {
                 return "KH0001";

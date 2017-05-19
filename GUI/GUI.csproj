@@ -50,6 +50,12 @@
     <Compile Include="frmChiTietTruyCap.Designer.cs">
       <DependentUpon>frmChiTietTruyCap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDangKyOnline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKyOnline.Designer.cs">
+      <DependentUpon>frmDangKyOnline.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,10 +110,19 @@
     <Compile Include="frmTiepNhanTaiKhoan.Designer.cs">
       <DependentUpon>frmTiepNhanTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmXacNhanThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXacNhanThanhToan.Designer.cs">
+      <DependentUpon>frmXacNhanThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmChiTietTruyCap.resx">
       <DependentUpon>frmChiTietTruyCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangKyOnline.resx">
+      <DependentUpon>frmDangKyOnline.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
@@ -135,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTiepNhanTaiKhoan.resx">
       <DependentUpon>frmTiepNhanTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXacNhanThanhToan.resx">
+      <DependentUpon>frmXacNhanThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

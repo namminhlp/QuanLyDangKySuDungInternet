@@ -149,7 +149,14 @@ namespace GUI
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            frmDangKyOnline fDK= new frmDangKyOnline();
+            fDK.Show();
+            fDK.FormClosed += FDK_FormClosed;
+        }
 
+        private void FDK_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
         }
 
         private void btThoat_Click(object sender, EventArgs e)
