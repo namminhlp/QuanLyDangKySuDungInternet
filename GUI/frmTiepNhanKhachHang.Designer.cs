@@ -30,7 +30,6 @@
         {
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.lbSDT = new System.Windows.Forms.Label();
-            this.txtLoaiKH = new System.Windows.Forms.TextBox();
             this.txtCMND = new System.Windows.Forms.TextBox();
             this.lbCMND = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
@@ -43,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btDongY = new System.Windows.Forms.Button();
             this.btHuy = new System.Windows.Forms.Button();
+            this.txtLoaiKH = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtSDT
@@ -66,15 +66,6 @@
             this.lbSDT.TabIndex = 36;
             this.lbSDT.Text = "Số điện thoại";
             this.lbSDT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtLoaiKH
-            // 
-            this.txtLoaiKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLoaiKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoaiKH.Location = new System.Drawing.Point(168, 262);
-            this.txtLoaiKH.Name = "txtLoaiKH";
-            this.txtLoaiKH.Size = new System.Drawing.Size(170, 22);
-            this.txtLoaiKH.TabIndex = 5;
             // 
             // txtCMND
             // 
@@ -218,6 +209,18 @@
             this.btHuy.UseVisualStyleBackColor = false;
             this.btHuy.Click += new System.EventHandler(this.btHuy_Click);
             // 
+            // txtLoaiKH
+            // 
+            this.txtLoaiKH.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoaiKH.FormattingEnabled = true;
+            this.txtLoaiKH.Items.AddRange(new object[] {
+            "Cá nhân",
+            "Đơn vị"});
+            this.txtLoaiKH.Location = new System.Drawing.Point(168, 260);
+            this.txtLoaiKH.Name = "txtLoaiKH";
+            this.txtLoaiKH.Size = new System.Drawing.Size(170, 23);
+            this.txtLoaiKH.TabIndex = 5;
+            // 
             // frmTiepNhanKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,13 +228,13 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(384, 461);
+            this.Controls.Add(this.txtLoaiKH);
             this.Controls.Add(this.btHuy);
             this.Controls.Add(this.btDongY);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbLoaiKH);
             this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.lbSDT);
-            this.Controls.Add(this.txtLoaiKH);
             this.Controls.Add(this.txtCMND);
             this.Controls.Add(this.lbCMND);
             this.Controls.Add(this.txtDiaChi);
@@ -253,7 +256,6 @@
 
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label lbSDT;
-        private System.Windows.Forms.TextBox txtLoaiKH;
         private System.Windows.Forms.TextBox txtCMND;
         private System.Windows.Forms.Label lbCMND;
         private System.Windows.Forms.TextBox txtDiaChi;
@@ -266,5 +268,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btDongY;
         private System.Windows.Forms.Button btHuy;
+        private System.Windows.Forms.ComboBox txtLoaiKH;
     }
 }

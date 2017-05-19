@@ -42,21 +42,24 @@ namespace GUI
                     }
                 }
             }
+            // Nếu textbox không rỗng, bắt đầu thêm khách hàng và hợp đồng
 
-            foreach (Control c in groupBox2.Controls)
-            {
-                if (c is TextBox)
-                {
-                    if (c.Text.ToString() == String.Empty)
-                    {
-                        c.Focus();
-                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin !");
-                        return;
-                    }
-                }
-            }
             BUS.KhachHangBUS busKH = new BUS.KhachHangBUS();
             BUS.HopDongBUS busHD = new BUS.HopDongBUS();
+            string tempMaKH = busKH.sinhMaTuDong();
+            if (busKH.themKhachHang(tempMaKH, txtHoTen.Text, txtDiaChi.Text, txtCMND.Text, txtLoaiKH.Text, txtSDT.Text))
+            {
+                bool checkHD = busHD.themHopDong(busHD.sinhMaTuDong(), tempMaKH, txtTongTK.Text, "100000", Convert.ToString(DateTime.Now));
+                if (checkHD == false)
+                {
+                    MessageBox.Show("Thêm được khách hàng nhưng hợp đồng thất bại !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Thêm hợp đồng thất bại !!!","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Hand);
+            }
+
         }
 
         private void btHuy_Click(object sender, EventArgs e)

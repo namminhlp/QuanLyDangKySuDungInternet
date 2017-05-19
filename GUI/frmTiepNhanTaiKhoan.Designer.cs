@@ -270,7 +270,7 @@
             this.Controls.Add(this.txtMaHopDong);
             this.Controls.Add(this.lbMaHopDong);
             this.Name = "frmTiepNhanTaiKhoan";
-            this.Text = "frmTiepNhanTaiKhoan";
+            this.Text = "Tiếp nhận tài khoản";
             this.Load += new System.EventHandler(this.frmTiepNhanTaiKhoan_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
