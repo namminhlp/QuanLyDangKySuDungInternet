@@ -50,6 +50,7 @@ namespace GUI
                 MessageBox.Show("Thêm hợp đồng thất bại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
             }
+            Close();
         }
 
         private void txtMaKhachHang_TextChanged(object sender, EventArgs e)

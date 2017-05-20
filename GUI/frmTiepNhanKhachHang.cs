@@ -46,7 +46,7 @@ namespace GUI
                 MessageBox.Show("Thêm khách hàng thất bại!", "Thông báo",  MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
             }
-            
+            Close();
 
         }
     }

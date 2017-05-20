@@ -40,14 +40,20 @@ namespace GUI
 
         private void btDongY_Click(object sender, EventArgs e)
         {
+            if (txtTenTruyCap.Text.Length <= 6)
+            {
+                MessageBox.Show("Tên truy cập ít nhất 7 ký tự!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
+                return;
+            }
             if (business.themTaiKhoan(txtTenTruyCap.Text, txtMatKhau.Text,txtMaHopDong.Text, txtEmail.Text, txtDiaChiCD.Text,txtDiaChiTT.Text,txtTrangThai.Text))
             {
-                MessageBox.Show("Thêm hợp đồng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
+                MessageBox.Show("Thêm tài khoản thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
             else
             {
-                MessageBox.Show("Thêm hợp đồng thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Thêm tài khoản thất bại! Có thể do đã tồn tại tên truy cập", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
+            Close();
         }
     }
 }
