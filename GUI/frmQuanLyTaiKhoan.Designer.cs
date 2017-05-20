@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.lbMaHopDong = new System.Windows.Forms.Label();
             this.txtMaHopDong = new System.Windows.Forms.TextBox();
@@ -38,29 +38,9 @@
             this.lbMatKhau = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.RichTextBox();
             this.pnMenu = new System.Windows.Forms.Panel();
-            this.btThoat = new System.Windows.Forms.Button();
-            this.btTroGiup = new System.Windows.Forms.Button();
-            this.btHopDong = new System.Windows.Forms.Button();
-            this.btTaiKhoan = new System.Windows.Forms.Button();
-            this.btPhieuBao = new System.Windows.Forms.Button();
-            this.btKhachHang = new System.Windows.Forms.Button();
-            this.btHome = new System.Windows.Forms.Button();
             this.lbHeader = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.maHDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenTruyCapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.matKhauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diaChiCaiDatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diaChiThanhToanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trangThaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.taiKhoanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripTaiKhoan = new System.Windows.Forms.ToolStrip();
-            this.btXem = new System.Windows.Forms.ToolStripButton();
-            this.btThem = new System.Windows.Forms.ToolStripButton();
-            this.btSua = new System.Windows.Forms.ToolStripButton();
-            this.btXoa = new System.Windows.Forms.ToolStripButton();
-            this.btDinhChi = new System.Windows.Forms.ToolStripButton();
             this.txtDiaChiTT = new System.Windows.Forms.TextBox();
             this.lbDiaChiTT = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -71,12 +51,32 @@
             this.lbTrangThai = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btMinimized = new System.Windows.Forms.Button();
+            this.btThoat = new System.Windows.Forms.Button();
+            this.btTroGiup = new System.Windows.Forms.Button();
+            this.btHopDong = new System.Windows.Forms.Button();
+            this.btTaiKhoan = new System.Windows.Forms.Button();
+            this.btPhieuBao = new System.Windows.Forms.Button();
+            this.btKhachHang = new System.Windows.Forms.Button();
+            this.btHome = new System.Windows.Forms.Button();
+            this.maHDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenTruyCapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.matKhauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaChiCaiDatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaChiThanhToanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trangThaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taiKhoanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btXem = new System.Windows.Forms.ToolStripButton();
+            this.btThem = new System.Windows.Forms.ToolStripButton();
+            this.btSua = new System.Windows.Forms.ToolStripButton();
+            this.btXoa = new System.Windows.Forms.ToolStripButton();
+            this.btDinhChi = new System.Windows.Forms.ToolStripButton();
             this.btExit = new System.Windows.Forms.Button();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).BeginInit();
             this.toolStripTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtMatKhau
@@ -150,7 +150,7 @@
             this.txtTimKiem.BackColor = System.Drawing.Color.White;
             this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(30, 130);
+            this.txtTimKiem.Location = new System.Drawing.Point(318, 130);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(0);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(324, 25);
@@ -176,6 +176,197 @@
             this.pnMenu.Size = new System.Drawing.Size(960, 70);
             this.pnMenu.TabIndex = 51;
             this.pnMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnMenu_Paint);
+            // 
+            // lbHeader
+            // 
+            this.lbHeader.BackColor = System.Drawing.Color.DimGray;
+            this.lbHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbHeader.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeader.ForeColor = System.Drawing.Color.White;
+            this.lbHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbHeader.Location = new System.Drawing.Point(0, 0);
+            this.lbHeader.Name = "lbHeader";
+            this.lbHeader.Size = new System.Drawing.Size(900, 30);
+            this.lbHeader.TabIndex = 48;
+            this.lbHeader.Text = "Quản lý tài khoản";
+            this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbHeader.Click += new System.EventHandler(this.lbHeader_Click);
+            this.lbHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbHeader_MouseDown);
+            this.lbHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbHeader_MouseMove);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maHDDataGridViewTextBoxColumn,
+            this.tenTruyCapDataGridViewTextBoxColumn,
+            this.matKhauDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.diaChiCaiDatDataGridViewTextBoxColumn,
+            this.diaChiThanhToanDataGridViewTextBoxColumn,
+            this.trangThaiDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.taiKhoanBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 300);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(960, 300);
+            this.dataGridView1.TabIndex = 53;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // toolStripTaiKhoan
+            // 
+            this.toolStripTaiKhoan.AutoSize = false;
+            this.toolStripTaiKhoan.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripTaiKhoan.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripTaiKhoan.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btXem,
+            this.btThem,
+            this.btSua,
+            this.btXoa,
+            this.btDinhChi});
+            this.toolStripTaiKhoan.Location = new System.Drawing.Point(-8, 100);
+            this.toolStripTaiKhoan.Name = "toolStripTaiKhoan";
+            this.toolStripTaiKhoan.Size = new System.Drawing.Size(960, 30);
+            this.toolStripTaiKhoan.TabIndex = 52;
+            this.toolStripTaiKhoan.Text = "toolStrip1";
+            // 
+            // txtDiaChiTT
+            // 
+            this.txtDiaChiTT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDiaChiTT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChiTT.Location = new System.Drawing.Point(472, 257);
+            this.txtDiaChiTT.Name = "txtDiaChiTT";
+            this.txtDiaChiTT.Size = new System.Drawing.Size(170, 22);
+            this.txtDiaChiTT.TabIndex = 73;
+            // 
+            // lbDiaChiTT
+            // 
+            this.lbDiaChiTT.BackColor = System.Drawing.Color.Transparent;
+            this.lbDiaChiTT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDiaChiTT.ForeColor = System.Drawing.Color.Black;
+            this.lbDiaChiTT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbDiaChiTT.Location = new System.Drawing.Point(346, 256);
+            this.lbDiaChiTT.Name = "lbDiaChiTT";
+            this.lbDiaChiTT.Size = new System.Drawing.Size(123, 22);
+            this.lbDiaChiTT.TabIndex = 72;
+            this.lbDiaChiTT.Text = "Đ/C thanh toán";
+            this.lbDiaChiTT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(472, 182);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(170, 22);
+            this.txtEmail.TabIndex = 71;
+            // 
+            // lbEmail
+            // 
+            this.lbEmail.BackColor = System.Drawing.Color.Transparent;
+            this.lbEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmail.ForeColor = System.Drawing.Color.Black;
+            this.lbEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbEmail.Location = new System.Drawing.Point(346, 181);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(123, 22);
+            this.lbEmail.TabIndex = 70;
+            this.lbEmail.Text = "Email";
+            this.lbEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtDiaChiCD
+            // 
+            this.txtDiaChiCD.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDiaChiCD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChiCD.Location = new System.Drawing.Point(472, 218);
+            this.txtDiaChiCD.Name = "txtDiaChiCD";
+            this.txtDiaChiCD.Size = new System.Drawing.Size(170, 22);
+            this.txtDiaChiCD.TabIndex = 69;
+            // 
+            // lbDiaChiCD
+            // 
+            this.lbDiaChiCD.BackColor = System.Drawing.Color.Transparent;
+            this.lbDiaChiCD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDiaChiCD.ForeColor = System.Drawing.Color.Black;
+            this.lbDiaChiCD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbDiaChiCD.Location = new System.Drawing.Point(346, 218);
+            this.lbDiaChiCD.Name = "lbDiaChiCD";
+            this.lbDiaChiCD.Size = new System.Drawing.Size(120, 22);
+            this.lbDiaChiCD.TabIndex = 68;
+            this.lbDiaChiCD.Text = "Đ/C cài đặt";
+            this.lbDiaChiCD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtTrangThai
+            // 
+            this.txtTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtTrangThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtTrangThai.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTrangThai.FormattingEnabled = true;
+            this.txtTrangThai.Items.AddRange(new object[] {
+            "True",
+            "False"});
+            this.txtTrangThai.Location = new System.Drawing.Point(778, 184);
+            this.txtTrangThai.Name = "txtTrangThai";
+            this.txtTrangThai.Size = new System.Drawing.Size(152, 23);
+            this.txtTrangThai.TabIndex = 75;
+            this.txtTrangThai.SelectedIndexChanged += new System.EventHandler(this.txtTrangThai_SelectedIndexChanged);
+            // 
+            // lbTrangThai
+            // 
+            this.lbTrangThai.BackColor = System.Drawing.Color.Transparent;
+            this.lbTrangThai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTrangThai.ForeColor = System.Drawing.Color.Black;
+            this.lbTrangThai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbTrangThai.Location = new System.Drawing.Point(662, 183);
+            this.lbTrangThai.Name = "lbTrangThai";
+            this.lbTrangThai.Size = new System.Drawing.Size(120, 22);
+            this.lbTrangThai.TabIndex = 74;
+            this.lbTrangThai.Text = "Trạng thái";
+            this.lbTrangThai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox2.BackgroundImage = global::GUI.Properties.Resources.mobile_search_icon_x2;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(617, 130);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.TabIndex = 67;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
+            // 
+            // btMinimized
+            // 
+            this.btMinimized.BackColor = System.Drawing.Color.DimGray;
+            this.btMinimized.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btMinimized.FlatAppearance.BorderSize = 0;
+            this.btMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMinimized.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMinimized.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btMinimized.Image = global::GUI.Properties.Resources.icon_mini;
+            this.btMinimized.Location = new System.Drawing.Point(900, 0);
+            this.btMinimized.Name = "btMinimized";
+            this.btMinimized.Size = new System.Drawing.Size(30, 30);
+            this.btMinimized.TabIndex = 50;
+            this.btMinimized.UseVisualStyleBackColor = false;
+            this.btMinimized.Click += new System.EventHandler(this.btMinimized_Click);
             // 
             // btThoat
             // 
@@ -301,56 +492,6 @@
             this.btHome.UseVisualStyleBackColor = false;
             this.btHome.Click += new System.EventHandler(this.btHome_Click);
             // 
-            // lbHeader
-            // 
-            this.lbHeader.BackColor = System.Drawing.Color.DimGray;
-            this.lbHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbHeader.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHeader.ForeColor = System.Drawing.Color.White;
-            this.lbHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbHeader.Location = new System.Drawing.Point(0, 0);
-            this.lbHeader.Name = "lbHeader";
-            this.lbHeader.Size = new System.Drawing.Size(900, 30);
-            this.lbHeader.TabIndex = 48;
-            this.lbHeader.Text = "Quản lý tài khoản";
-            this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbHeader.Click += new System.EventHandler(this.lbHeader_Click);
-            this.lbHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbHeader_MouseDown);
-            this.lbHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbHeader_MouseMove);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maHDDataGridViewTextBoxColumn,
-            this.tenTruyCapDataGridViewTextBoxColumn,
-            this.matKhauDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.diaChiCaiDatDataGridViewTextBoxColumn,
-            this.diaChiThanhToanDataGridViewTextBoxColumn,
-            this.trangThaiDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.taiKhoanBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 300);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(960, 300);
-            this.dataGridView1.TabIndex = 53;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // maHDDataGridViewTextBoxColumn
             // 
             this.maHDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -403,23 +544,6 @@
             // taiKhoanBindingSource
             // 
             this.taiKhoanBindingSource.DataSource = typeof(DAO.TaiKhoan);
-            // 
-            // toolStripTaiKhoan
-            // 
-            this.toolStripTaiKhoan.AutoSize = false;
-            this.toolStripTaiKhoan.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripTaiKhoan.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStripTaiKhoan.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btXem,
-            this.btThem,
-            this.btSua,
-            this.btXoa,
-            this.btDinhChi});
-            this.toolStripTaiKhoan.Location = new System.Drawing.Point(-8, 100);
-            this.toolStripTaiKhoan.Name = "toolStripTaiKhoan";
-            this.toolStripTaiKhoan.Size = new System.Drawing.Size(960, 30);
-            this.toolStripTaiKhoan.TabIndex = 52;
-            this.toolStripTaiKhoan.Text = "toolStrip1";
             // 
             // btXem
             // 
@@ -483,130 +607,6 @@
             this.btDinhChi.Text = "Xem d/s đình chỉ";
             this.btDinhChi.Click += new System.EventHandler(this.btDinhChi_Click);
             // 
-            // txtDiaChiTT
-            // 
-            this.txtDiaChiTT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDiaChiTT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChiTT.Location = new System.Drawing.Point(472, 257);
-            this.txtDiaChiTT.Name = "txtDiaChiTT";
-            this.txtDiaChiTT.Size = new System.Drawing.Size(170, 22);
-            this.txtDiaChiTT.TabIndex = 73;
-            // 
-            // lbDiaChiTT
-            // 
-            this.lbDiaChiTT.BackColor = System.Drawing.Color.Transparent;
-            this.lbDiaChiTT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDiaChiTT.ForeColor = System.Drawing.Color.Black;
-            this.lbDiaChiTT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbDiaChiTT.Location = new System.Drawing.Point(346, 256);
-            this.lbDiaChiTT.Name = "lbDiaChiTT";
-            this.lbDiaChiTT.Size = new System.Drawing.Size(123, 22);
-            this.lbDiaChiTT.TabIndex = 72;
-            this.lbDiaChiTT.Text = "Đ/C thanh toán";
-            this.lbDiaChiTT.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(472, 182);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(170, 22);
-            this.txtEmail.TabIndex = 71;
-            // 
-            // lbEmail
-            // 
-            this.lbEmail.BackColor = System.Drawing.Color.Transparent;
-            this.lbEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbEmail.ForeColor = System.Drawing.Color.Black;
-            this.lbEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbEmail.Location = new System.Drawing.Point(346, 181);
-            this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(123, 22);
-            this.lbEmail.TabIndex = 70;
-            this.lbEmail.Text = "Email";
-            this.lbEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtDiaChiCD
-            // 
-            this.txtDiaChiCD.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDiaChiCD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChiCD.Location = new System.Drawing.Point(472, 218);
-            this.txtDiaChiCD.Name = "txtDiaChiCD";
-            this.txtDiaChiCD.Size = new System.Drawing.Size(170, 22);
-            this.txtDiaChiCD.TabIndex = 69;
-            // 
-            // lbDiaChiCD
-            // 
-            this.lbDiaChiCD.BackColor = System.Drawing.Color.Transparent;
-            this.lbDiaChiCD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDiaChiCD.ForeColor = System.Drawing.Color.Black;
-            this.lbDiaChiCD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbDiaChiCD.Location = new System.Drawing.Point(346, 218);
-            this.lbDiaChiCD.Name = "lbDiaChiCD";
-            this.lbDiaChiCD.Size = new System.Drawing.Size(120, 22);
-            this.lbDiaChiCD.TabIndex = 68;
-            this.lbDiaChiCD.Text = "Đ/C cài đặt";
-            this.lbDiaChiCD.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtTrangThai
-            // 
-            this.txtTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtTrangThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txtTrangThai.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTrangThai.FormattingEnabled = true;
-            this.txtTrangThai.Items.AddRange(new object[] {
-            "True",
-            "False"});
-            this.txtTrangThai.Location = new System.Drawing.Point(778, 184);
-            this.txtTrangThai.Name = "txtTrangThai";
-            this.txtTrangThai.Size = new System.Drawing.Size(152, 23);
-            this.txtTrangThai.TabIndex = 75;
-            this.txtTrangThai.SelectedIndexChanged += new System.EventHandler(this.txtTrangThai_SelectedIndexChanged);
-            // 
-            // lbTrangThai
-            // 
-            this.lbTrangThai.BackColor = System.Drawing.Color.Transparent;
-            this.lbTrangThai.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTrangThai.ForeColor = System.Drawing.Color.Black;
-            this.lbTrangThai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbTrangThai.Location = new System.Drawing.Point(662, 183);
-            this.lbTrangThai.Name = "lbTrangThai";
-            this.lbTrangThai.Size = new System.Drawing.Size(120, 22);
-            this.lbTrangThai.TabIndex = 74;
-            this.lbTrangThai.Text = "Trạng thái";
-            this.lbTrangThai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox2.BackgroundImage = global::GUI.Properties.Resources.mobile_search_icon_x2;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(330, 130);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.TabIndex = 67;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
-            // 
-            // btMinimized
-            // 
-            this.btMinimized.BackColor = System.Drawing.Color.DimGray;
-            this.btMinimized.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btMinimized.FlatAppearance.BorderSize = 0;
-            this.btMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btMinimized.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btMinimized.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btMinimized.Image = global::GUI.Properties.Resources.icon_mini;
-            this.btMinimized.Location = new System.Drawing.Point(900, 0);
-            this.btMinimized.Name = "btMinimized";
-            this.btMinimized.Size = new System.Drawing.Size(30, 30);
-            this.btMinimized.TabIndex = 50;
-            this.btMinimized.UseVisualStyleBackColor = false;
-            this.btMinimized.Click += new System.EventHandler(this.btMinimized_Click);
-            // 
             // btExit
             // 
             this.btExit.AutoSize = true;
@@ -657,10 +657,10 @@
             this.Load += new System.EventHandler(this.frmQuanLyTaiKhoan_Load);
             this.pnMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).EndInit();
             this.toolStripTaiKhoan.ResumeLayout(false);
             this.toolStripTaiKhoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

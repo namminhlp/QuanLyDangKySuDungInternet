@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtNgayKyHD = new System.Windows.Forms.TextBox();
             this.lbNgayKyHD = new System.Windows.Forms.Label();
             this.txtChiPhi = new System.Windows.Forms.TextBox();
@@ -44,6 +44,12 @@
             this.lbMaHopDong = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.RichTextBox();
             this.pnMenu = new System.Windows.Forms.Panel();
+            this.lbHeader = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.toolStripHopDong = new System.Windows.Forms.ToolStrip();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btMinimized = new System.Windows.Forms.Button();
+            this.btExit = new System.Windows.Forms.Button();
             this.btThoat = new System.Windows.Forms.Button();
             this.btTroGiup = new System.Windows.Forms.Button();
             this.btHopDong = new System.Windows.Forms.Button();
@@ -51,8 +57,6 @@
             this.btPhieuBao = new System.Windows.Forms.Button();
             this.btKhachHang = new System.Windows.Forms.Button();
             this.btHome = new System.Windows.Forms.Button();
-            this.lbHeader = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.maHDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayDKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,28 +64,24 @@
             this.chiPhiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayKyHDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hopDongBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.toolStripHopDong = new System.Windows.Forms.ToolStrip();
             this.btXem = new System.Windows.Forms.ToolStripButton();
             this.btThem = new System.Windows.Forms.ToolStripButton();
             this.btSua = new System.Windows.Forms.ToolStripButton();
             this.btXoa = new System.Windows.Forms.ToolStripButton();
             this.btTaoTaiKhoan = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btMinimized = new System.Windows.Forms.Button();
-            this.btExit = new System.Windows.Forms.Button();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hopDongBindingSource)).BeginInit();
             this.toolStripHopDong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hopDongBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNgayKyHD
             // 
             this.txtNgayKyHD.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNgayKyHD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgayKyHD.Location = new System.Drawing.Point(451, 255);
+            this.txtNgayKyHD.Location = new System.Drawing.Point(589, 258);
             this.txtNgayKyHD.Name = "txtNgayKyHD";
             this.txtNgayKyHD.Size = new System.Drawing.Size(170, 22);
             this.txtNgayKyHD.TabIndex = 46;
@@ -95,7 +95,7 @@
             this.lbNgayKyHD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNgayKyHD.ForeColor = System.Drawing.Color.Black;
             this.lbNgayKyHD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbNgayKyHD.Location = new System.Drawing.Point(334, 255);
+            this.lbNgayKyHD.Location = new System.Drawing.Point(472, 258);
             this.lbNgayKyHD.Name = "lbNgayKyHD";
             this.lbNgayKyHD.Size = new System.Drawing.Size(121, 22);
             this.lbNgayKyHD.TabIndex = 45;
@@ -107,7 +107,7 @@
             // 
             this.txtChiPhi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtChiPhi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChiPhi.Location = new System.Drawing.Point(451, 219);
+            this.txtChiPhi.Location = new System.Drawing.Point(589, 222);
             this.txtChiPhi.Name = "txtChiPhi";
             this.txtChiPhi.Size = new System.Drawing.Size(170, 22);
             this.txtChiPhi.TabIndex = 44;
@@ -121,7 +121,7 @@
             this.lbChiPhi.BackColor = System.Drawing.Color.Transparent;
             this.lbChiPhi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChiPhi.ForeColor = System.Drawing.Color.Black;
-            this.lbChiPhi.Location = new System.Drawing.Point(334, 219);
+            this.lbChiPhi.Location = new System.Drawing.Point(472, 222);
             this.lbChiPhi.Name = "lbChiPhi";
             this.lbChiPhi.Size = new System.Drawing.Size(121, 22);
             this.lbChiPhi.TabIndex = 43;
@@ -133,7 +133,7 @@
             // 
             this.txtTongTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTongTK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongTK.Location = new System.Drawing.Point(451, 181);
+            this.txtTongTK.Location = new System.Drawing.Point(589, 184);
             this.txtTongTK.Name = "txtTongTK";
             this.txtTongTK.Size = new System.Drawing.Size(170, 22);
             this.txtTongTK.TabIndex = 42;
@@ -145,7 +145,7 @@
             this.lbTongTK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTongTK.ForeColor = System.Drawing.Color.Black;
             this.lbTongTK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbTongTK.Location = new System.Drawing.Point(334, 180);
+            this.lbTongTK.Location = new System.Drawing.Point(472, 183);
             this.lbTongTK.Name = "lbTongTK";
             this.lbTongTK.Size = new System.Drawing.Size(121, 22);
             this.lbTongTK.TabIndex = 41;
@@ -157,7 +157,7 @@
             // 
             this.txtNgayDK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNgayDK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgayDK.Location = new System.Drawing.Point(149, 255);
+            this.txtNgayDK.Location = new System.Drawing.Point(287, 258);
             this.txtNgayDK.Name = "txtNgayDK";
             this.txtNgayDK.Size = new System.Drawing.Size(170, 22);
             this.txtNgayDK.TabIndex = 40;
@@ -168,7 +168,7 @@
             this.lbNgayDK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNgayDK.ForeColor = System.Drawing.Color.Black;
             this.lbNgayDK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbNgayDK.Location = new System.Drawing.Point(30, 255);
+            this.lbNgayDK.Location = new System.Drawing.Point(168, 258);
             this.lbNgayDK.Name = "lbNgayDK";
             this.lbNgayDK.Size = new System.Drawing.Size(123, 22);
             this.lbNgayDK.TabIndex = 39;
@@ -179,7 +179,7 @@
             // 
             this.txtMaKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMaKhachHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKhachHang.Location = new System.Drawing.Point(149, 180);
+            this.txtMaKhachHang.Location = new System.Drawing.Point(287, 183);
             this.txtMaKhachHang.Name = "txtMaKhachHang";
             this.txtMaKhachHang.Size = new System.Drawing.Size(170, 22);
             this.txtMaKhachHang.TabIndex = 38;
@@ -191,7 +191,7 @@
             this.lbMaKhachHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaKhachHang.ForeColor = System.Drawing.Color.Black;
             this.lbMaKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbMaKhachHang.Location = new System.Drawing.Point(30, 180);
+            this.lbMaKhachHang.Location = new System.Drawing.Point(168, 183);
             this.lbMaKhachHang.Name = "lbMaKhachHang";
             this.lbMaKhachHang.Size = new System.Drawing.Size(123, 22);
             this.lbMaKhachHang.TabIndex = 37;
@@ -203,7 +203,7 @@
             // 
             this.txtMaHopDong.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMaHopDong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaHopDong.Location = new System.Drawing.Point(149, 219);
+            this.txtMaHopDong.Location = new System.Drawing.Point(287, 222);
             this.txtMaHopDong.Name = "txtMaHopDong";
             this.txtMaHopDong.Size = new System.Drawing.Size(170, 22);
             this.txtMaHopDong.TabIndex = 36;
@@ -214,7 +214,7 @@
             this.lbMaHopDong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaHopDong.ForeColor = System.Drawing.Color.Black;
             this.lbMaHopDong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbMaHopDong.Location = new System.Drawing.Point(30, 219);
+            this.lbMaHopDong.Location = new System.Drawing.Point(168, 222);
             this.lbMaHopDong.Name = "lbMaHopDong";
             this.lbMaHopDong.Size = new System.Drawing.Size(120, 22);
             this.lbMaHopDong.TabIndex = 35;
@@ -229,7 +229,7 @@
             this.txtTimKiem.BackColor = System.Drawing.Color.White;
             this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(30, 130);
+            this.txtTimKiem.Location = new System.Drawing.Point(308, 133);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(0);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(325, 25);
@@ -254,6 +254,122 @@
             this.pnMenu.Name = "pnMenu";
             this.pnMenu.Size = new System.Drawing.Size(960, 70);
             this.pnMenu.TabIndex = 31;
+            // 
+            // lbHeader
+            // 
+            this.lbHeader.BackColor = System.Drawing.Color.DimGray;
+            this.lbHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbHeader.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHeader.ForeColor = System.Drawing.Color.White;
+            this.lbHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbHeader.Location = new System.Drawing.Point(0, 0);
+            this.lbHeader.Name = "lbHeader";
+            this.lbHeader.Size = new System.Drawing.Size(900, 30);
+            this.lbHeader.TabIndex = 28;
+            this.lbHeader.Text = "Quản lý hợp đồng";
+            this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbHeader.Click += new System.EventHandler(this.lbHeader_Click);
+            this.lbHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbHeader_MouseDown);
+            this.lbHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbHeader_MouseMove);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maHDDataGridViewTextBoxColumn,
+            this.maKHDataGridViewTextBoxColumn,
+            this.ngayDKDataGridViewTextBoxColumn,
+            this.tongTKDataGridViewTextBoxColumn,
+            this.chiPhiDataGridViewTextBoxColumn,
+            this.ngayKyHDDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.hopDongBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 300);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(960, 300);
+            this.dataGridView1.TabIndex = 33;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
+            // 
+            // toolStripHopDong
+            // 
+            this.toolStripHopDong.AutoSize = false;
+            this.toolStripHopDong.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripHopDong.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStripHopDong.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btXem,
+            this.btThem,
+            this.btSua,
+            this.btXoa,
+            this.btTaoTaiKhoan,
+            this.toolStripButton1});
+            this.toolStripHopDong.Location = new System.Drawing.Point(0, 100);
+            this.toolStripHopDong.Name = "toolStripHopDong";
+            this.toolStripHopDong.Size = new System.Drawing.Size(960, 30);
+            this.toolStripHopDong.TabIndex = 32;
+            this.toolStripHopDong.Text = "toolStrip1";
+            this.toolStripHopDong.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStripHopDong_ItemClicked);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pictureBox2.BackgroundImage = global::GUI.Properties.Resources.mobile_search_icon_x2;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(608, 133);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.TabIndex = 47;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
+            // 
+            // btMinimized
+            // 
+            this.btMinimized.BackColor = System.Drawing.Color.DimGray;
+            this.btMinimized.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btMinimized.FlatAppearance.BorderSize = 0;
+            this.btMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMinimized.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMinimized.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btMinimized.Image = global::GUI.Properties.Resources.icon_mini;
+            this.btMinimized.Location = new System.Drawing.Point(900, 0);
+            this.btMinimized.Name = "btMinimized";
+            this.btMinimized.Size = new System.Drawing.Size(30, 30);
+            this.btMinimized.TabIndex = 30;
+            this.btMinimized.UseVisualStyleBackColor = false;
+            this.btMinimized.Click += new System.EventHandler(this.btMinimized_Click);
+            // 
+            // btExit
+            // 
+            this.btExit.AutoSize = true;
+            this.btExit.BackColor = System.Drawing.Color.DimGray;
+            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btExit.FlatAppearance.BorderSize = 0;
+            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btExit.ForeColor = System.Drawing.Color.Black;
+            this.btExit.Image = global::GUI.Properties.Resources.icon_exit;
+            this.btExit.Location = new System.Drawing.Point(930, 0);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(30, 30);
+            this.btExit.TabIndex = 29;
+            this.btExit.UseVisualStyleBackColor = false;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
             // btThoat
             // 
@@ -380,56 +496,6 @@
             this.btHome.UseVisualStyleBackColor = false;
             this.btHome.Click += new System.EventHandler(this.btHome_Click);
             // 
-            // lbHeader
-            // 
-            this.lbHeader.BackColor = System.Drawing.Color.DimGray;
-            this.lbHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbHeader.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHeader.ForeColor = System.Drawing.Color.White;
-            this.lbHeader.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbHeader.Location = new System.Drawing.Point(0, 0);
-            this.lbHeader.Name = "lbHeader";
-            this.lbHeader.Size = new System.Drawing.Size(900, 30);
-            this.lbHeader.TabIndex = 28;
-            this.lbHeader.Text = "Quản lý hợp đồng";
-            this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbHeader.Click += new System.EventHandler(this.lbHeader_Click);
-            this.lbHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbHeader_MouseDown);
-            this.lbHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbHeader_MouseMove);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maHDDataGridViewTextBoxColumn,
-            this.maKHDataGridViewTextBoxColumn,
-            this.ngayDKDataGridViewTextBoxColumn,
-            this.tongTKDataGridViewTextBoxColumn,
-            this.chiPhiDataGridViewTextBoxColumn,
-            this.ngayKyHDDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.hopDongBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.GridColor = System.Drawing.Color.LightGray;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 300);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(960, 300);
-            this.dataGridView1.TabIndex = 33;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
-            // 
             // maHDDataGridViewTextBoxColumn
             // 
             this.maHDDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -475,25 +541,6 @@
             // hopDongBindingSource
             // 
             this.hopDongBindingSource.DataSource = typeof(DAO.HopDong);
-            // 
-            // toolStripHopDong
-            // 
-            this.toolStripHopDong.AutoSize = false;
-            this.toolStripHopDong.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripHopDong.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStripHopDong.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btXem,
-            this.btThem,
-            this.btSua,
-            this.btXoa,
-            this.btTaoTaiKhoan,
-            this.toolStripButton1});
-            this.toolStripHopDong.Location = new System.Drawing.Point(0, 100);
-            this.toolStripHopDong.Name = "toolStripHopDong";
-            this.toolStripHopDong.Size = new System.Drawing.Size(960, 30);
-            this.toolStripHopDong.TabIndex = 32;
-            this.toolStripHopDong.Text = "toolStrip1";
-            this.toolStripHopDong.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStripHopDong_ItemClicked);
             // 
             // btXem
             // 
@@ -567,53 +614,6 @@
             this.toolStripButton1.Text = "Danh sách HĐ đợi";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.pictureBox2.BackgroundImage = global::GUI.Properties.Resources.mobile_search_icon_x2;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(329, 130);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.TabIndex = 47;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
-            this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
-            // 
-            // btMinimized
-            // 
-            this.btMinimized.BackColor = System.Drawing.Color.DimGray;
-            this.btMinimized.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btMinimized.FlatAppearance.BorderSize = 0;
-            this.btMinimized.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btMinimized.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btMinimized.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btMinimized.Image = global::GUI.Properties.Resources.icon_mini;
-            this.btMinimized.Location = new System.Drawing.Point(900, 0);
-            this.btMinimized.Name = "btMinimized";
-            this.btMinimized.Size = new System.Drawing.Size(30, 30);
-            this.btMinimized.TabIndex = 30;
-            this.btMinimized.UseVisualStyleBackColor = false;
-            this.btMinimized.Click += new System.EventHandler(this.btMinimized_Click);
-            // 
-            // btExit
-            // 
-            this.btExit.AutoSize = true;
-            this.btExit.BackColor = System.Drawing.Color.DimGray;
-            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btExit.FlatAppearance.BorderSize = 0;
-            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btExit.ForeColor = System.Drawing.Color.Black;
-            this.btExit.Image = global::GUI.Properties.Resources.icon_exit;
-            this.btExit.Location = new System.Drawing.Point(930, 0);
-            this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(30, 30);
-            this.btExit.TabIndex = 29;
-            this.btExit.UseVisualStyleBackColor = false;
-            this.btExit.Click += new System.EventHandler(this.btExit_Click);
-            // 
             // frmQuanLyHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -645,10 +645,10 @@
             this.Load += new System.EventHandler(this.frmQuanLyHopDong_Load);
             this.pnMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hopDongBindingSource)).EndInit();
             this.toolStripHopDong.ResumeLayout(false);
             this.toolStripHopDong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hopDongBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

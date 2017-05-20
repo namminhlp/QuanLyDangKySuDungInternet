@@ -168,7 +168,7 @@
             this.txtTimKiem.BackColor = System.Drawing.Color.White;
             this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(30, 130);
+            this.txtTimKiem.Location = new System.Drawing.Point(337, 130);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(0);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(332, 25);
@@ -185,7 +185,7 @@
             this.lbMaKhachHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaKhachHang.ForeColor = System.Drawing.Color.Black;
             this.lbMaKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbMaKhachHang.Location = new System.Drawing.Point(30, 180);
+            this.lbMaKhachHang.Location = new System.Drawing.Point(177, 180);
             this.lbMaKhachHang.Name = "lbMaKhachHang";
             this.lbMaKhachHang.Size = new System.Drawing.Size(121, 22);
             this.lbMaKhachHang.TabIndex = 14;
@@ -197,7 +197,7 @@
             // 
             this.txtMaKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMaKhachHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKhachHang.Location = new System.Drawing.Point(149, 180);
+            this.txtMaKhachHang.Location = new System.Drawing.Point(296, 180);
             this.txtMaKhachHang.Name = "txtMaKhachHang";
             this.txtMaKhachHang.Size = new System.Drawing.Size(170, 22);
             this.txtMaKhachHang.TabIndex = 2;
@@ -207,7 +207,7 @@
             // 
             this.txtHoTen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtHoTen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.Location = new System.Drawing.Point(149, 219);
+            this.txtHoTen.Location = new System.Drawing.Point(296, 219);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(170, 22);
             this.txtHoTen.TabIndex = 3;
@@ -219,7 +219,7 @@
             this.lbHoTen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHoTen.ForeColor = System.Drawing.Color.Black;
             this.lbHoTen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbHoTen.Location = new System.Drawing.Point(30, 218);
+            this.lbHoTen.Location = new System.Drawing.Point(177, 218);
             this.lbHoTen.Name = "lbHoTen";
             this.lbHoTen.Size = new System.Drawing.Size(115, 22);
             this.lbHoTen.TabIndex = 16;
@@ -231,7 +231,7 @@
             // 
             this.txtDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(149, 256);
+            this.txtDiaChi.Location = new System.Drawing.Point(296, 256);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(170, 22);
             this.txtDiaChi.TabIndex = 4;
@@ -243,7 +243,7 @@
             this.lbDiaChi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDiaChi.ForeColor = System.Drawing.Color.Black;
             this.lbDiaChi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbDiaChi.Location = new System.Drawing.Point(30, 256);
+            this.lbDiaChi.Location = new System.Drawing.Point(177, 256);
             this.lbDiaChi.Name = "lbDiaChi";
             this.lbDiaChi.Size = new System.Drawing.Size(115, 22);
             this.lbDiaChi.TabIndex = 18;
@@ -255,7 +255,7 @@
             // 
             this.txtCMND.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCMND.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCMND.Location = new System.Drawing.Point(466, 180);
+            this.txtCMND.Location = new System.Drawing.Point(613, 180);
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(170, 22);
             this.txtCMND.TabIndex = 5;
@@ -267,7 +267,7 @@
             this.lbCMND.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCMND.ForeColor = System.Drawing.Color.Black;
             this.lbCMND.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbCMND.Location = new System.Drawing.Point(340, 180);
+            this.lbCMND.Location = new System.Drawing.Point(487, 180);
             this.lbCMND.Name = "lbCMND";
             this.lbCMND.Size = new System.Drawing.Size(120, 22);
             this.lbCMND.TabIndex = 20;
@@ -279,7 +279,7 @@
             // 
             this.txtLoaiKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLoaiKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoaiKH.Location = new System.Drawing.Point(466, 219);
+            this.txtLoaiKH.Location = new System.Drawing.Point(613, 219);
             this.txtLoaiKH.Name = "txtLoaiKH";
             this.txtLoaiKH.Size = new System.Drawing.Size(170, 22);
             this.txtLoaiKH.TabIndex = 6;
@@ -293,7 +293,7 @@
             this.lbLoaiKH.BackColor = System.Drawing.Color.Transparent;
             this.lbLoaiKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLoaiKH.ForeColor = System.Drawing.Color.Black;
-            this.lbLoaiKH.Location = new System.Drawing.Point(340, 217);
+            this.lbLoaiKH.Location = new System.Drawing.Point(487, 217);
             this.lbLoaiKH.Name = "lbLoaiKH";
             this.lbLoaiKH.Size = new System.Drawing.Size(120, 22);
             this.lbLoaiKH.TabIndex = 22;
@@ -305,7 +305,7 @@
             // 
             this.txtSDT.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSDT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDT.Location = new System.Drawing.Point(466, 256);
+            this.txtSDT.Location = new System.Drawing.Point(613, 256);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(170, 22);
             this.txtSDT.TabIndex = 7;
@@ -317,7 +317,7 @@
             this.lbSDT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSDT.ForeColor = System.Drawing.Color.Black;
             this.lbSDT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbSDT.Location = new System.Drawing.Point(340, 256);
+            this.lbSDT.Location = new System.Drawing.Point(487, 256);
             this.lbSDT.Name = "lbSDT";
             this.lbSDT.Size = new System.Drawing.Size(120, 22);
             this.lbSDT.TabIndex = 24;
@@ -330,7 +330,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pictureBox2.BackgroundImage = global::GUI.Properties.Resources.mobile_search_icon_x2;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(337, 130);
+            this.pictureBox2.Location = new System.Drawing.Point(644, 130);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
             this.pictureBox2.TabIndex = 27;
