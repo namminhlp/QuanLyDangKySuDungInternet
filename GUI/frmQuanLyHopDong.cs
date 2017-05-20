@@ -97,6 +97,7 @@ namespace GUI
                 {
                     txtNgayKyHD.Text = "mm/dd/yyyy";
                     txtNgayKyHD.ForeColor = Color.Gray;
+                    btTaoTaiKhoan.Enabled = false;
                 }
                 else
                 {
@@ -134,7 +135,7 @@ namespace GUI
                 {
                     txtNgayKyHD.ForeColor = Color.Gray;
                     txtNgayKyHD.Text = "mm/dd/yyyy";
-
+                    btTaoTaiKhoan.Enabled = false;
                 }
                 else
                 {
