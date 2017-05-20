@@ -56,7 +56,7 @@
             this.btHuy.Location = new System.Drawing.Point(223, 404);
             this.btHuy.Name = "btHuy";
             this.btHuy.Size = new System.Drawing.Size(115, 45);
-            this.btHuy.TabIndex = 47;
+            this.btHuy.TabIndex = 48;
             this.btHuy.Text = "HỦY";
             this.btHuy.UseVisualStyleBackColor = false;
             this.btHuy.Click += new System.EventHandler(this.btHuy_Click);
@@ -70,7 +70,7 @@
             this.btDongY.Location = new System.Drawing.Point(51, 404);
             this.btDongY.Name = "btDongY";
             this.btDongY.Size = new System.Drawing.Size(115, 45);
-            this.btDongY.TabIndex = 46;
+            this.btDongY.TabIndex = 47;
             this.btDongY.Text = "ĐỒNG Ý";
             this.btDongY.UseVisualStyleBackColor = false;
             this.btDongY.Click += new System.EventHandler(this.btDongY_Click);
@@ -245,7 +245,7 @@
             this.txtTrangThai.Location = new System.Drawing.Point(170, 344);
             this.txtTrangThai.Name = "txtTrangThai";
             this.txtTrangThai.Size = new System.Drawing.Size(169, 23);
-            this.txtTrangThai.TabIndex = 57;
+            this.txtTrangThai.TabIndex = 46;
             // 
             // frmTiepNhanTaiKhoan
             // 
