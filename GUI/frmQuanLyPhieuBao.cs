@@ -293,5 +293,12 @@ namespace GUI
         {
 
         }
+
+        private void btTroGiup_Click(object sender, EventArgs e)
+        {
+            frmTroGiup x = new frmTroGiup();
+            x.Show();
+            Close();
+        }
     }
 }

@@ -351,10 +351,17 @@ namespace GUI
         {
             pictureBox2.BackColor = Color.DarkOrange;
         }
-
+        
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
             pictureBox2.BackColor = Color.WhiteSmoke;
+        }
+
+        private void btTroGiup_Click(object sender, EventArgs e)
+        {
+            frmTroGiup x = new frmTroGiup();
+            x.Show();
+            Close();
         }
     }
 }

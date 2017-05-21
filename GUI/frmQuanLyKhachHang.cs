@@ -357,7 +357,9 @@ namespace GUI
 
         private void btTroGiup_Click(object sender, EventArgs e)
         {
-
+            frmTroGiup x = new frmTroGiup();
+            x.Show();
+            Close();
         }
 
         private void txtTimKiem_KeyPress(object sender, KeyPressEventArgs e)

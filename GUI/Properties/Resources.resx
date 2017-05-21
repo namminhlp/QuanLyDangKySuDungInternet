@@ -127,6 +127,9 @@
   <data name="search-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Oxygen-Icons.org-Oxygen-Actions-arrow-left-double" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Oxygen-Icons.org-Oxygen-Actions-arrow-left-double.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon-call" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-call.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -208,7 +211,7 @@
   <data name="15-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\15-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Oxygen-Icons.org-Oxygen-Actions-arrow-left-double" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Oxygen-Icons.org-Oxygen-Actions-arrow-left-double.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HelpInfo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HelpInfo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

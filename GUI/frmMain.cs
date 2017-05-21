@@ -25,6 +25,7 @@ namespace GUI
             btTroGiup.BackColor = ColorTranslator.FromHtml("#2B569A");
             btHopDong.BackColor = ColorTranslator.FromHtml("#2B569A");
             btHome.BackColor = ColorTranslator.FromHtml("#2196F3");
+            
 
         }
         private void frmMain_Load(object sender, EventArgs e)
@@ -95,7 +96,9 @@ namespace GUI
 
         private void btTroGiup_Click(object sender, EventArgs e)
         {
-
+            frmTroGiup x = new frmTroGiup();
+            x.Show();
+            Close();
         }
 
         private void btKhachHang_Click(object sender, EventArgs e)
@@ -130,6 +133,11 @@ namespace GUI
         }
 
         private void btHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbThongTin_Click(object sender, EventArgs e)
         {
 
         }

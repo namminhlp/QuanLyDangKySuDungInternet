@@ -30,6 +30,7 @@
         {
             this.pnMenu = new System.Windows.Forms.Panel();
             this.lbHeader = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btThoat = new System.Windows.Forms.Button();
             this.btTroGiup = new System.Windows.Forms.Button();
             this.btHopDong = new System.Windows.Forms.Button();
@@ -71,6 +72,17 @@
             this.lbHeader.TabIndex = 6;
             this.lbHeader.Text = "Hệ thống quản lý đăng kí sử dụng Internet - ABC Tech Co. Inc";
             this.lbHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbHeader.Click += new System.EventHandler(this.lbHeader_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BackgroundImage = global::GUI.Properties.Resources.HelpInfo;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 100);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(960, 500);
+            this.panel1.TabIndex = 10;
             // 
             // btThoat
             // 
@@ -88,6 +100,7 @@
             this.btThoat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btThoat.UseVisualStyleBackColor = false;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
             // btTroGiup
             // 
@@ -105,6 +118,7 @@
             this.btTroGiup.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btTroGiup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btTroGiup.UseVisualStyleBackColor = false;
+            this.btTroGiup.Click += new System.EventHandler(this.btTroGiup_Click);
             // 
             // btHopDong
             // 
@@ -139,6 +153,7 @@
             this.btTaiKhoan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btTaiKhoan.UseVisualStyleBackColor = false;
+            this.btTaiKhoan.Click += new System.EventHandler(this.btTaiKhoan_Click);
             // 
             // btPhieuBao
             // 
@@ -156,6 +171,7 @@
             this.btPhieuBao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btPhieuBao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btPhieuBao.UseVisualStyleBackColor = false;
+            this.btPhieuBao.Click += new System.EventHandler(this.btPhieuBao_Click);
             // 
             // btKhachHang
             // 
@@ -173,6 +189,7 @@
             this.btKhachHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btKhachHang.UseVisualStyleBackColor = false;
+            this.btKhachHang.Click += new System.EventHandler(this.btKhachHang_Click);
             // 
             // btHome
             // 
@@ -190,6 +207,7 @@
             this.btHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btHome.UseVisualStyleBackColor = false;
+            this.btHome.Click += new System.EventHandler(this.btHome_Click);
             // 
             // btMinimized
             // 
@@ -200,7 +218,7 @@
             this.btMinimized.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btMinimized.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btMinimized.Image = global::GUI.Properties.Resources.icon_mini;
-            this.btMinimized.Location = new System.Drawing.Point(893, 0);
+            this.btMinimized.Location = new System.Drawing.Point(900, 0);
             this.btMinimized.Name = "btMinimized";
             this.btMinimized.Size = new System.Drawing.Size(30, 30);
             this.btMinimized.TabIndex = 8;
@@ -217,7 +235,7 @@
             this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btExit.ForeColor = System.Drawing.Color.Black;
             this.btExit.Image = global::GUI.Properties.Resources.icon_exit;
-            this.btExit.Location = new System.Drawing.Point(917, 0);
+            this.btExit.Location = new System.Drawing.Point(930, 0);
             this.btExit.Name = "btExit";
             this.btExit.Size = new System.Drawing.Size(30, 30);
             this.btExit.TabIndex = 7;
@@ -228,7 +246,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(944, 561);
+            this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.lbHeader);
             this.Controls.Add(this.btMinimized);
@@ -255,5 +274,6 @@
         private System.Windows.Forms.Label lbHeader;
         private System.Windows.Forms.Button btMinimized;
         private System.Windows.Forms.Button btExit;
+        private System.Windows.Forms.Panel panel1;
     }
 }

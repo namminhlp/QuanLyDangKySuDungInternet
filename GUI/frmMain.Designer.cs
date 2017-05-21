@@ -39,7 +39,11 @@
             this.btHome = new System.Windows.Forms.Button();
             this.btMinimized = new System.Windows.Forms.Button();
             this.btExit = new System.Windows.Forms.Button();
+            this.lbThongTin = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbHeader
@@ -235,12 +239,53 @@
             this.btExit.UseVisualStyleBackColor = false;
             this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
+            // lbThongTin
+            // 
+            this.lbThongTin.BackColor = System.Drawing.Color.DimGray;
+            this.lbThongTin.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbThongTin.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThongTin.ForeColor = System.Drawing.Color.White;
+            this.lbThongTin.Location = new System.Drawing.Point(0, 570);
+            this.lbThongTin.Name = "lbThongTin";
+            this.lbThongTin.Size = new System.Drawing.Size(960, 30);
+            this.lbThongTin.TabIndex = 6;
+            this.lbThongTin.Text = "GVHD : Nguyễn Hồ Duy Trí (Thực hành), Nguyễn Đình Loan Phương (Lý thuyết)";
+            this.lbThongTin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbThongTin.Click += new System.EventHandler(this.lbThongTin_Click);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.DimGray;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 540);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(960, 30);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Đồ án môn học Phân tiết thiết kế hệ thống thông tin - nhóm thực hiện : Nam Minh, " +
+    "Hoa Nam, Thành Phúc, Anh Thơ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::GUI.Properties.Resources.ABC_Logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(280, 124);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(400, 400);
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(960, 600);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbThongTin);
             this.Controls.Add(this.pnMenu);
             this.Controls.Add(this.btMinimized);
             this.Controls.Add(this.btExit);
@@ -251,6 +296,7 @@
             this.Text = "Hệ thống quản lý đăng kí sử dụng Internet - ABC Tech Co. Inc";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,5 +315,8 @@
         private System.Windows.Forms.Button btKhachHang;
         private System.Windows.Forms.Button btThoat;
         private System.Windows.Forms.Button btTroGiup;
+        private System.Windows.Forms.Label lbThongTin;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

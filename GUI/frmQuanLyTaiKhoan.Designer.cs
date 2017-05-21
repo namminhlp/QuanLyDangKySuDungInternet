@@ -38,22 +38,9 @@
             this.lbMatKhau = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.RichTextBox();
             this.pnMenu = new System.Windows.Forms.Panel();
-            this.btThoat = new System.Windows.Forms.Button();
-            this.btTroGiup = new System.Windows.Forms.Button();
-            this.btHopDong = new System.Windows.Forms.Button();
-            this.btTaiKhoan = new System.Windows.Forms.Button();
-            this.btPhieuBao = new System.Windows.Forms.Button();
-            this.btKhachHang = new System.Windows.Forms.Button();
-            this.btHome = new System.Windows.Forms.Button();
             this.lbHeader = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.taiKhoanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.toolStripTaiKhoan = new System.Windows.Forms.ToolStrip();
-            this.btXem = new System.Windows.Forms.ToolStripButton();
-            this.btThem = new System.Windows.Forms.ToolStripButton();
-            this.btSua = new System.Windows.Forms.ToolStripButton();
-            this.btXoa = new System.Windows.Forms.ToolStripButton();
-            this.btDinhChi = new System.Windows.Forms.ToolStripButton();
             this.txtDiaChiTT = new System.Windows.Forms.TextBox();
             this.lbDiaChiTT = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -64,7 +51,13 @@
             this.lbTrangThai = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btMinimized = new System.Windows.Forms.Button();
-            this.btExit = new System.Windows.Forms.Button();
+            this.btThoat = new System.Windows.Forms.Button();
+            this.btTroGiup = new System.Windows.Forms.Button();
+            this.btHopDong = new System.Windows.Forms.Button();
+            this.btTaiKhoan = new System.Windows.Forms.Button();
+            this.btPhieuBao = new System.Windows.Forms.Button();
+            this.btKhachHang = new System.Windows.Forms.Button();
+            this.btHome = new System.Windows.Forms.Button();
             this.tenTruyCapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maHDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.matKhauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,11 +65,18 @@
             this.diaChiCaiDatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diaChiThanhToanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trangThaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taiKhoanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btXem = new System.Windows.Forms.ToolStripButton();
+            this.btThem = new System.Windows.Forms.ToolStripButton();
+            this.btSua = new System.Windows.Forms.ToolStripButton();
+            this.btXoa = new System.Windows.Forms.ToolStripButton();
+            this.btDinhChi = new System.Windows.Forms.ToolStripButton();
+            this.btExit = new System.Windows.Forms.Button();
             this.pnMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).BeginInit();
             this.toolStripTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtMatKhau
@@ -177,130 +177,6 @@
             this.pnMenu.TabIndex = 51;
             this.pnMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.pnMenu_Paint);
             // 
-            // btThoat
-            // 
-            this.btThoat.BackColor = System.Drawing.Color.MediumBlue;
-            this.btThoat.FlatAppearance.BorderSize = 0;
-            this.btThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btThoat.ForeColor = System.Drawing.Color.White;
-            this.btThoat.Image = global::GUI.Properties.Resources.btn_carousel_arrow_right;
-            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btThoat.Location = new System.Drawing.Point(425, 0);
-            this.btThoat.Name = "btThoat";
-            this.btThoat.Size = new System.Drawing.Size(70, 70);
-            this.btThoat.TabIndex = 6;
-            this.btThoat.Text = "Thoát";
-            this.btThoat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btThoat.UseVisualStyleBackColor = false;
-            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
-            // 
-            // btTroGiup
-            // 
-            this.btTroGiup.BackColor = System.Drawing.Color.MediumBlue;
-            this.btTroGiup.FlatAppearance.BorderSize = 0;
-            this.btTroGiup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btTroGiup.ForeColor = System.Drawing.Color.White;
-            this.btTroGiup.Image = global::GUI.Properties.Resources.icon_call;
-            this.btTroGiup.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btTroGiup.Location = new System.Drawing.Point(355, 0);
-            this.btTroGiup.Name = "btTroGiup";
-            this.btTroGiup.Size = new System.Drawing.Size(70, 70);
-            this.btTroGiup.TabIndex = 5;
-            this.btTroGiup.Text = "Trợ giúp";
-            this.btTroGiup.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btTroGiup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btTroGiup.UseVisualStyleBackColor = false;
-            // 
-            // btHopDong
-            // 
-            this.btHopDong.BackColor = System.Drawing.Color.MediumBlue;
-            this.btHopDong.FlatAppearance.BorderSize = 0;
-            this.btHopDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btHopDong.ForeColor = System.Drawing.Color.White;
-            this.btHopDong.Image = global::GUI.Properties.Resources.icon_contract;
-            this.btHopDong.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btHopDong.Location = new System.Drawing.Point(145, 0);
-            this.btHopDong.Name = "btHopDong";
-            this.btHopDong.Size = new System.Drawing.Size(70, 70);
-            this.btHopDong.TabIndex = 4;
-            this.btHopDong.Text = "Hợp đồng";
-            this.btHopDong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btHopDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btHopDong.UseVisualStyleBackColor = false;
-            this.btHopDong.Click += new System.EventHandler(this.btHopDong_Click);
-            // 
-            // btTaiKhoan
-            // 
-            this.btTaiKhoan.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btTaiKhoan.FlatAppearance.BorderSize = 0;
-            this.btTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btTaiKhoan.ForeColor = System.Drawing.Color.White;
-            this.btTaiKhoan.Image = global::GUI.Properties.Resources.incon_key;
-            this.btTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btTaiKhoan.Location = new System.Drawing.Point(215, 0);
-            this.btTaiKhoan.Name = "btTaiKhoan";
-            this.btTaiKhoan.Size = new System.Drawing.Size(70, 70);
-            this.btTaiKhoan.TabIndex = 3;
-            this.btTaiKhoan.Text = "Tài khoản";
-            this.btTaiKhoan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btTaiKhoan.UseVisualStyleBackColor = false;
-            // 
-            // btPhieuBao
-            // 
-            this.btPhieuBao.BackColor = System.Drawing.Color.MediumBlue;
-            this.btPhieuBao.FlatAppearance.BorderSize = 0;
-            this.btPhieuBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btPhieuBao.ForeColor = System.Drawing.Color.White;
-            this.btPhieuBao.Image = global::GUI.Properties.Resources.email_icon;
-            this.btPhieuBao.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btPhieuBao.Location = new System.Drawing.Point(285, 0);
-            this.btPhieuBao.Name = "btPhieuBao";
-            this.btPhieuBao.Size = new System.Drawing.Size(70, 70);
-            this.btPhieuBao.TabIndex = 2;
-            this.btPhieuBao.Text = "Phiếu báo";
-            this.btPhieuBao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btPhieuBao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btPhieuBao.UseVisualStyleBackColor = false;
-            this.btPhieuBao.Click += new System.EventHandler(this.btPhieuBao_Click);
-            // 
-            // btKhachHang
-            // 
-            this.btKhachHang.BackColor = System.Drawing.Color.MediumBlue;
-            this.btKhachHang.FlatAppearance.BorderSize = 0;
-            this.btKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btKhachHang.ForeColor = System.Drawing.Color.White;
-            this.btKhachHang.Image = global::GUI.Properties.Resources.icon_people;
-            this.btKhachHang.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btKhachHang.Location = new System.Drawing.Point(70, 0);
-            this.btKhachHang.Name = "btKhachHang";
-            this.btKhachHang.Size = new System.Drawing.Size(75, 70);
-            this.btKhachHang.TabIndex = 1;
-            this.btKhachHang.Text = "Khách hàng";
-            this.btKhachHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btKhachHang.UseVisualStyleBackColor = false;
-            this.btKhachHang.Click += new System.EventHandler(this.btKhachHang_Click);
-            // 
-            // btHome
-            // 
-            this.btHome.BackColor = System.Drawing.Color.MediumBlue;
-            this.btHome.FlatAppearance.BorderSize = 0;
-            this.btHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btHome.ForeColor = System.Drawing.Color.White;
-            this.btHome.Image = global::GUI.Properties.Resources.home_icon;
-            this.btHome.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btHome.Location = new System.Drawing.Point(0, 0);
-            this.btHome.Name = "btHome";
-            this.btHome.Size = new System.Drawing.Size(70, 70);
-            this.btHome.TabIndex = 0;
-            this.btHome.Text = "Trang chủ";
-            this.btHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btHome.UseVisualStyleBackColor = false;
-            this.btHome.Click += new System.EventHandler(this.btHome_Click);
-            // 
             // lbHeader
             // 
             this.lbHeader.BackColor = System.Drawing.Color.DimGray;
@@ -351,10 +227,6 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // taiKhoanBindingSource
-            // 
-            this.taiKhoanBindingSource.DataSource = typeof(DAO.TaiKhoan);
-            // 
             // toolStripTaiKhoan
             // 
             this.toolStripTaiKhoan.AutoSize = false;
@@ -371,68 +243,6 @@
             this.toolStripTaiKhoan.Size = new System.Drawing.Size(960, 30);
             this.toolStripTaiKhoan.TabIndex = 52;
             this.toolStripTaiKhoan.Text = "toolStrip1";
-            // 
-            // btXem
-            // 
-            this.btXem.AutoSize = false;
-            this.btXem.BackColor = System.Drawing.Color.Transparent;
-            this.btXem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXem.ForeColor = System.Drawing.Color.Black;
-            this.btXem.Image = global::GUI.Properties.Resources.Hopstarter_Soft_Scraps_Button_Refresh;
-            this.btXem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btXem.Name = "btXem";
-            this.btXem.Size = new System.Drawing.Size(60, 30);
-            this.btXem.Text = "Tải lại";
-            this.btXem.Click += new System.EventHandler(this.btXem_Click);
-            // 
-            // btThem
-            // 
-            this.btThem.AutoSize = false;
-            this.btThem.BackColor = System.Drawing.Color.Transparent;
-            this.btThem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThem.ForeColor = System.Drawing.Color.Black;
-            this.btThem.Image = global::GUI.Properties.Resources.Add_Button;
-            this.btThem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btThem.Name = "btThem";
-            this.btThem.Size = new System.Drawing.Size(60, 30);
-            this.btThem.Text = "Thêm";
-            this.btThem.Click += new System.EventHandler(this.btThem_Click);
-            // 
-            // btSua
-            // 
-            this.btSua.AutoSize = false;
-            this.btSua.BackColor = System.Drawing.Color.Transparent;
-            this.btSua.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSua.ForeColor = System.Drawing.Color.Black;
-            this.btSua.Image = global::GUI.Properties.Resources._15_512;
-            this.btSua.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btSua.Name = "btSua";
-            this.btSua.Size = new System.Drawing.Size(60, 30);
-            this.btSua.Text = "Sửa";
-            this.btSua.Click += new System.EventHandler(this.btSua_Click);
-            // 
-            // btXoa
-            // 
-            this.btXoa.AutoSize = false;
-            this.btXoa.BackColor = System.Drawing.Color.Transparent;
-            this.btXoa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoa.ForeColor = System.Drawing.Color.Black;
-            this.btXoa.Image = global::GUI.Properties.Resources.delete_xxl;
-            this.btXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btXoa.Name = "btXoa";
-            this.btXoa.Size = new System.Drawing.Size(60, 30);
-            this.btXoa.Text = "Hủy";
-            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
-            // 
-            // btDinhChi
-            // 
-            this.btDinhChi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDinhChi.Image = global::GUI.Properties.Resources.Cancel__Red;
-            this.btDinhChi.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btDinhChi.Name = "btDinhChi";
-            this.btDinhChi.Size = new System.Drawing.Size(126, 27);
-            this.btDinhChi.Text = "Xem d/s đình chỉ";
-            this.btDinhChi.Click += new System.EventHandler(this.btDinhChi_Click);
             // 
             // txtDiaChiTT
             // 
@@ -558,22 +368,130 @@
             this.btMinimized.UseVisualStyleBackColor = false;
             this.btMinimized.Click += new System.EventHandler(this.btMinimized_Click);
             // 
-            // btExit
+            // btThoat
             // 
-            this.btExit.AutoSize = true;
-            this.btExit.BackColor = System.Drawing.Color.DimGray;
-            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btExit.FlatAppearance.BorderSize = 0;
-            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btExit.ForeColor = System.Drawing.Color.Black;
-            this.btExit.Image = global::GUI.Properties.Resources.icon_exit;
-            this.btExit.Location = new System.Drawing.Point(930, 0);
-            this.btExit.Name = "btExit";
-            this.btExit.Size = new System.Drawing.Size(30, 30);
-            this.btExit.TabIndex = 49;
-            this.btExit.UseVisualStyleBackColor = false;
-            this.btExit.Click += new System.EventHandler(this.btExit_Click);
+            this.btThoat.BackColor = System.Drawing.Color.MediumBlue;
+            this.btThoat.FlatAppearance.BorderSize = 0;
+            this.btThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btThoat.ForeColor = System.Drawing.Color.White;
+            this.btThoat.Image = global::GUI.Properties.Resources.btn_carousel_arrow_right;
+            this.btThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btThoat.Location = new System.Drawing.Point(425, 0);
+            this.btThoat.Name = "btThoat";
+            this.btThoat.Size = new System.Drawing.Size(70, 70);
+            this.btThoat.TabIndex = 6;
+            this.btThoat.Text = "Thoát";
+            this.btThoat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btThoat.UseVisualStyleBackColor = false;
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
+            // 
+            // btTroGiup
+            // 
+            this.btTroGiup.BackColor = System.Drawing.Color.MediumBlue;
+            this.btTroGiup.FlatAppearance.BorderSize = 0;
+            this.btTroGiup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTroGiup.ForeColor = System.Drawing.Color.White;
+            this.btTroGiup.Image = global::GUI.Properties.Resources.icon_call;
+            this.btTroGiup.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btTroGiup.Location = new System.Drawing.Point(355, 0);
+            this.btTroGiup.Name = "btTroGiup";
+            this.btTroGiup.Size = new System.Drawing.Size(70, 70);
+            this.btTroGiup.TabIndex = 5;
+            this.btTroGiup.Text = "Trợ giúp";
+            this.btTroGiup.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btTroGiup.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btTroGiup.UseVisualStyleBackColor = false;
+            this.btTroGiup.Click += new System.EventHandler(this.btTroGiup_Click);
+            // 
+            // btHopDong
+            // 
+            this.btHopDong.BackColor = System.Drawing.Color.MediumBlue;
+            this.btHopDong.FlatAppearance.BorderSize = 0;
+            this.btHopDong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btHopDong.ForeColor = System.Drawing.Color.White;
+            this.btHopDong.Image = global::GUI.Properties.Resources.icon_contract;
+            this.btHopDong.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btHopDong.Location = new System.Drawing.Point(145, 0);
+            this.btHopDong.Name = "btHopDong";
+            this.btHopDong.Size = new System.Drawing.Size(70, 70);
+            this.btHopDong.TabIndex = 4;
+            this.btHopDong.Text = "Hợp đồng";
+            this.btHopDong.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btHopDong.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btHopDong.UseVisualStyleBackColor = false;
+            this.btHopDong.Click += new System.EventHandler(this.btHopDong_Click);
+            // 
+            // btTaiKhoan
+            // 
+            this.btTaiKhoan.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btTaiKhoan.FlatAppearance.BorderSize = 0;
+            this.btTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btTaiKhoan.ForeColor = System.Drawing.Color.White;
+            this.btTaiKhoan.Image = global::GUI.Properties.Resources.incon_key;
+            this.btTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btTaiKhoan.Location = new System.Drawing.Point(215, 0);
+            this.btTaiKhoan.Name = "btTaiKhoan";
+            this.btTaiKhoan.Size = new System.Drawing.Size(70, 70);
+            this.btTaiKhoan.TabIndex = 3;
+            this.btTaiKhoan.Text = "Tài khoản";
+            this.btTaiKhoan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btTaiKhoan.UseVisualStyleBackColor = false;
+            // 
+            // btPhieuBao
+            // 
+            this.btPhieuBao.BackColor = System.Drawing.Color.MediumBlue;
+            this.btPhieuBao.FlatAppearance.BorderSize = 0;
+            this.btPhieuBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPhieuBao.ForeColor = System.Drawing.Color.White;
+            this.btPhieuBao.Image = global::GUI.Properties.Resources.email_icon;
+            this.btPhieuBao.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btPhieuBao.Location = new System.Drawing.Point(285, 0);
+            this.btPhieuBao.Name = "btPhieuBao";
+            this.btPhieuBao.Size = new System.Drawing.Size(70, 70);
+            this.btPhieuBao.TabIndex = 2;
+            this.btPhieuBao.Text = "Phiếu báo";
+            this.btPhieuBao.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btPhieuBao.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btPhieuBao.UseVisualStyleBackColor = false;
+            this.btPhieuBao.Click += new System.EventHandler(this.btPhieuBao_Click);
+            // 
+            // btKhachHang
+            // 
+            this.btKhachHang.BackColor = System.Drawing.Color.MediumBlue;
+            this.btKhachHang.FlatAppearance.BorderSize = 0;
+            this.btKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btKhachHang.ForeColor = System.Drawing.Color.White;
+            this.btKhachHang.Image = global::GUI.Properties.Resources.icon_people;
+            this.btKhachHang.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btKhachHang.Location = new System.Drawing.Point(70, 0);
+            this.btKhachHang.Name = "btKhachHang";
+            this.btKhachHang.Size = new System.Drawing.Size(75, 70);
+            this.btKhachHang.TabIndex = 1;
+            this.btKhachHang.Text = "Khách hàng";
+            this.btKhachHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btKhachHang.UseVisualStyleBackColor = false;
+            this.btKhachHang.Click += new System.EventHandler(this.btKhachHang_Click);
+            // 
+            // btHome
+            // 
+            this.btHome.BackColor = System.Drawing.Color.MediumBlue;
+            this.btHome.FlatAppearance.BorderSize = 0;
+            this.btHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btHome.ForeColor = System.Drawing.Color.White;
+            this.btHome.Image = global::GUI.Properties.Resources.home_icon;
+            this.btHome.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btHome.Location = new System.Drawing.Point(0, 0);
+            this.btHome.Name = "btHome";
+            this.btHome.Size = new System.Drawing.Size(70, 70);
+            this.btHome.TabIndex = 0;
+            this.btHome.Text = "Trang chủ";
+            this.btHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btHome.UseVisualStyleBackColor = false;
+            this.btHome.Click += new System.EventHandler(this.btHome_Click);
             // 
             // tenTruyCapDataGridViewTextBoxColumn
             // 
@@ -624,6 +542,89 @@
             this.trangThaiDataGridViewTextBoxColumn.HeaderText = "Trạng thái";
             this.trangThaiDataGridViewTextBoxColumn.Name = "trangThaiDataGridViewTextBoxColumn";
             // 
+            // taiKhoanBindingSource
+            // 
+            this.taiKhoanBindingSource.DataSource = typeof(DAO.TaiKhoan);
+            // 
+            // btXem
+            // 
+            this.btXem.AutoSize = false;
+            this.btXem.BackColor = System.Drawing.Color.Transparent;
+            this.btXem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXem.ForeColor = System.Drawing.Color.Black;
+            this.btXem.Image = global::GUI.Properties.Resources.Hopstarter_Soft_Scraps_Button_Refresh;
+            this.btXem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btXem.Name = "btXem";
+            this.btXem.Size = new System.Drawing.Size(60, 30);
+            this.btXem.Text = "Tải lại";
+            this.btXem.Click += new System.EventHandler(this.btXem_Click);
+            // 
+            // btThem
+            // 
+            this.btThem.AutoSize = false;
+            this.btThem.BackColor = System.Drawing.Color.Transparent;
+            this.btThem.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThem.ForeColor = System.Drawing.Color.Black;
+            this.btThem.Image = global::GUI.Properties.Resources.Add_Button;
+            this.btThem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btThem.Name = "btThem";
+            this.btThem.Size = new System.Drawing.Size(60, 30);
+            this.btThem.Text = "Thêm";
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
+            // 
+            // btSua
+            // 
+            this.btSua.AutoSize = false;
+            this.btSua.BackColor = System.Drawing.Color.Transparent;
+            this.btSua.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSua.ForeColor = System.Drawing.Color.Black;
+            this.btSua.Image = global::GUI.Properties.Resources._15_512;
+            this.btSua.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btSua.Name = "btSua";
+            this.btSua.Size = new System.Drawing.Size(60, 30);
+            this.btSua.Text = "Sửa";
+            this.btSua.Click += new System.EventHandler(this.btSua_Click);
+            // 
+            // btXoa
+            // 
+            this.btXoa.AutoSize = false;
+            this.btXoa.BackColor = System.Drawing.Color.Transparent;
+            this.btXoa.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXoa.ForeColor = System.Drawing.Color.Black;
+            this.btXoa.Image = global::GUI.Properties.Resources.delete_xxl;
+            this.btXoa.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btXoa.Name = "btXoa";
+            this.btXoa.Size = new System.Drawing.Size(60, 30);
+            this.btXoa.Text = "Hủy";
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
+            // 
+            // btDinhChi
+            // 
+            this.btDinhChi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDinhChi.Image = global::GUI.Properties.Resources.Cancel__Red;
+            this.btDinhChi.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btDinhChi.Name = "btDinhChi";
+            this.btDinhChi.Size = new System.Drawing.Size(126, 27);
+            this.btDinhChi.Text = "Xem d/s đình chỉ";
+            this.btDinhChi.Click += new System.EventHandler(this.btDinhChi_Click);
+            // 
+            // btExit
+            // 
+            this.btExit.AutoSize = true;
+            this.btExit.BackColor = System.Drawing.Color.DimGray;
+            this.btExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btExit.FlatAppearance.BorderSize = 0;
+            this.btExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btExit.ForeColor = System.Drawing.Color.Black;
+            this.btExit.Image = global::GUI.Properties.Resources.icon_exit;
+            this.btExit.Location = new System.Drawing.Point(930, 0);
+            this.btExit.Name = "btExit";
+            this.btExit.Size = new System.Drawing.Size(30, 30);
+            this.btExit.TabIndex = 49;
+            this.btExit.UseVisualStyleBackColor = false;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
+            // 
             // frmQuanLyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -657,10 +658,10 @@
             this.Load += new System.EventHandler(this.frmQuanLyTaiKhoan_Load);
             this.pnMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).EndInit();
             this.toolStripTaiKhoan.ResumeLayout(false);
             this.toolStripTaiKhoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taiKhoanBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

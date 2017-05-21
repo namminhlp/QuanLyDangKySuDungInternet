@@ -110,6 +110,12 @@
     <Compile Include="frmTiepNhanTaiKhoan.Designer.cs">
       <DependentUpon>frmTiepNhanTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTroGiup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTroGiup.Designer.cs">
+      <DependentUpon>frmTroGiup.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmXacNhanThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTiepNhanTaiKhoan.resx">
       <DependentUpon>frmTiepNhanTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTroGiup.resx">
+      <DependentUpon>frmTroGiup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmXacNhanThanhToan.resx">
       <DependentUpon>frmXacNhanThanhToan.cs</DependentUpon>
@@ -288,6 +297,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Oxygen-Icons.org-Oxygen-Actions-arrow-left-double.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HelpInfo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
