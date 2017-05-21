@@ -30,6 +30,9 @@ namespace GUI
             btTroGiup.BackColor = ColorTranslator.FromHtml("#2B569A");
             btKhachHang.BackColor = ColorTranslator.FromHtml("#2B569A");
             btHopDong.BackColor = ColorTranslator.FromHtml("#2B569A");
+
+            txtTimKiem.KeyDown += new KeyEventHandler(txtTimkiem_KeyDown);
+
         }
 
         private void pnMenu_Paint(object sender, PaintEventArgs e)
@@ -230,14 +233,13 @@ namespace GUI
             txtTimKiem.Text = null;
             txtTimKiem.ForeColor = Color.Black;
             // Xử lý khi nhấn một phím xuống
-            txtTimKiem.KeyDown += new KeyEventHandler(txtTimkiem_KeyDown);
         }
 
         private void txtTimkiem_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                dataGridView1.DataSource = business.timTaiKhoan(txtTenTruyCap.Text);
+                pictureBox2_Click(sender, e);
             }
         }
 
@@ -248,7 +250,8 @@ namespace GUI
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = business.timTaiKhoan(txtTenTruyCap.Text);
+            dataGridView1.DataSource = business.timTaiKhoan(txtTimKiem.Text);
+            txtTimKiem.Clear();
         }
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)

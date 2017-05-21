@@ -33,8 +33,8 @@ namespace GUI
             btTroGiup.BackColor = ColorTranslator.FromHtml("#2B569A");
             btHopDong.BackColor = ColorTranslator.FromHtml("#2B569A");
 
+            txtTimKiem.KeyDown += new KeyEventHandler(txtTimkiem_KeyDown);
 
-           
         }
 
         private void frmQuanLyKhachHang_Load(object sender, EventArgs e)
@@ -280,6 +280,7 @@ namespace GUI
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
             
+            
         }
 
         private void txtTimKiem_MouseLeave(object sender, EventArgs e)
@@ -290,27 +291,37 @@ namespace GUI
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = business.timKhachHang(txtTimKiem.Text);
+            txtTimKiem.Clear();
         }
-
+        
         private void txtTimKiem_Click(object sender, EventArgs e)
         {
             txtTimKiem.Text = null;
             txtTimKiem.ForeColor = Color.Black;
             // Xử lý khi nhấn một phím xuống
-            txtTimKiem.KeyDown += new KeyEventHandler(txtTimkiem_KeyDown);  
+
+
         }
 
         private void txtTimkiem_KeyDown(object sender, KeyEventArgs e)
         {
             // Khi click vào nút enter
+            
             if (e.KeyCode == Keys.Enter)
             {
-                dataGridView1.DataSource = business.timKhachHang(txtTimKiem.Text);
+                pictureBox2_Click(sender, e);
             }
+            
+        }
+
+        private void TxtTimKiem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
 
         private void txtTimKiem_Leave(object sender, EventArgs e)
         {
+            
             txtTimKiem.Text = "Tìm kiếm với Mã khách hàng...";
             txtTimKiem.ForeColor = Color.Gray;
         }
@@ -347,6 +358,11 @@ namespace GUI
         private void btTroGiup_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtTimKiem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
         }
     }
 }

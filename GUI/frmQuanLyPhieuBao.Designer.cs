@@ -134,6 +134,7 @@
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTimKiem.Location = new System.Drawing.Point(312, 130);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(0);
+            this.txtTimKiem.Multiline = false;
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(324, 25);
             this.txtTimKiem.TabIndex = 82;
