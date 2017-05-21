@@ -124,8 +124,9 @@ namespace GUI
         private void button2_Click(object sender, EventArgs e)
         {
             frmQuanLyPhieuBao frmQLPB = new frmQuanLyPhieuBao();
-            Close();
             frmQLPB.Show();
+            Close();
+
         }
 
         private void btHome_Click(object sender, EventArgs e)

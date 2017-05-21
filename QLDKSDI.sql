@@ -68,5 +68,6 @@ CREATE TABLE NhanVien (
 	MatKhau VARCHAR(20),
 	QuyenHan BIT
 )
+--- Bộ dữ liệu test
 --- Thêm chi tiết truy cập
 insert into NhanVien values ('admin1','Đoàn Nam Minh','Phan Thiet - Bình thuận','232731','3071997',1);

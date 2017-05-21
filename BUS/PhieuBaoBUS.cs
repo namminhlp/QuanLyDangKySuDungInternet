@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DAO;
+using System.Data.SqlTypes;
+
 namespace BUS
 {
     public class PhieuBaoBUS
@@ -42,14 +42,15 @@ namespace BUS
         }
         public void lapPhieuBaoTuDong()
         {
-                DateTime HienTai = DateTime.Now;
-                var queryTK = from u in db.TaiKhoans
+            DateTime HienTai = DateTime.Now;
+                    var queryTK = from u in db.TaiKhoans
                               where Convert.ToBoolean(u.TrangThai) == true
                               select u;
                 foreach (var x in queryTK)
                 {
                     var query = from u in db.PhieuBaos
-                                where x.TenTruyCap == u.TenTruyCap && Convert.ToInt32(u.ThangLap) == HienTai.Month
+                                where x.TenTruyCap == u.TenTruyCap && Convert.ToInt32(u.ThangLap) == HienTai.Month 
+                                        && Convert.ToDateTime(u.NgayLap).Year == HienTai.Year
                                 select u;
                     if (!query.Any())
                     {
@@ -59,13 +60,15 @@ namespace BUS
                         item.NgayLap = HienTai;
                         item.ThangLap = HienTai.Month.ToString();
                         item.TinhTrang = Convert.ToBoolean(false);
-                        item.NgayTT = DateTime.MinValue;
+                        item.NgayTT =(DateTime)SqlDateTime.MinValue;
+                        item.NgayTT = null;
                         item.HinhThucTT = null;
                         item.TongTien = 0;
                         db.PhieuBaos.InsertOnSubmit(item);
                         db.SubmitChanges();
                     }
-                 }
+
+            }
             
         }
         public void tinhCuocPhiTuDong()
@@ -179,6 +182,13 @@ namespace BUS
                             select u;
                 foreach (var x in query)
                 {
+                    var queryCTTC = from v in db.ChiTiet_TruyCaps
+                                    where v.MaPhieu == MaPhieuBao
+                                    select v;
+                    foreach(var y in queryCTTC)
+                    {
+                        db.ChiTiet_TruyCaps.DeleteOnSubmit(y);
+                    }
                     db.PhieuBaos.DeleteOnSubmit(x);
                 }
                 db.SubmitChanges();

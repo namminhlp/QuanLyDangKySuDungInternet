@@ -44,6 +44,9 @@ namespace GUI
             txtHinhThucTT.Enabled = false;
             txtNgayLap.Enabled = false;
 
+            // hàm tự động
+            business.lapPhieuBaoTuDong();
+            business.tinhCuocPhiTuDong();
 
         }
 
@@ -70,6 +73,8 @@ namespace GUI
 
         private void btXem_Click(object sender, EventArgs e)
         {
+            business.lapPhieuBaoTuDong();
+            business.tinhCuocPhiTuDong();
             dataGridView1.DataSource = business.load();
         }
 
@@ -77,7 +82,7 @@ namespace GUI
         {
             if (business.xoaPhieuBao(txtMaPhieuBao.Text))
             {
-                MessageBox.Show("Xóa dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("Xóa dữ liệu thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
             }
             else
             {
@@ -279,6 +284,11 @@ namespace GUI
         private void pictureBox2_MouseLeave(object sender, EventArgs e)
         {
             pictureBox2.BackColor = Color.WhiteSmoke;
+        }
+
+        private void btPhieuBao_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
